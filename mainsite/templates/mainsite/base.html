@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title> Griffel Studio</title>
+  <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
+</head>
+<body>
+  <div class="container">
+    <span class="line_1"></span>
+    <span class="line_2"></span>
+    <span class="line_3"></span>
+    {% block arrow %}<a href='#footer'><span class="arrow"></span></a>{% endblock %}
+    <header>
+      <a href="{% url 'mainsite:index_url' %}">
+        <div class="logo"></div>
+      </a>
+      {% block nav %}
+      <nav>
+        <ul>
+          <li><a href="{% url 'mainsite:index_url' %}" style="text-decoration: line-through;">about</a></li>
+          <li><a href="{% url 'mainsite:products_url' %}">products</a></li>
+          <li><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
+        </ul>
+      </nav>
+      {% endblock %}
+    </header>
+    {% block content %}
+
+    {% endblock %}
+
+    <footer id='footer'>
+      <div class="foot"></div>
+    </footer>
+  </div>
+  <script src="{% static 'mainsite/myscript.js' %}"></script>
+</body>
+</html>

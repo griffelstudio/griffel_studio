@@ -1,0 +1,30 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+{% block nav %}
+<nav>
+  <ul>
+    <li><a href="{% url 'mainsite:index_url' %}" >about</a></li>
+    <li><a href="{% url 'mainsite:products_url' %}" style="text-decoration: line-through;">products</a></li>
+    <li><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
+  </ul>
+</nav>
+{% endblock %}
+{% block content %}
+
+    <main>
+      <section class="products item">
+        <a class="header" href="#" >glTF Exporter ​API</a>
+        <div class="text">
+          <p>What is the plugin?</p><br>
+          <p>
+            glTF Exporter​ add-in for Revit exports your project to popular 3D
+            glTF format glTF is universal file format for transferring 3D assets
+            which almost every 3D software can handle. With glTF Exporter it has
+            never been easier to get a Revit project in gltf format.
+          </p><br>
+          <p>Get it from the &nbsp<a href="#">Autodesk App Store</a></p>
+        </div>
+      </section>
+    </main>
+
+  {% endblock %}
