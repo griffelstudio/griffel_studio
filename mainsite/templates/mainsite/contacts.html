@@ -12,25 +12,27 @@
 {% block content %}
     <main>
       <section class="contacts item">
-        <div class="item">
-            <h1 class="header">Connect</h1>
-            <div class="text">
-            <p>What is the plugin?</p><br>
-            <p>Interested in working together? Big announcements coming very soon! </p><br><br>
-            <ul>
-                <li class='link'><a href="#">​+1 843 999 1851</a></li>
-                <li class='link'><a href="#">management@griffelstudio.com</a></li>
-                <li class='link'><a href="#">Linkedin</a></li>
-                <li class='link'><a href="#">Facebook</a></li>
-                <li class='link'><a href="#">Autodesk App</a></li>
-                {% block arrow %}<span id="linkArrow"></span>{% endblock %}
-            </ul>
-            </div>
+
+        <h1 class="header">Connect</h1>
+        <article class="article">
+        <div class="text">
+        <p>What is the plugin?</p><br>
+        <p>Interested in working together? Big announcements coming very soon! </p><br><br>
+        <ul>
+            <li class='link'><a href="#">​+1 843 999 1851</a></li>
+            <li class='link'><a href="#">management@griffelstudio.com</a></li>
+            <li class='link'><a href="#">Linkedin</a></li>
+            <li class='link'><a href="#">Facebook</a></li>
+            <li class='link'><a href="#">Autodesk App</a></li>
+            {% block arrow %}<span id="linkArrow"></span>{% endblock %}
+        </ul>
         </div>
+        </article>
+
         <div class="image">
           <img class="rectangle"  src="{% static 'mainsite/img/Rectangle.png' %}" alt="">
         </div>
-        <img class="vector_11" src="{% static 'mainsite/img/Rectangle11.svg' %}" alt="">
+        <img class="vector_11" src="{% static 'mainsite/img/Rectangle12.svg' %}" alt="">
       </section>
     </main>
   {% endblock %}

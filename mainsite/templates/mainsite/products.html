@@ -12,18 +12,57 @@
 {% block content %}
 
     <main>
+      <img class="circle" src="{% static 'mainsite/img/circle.svg' %}" alt="">
       <section class="products item">
-        <a class="header" href="#" >glTF Exporter ​API</a>
-        <div class="text">
-          <p>What is the plugin?</p><br>
-          <p>
-            glTF Exporter​ add-in for Revit exports your project to popular 3D
-            glTF format glTF is universal file format for transferring 3D assets
-            which almost every 3D software can handle. With glTF Exporter it has
-            never been easier to get a Revit project in gltf format.
-          </p><br>
-          <p>Get it from the &nbsp<a href="#">Autodesk App Store</a></p>
-        </div>
+        <article class="article">
+          <a class="header" href="{% url 'mainsite:exporter_url' %}" >glTF Exporter ​API</a>
+          <div class="text">
+            <!-- <p>What is the plugin?</p><br> -->
+            <p>
+              glTF Exporter​ add-in for Revit exports your project to popular
+               3D glTF format glTF is universal file format for transferring
+                3D assets which almost every 3D software can handle.
+                 With glTF Exporter it has never been easier to get a
+                 Revit project in gltf format. Get it from the Autodesk
+                 App Store or ask for a special quote sending us an email.
+            </p><br>
+            <p>
+              Get it from the &nbsp <a href="#">Autodesk App Store</a>&nbspor
+              ask for a special quote sending us <a href="#">&nbspan email.</a>
+            </p>
+          </div>
+          <div class="video-container">
+          <div class="video"></div>
+              <!-- <img class="play" src="{% static 'mainsite/img/play.png' %}" alt=""> -->
+            </div>
+
+        </article>
+        <article class="article article-left"">
+          <h2 class="header">glTF Exporter ​API</h2>
+          <div class="text">
+            <!-- <p>What is the plugin?</p><br> -->
+            <p>
+              glTF Exporter API .NET library allows you to export projects to
+              the popular glTF 3D format. glTF is universal file format for
+              transferring 3D assets which almost every 3D software can handle.
+            </p><br>
+            <p>
+              Get it from the &nbsp <a href="#">Autodesk App Store</a>&nbspor
+              ask for a special quote sending us <a href="#">&nbspan email.</a>
+            </p>
+          </div>
+          <div class="video-container">
+            <div class="video"></div>
+              <!-- <video class="player"  controls="controls" poster="video/duel.jpg">
+                <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
+                <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
+                Тег video не поддерживается вашим браузером.
+                <a href="video/duel.mp4">Скачайте видео</a>.
+             </video> -->
+
+          </div>
+        </article>
       </section>
     </main>
 

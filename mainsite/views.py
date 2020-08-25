@@ -13,6 +13,10 @@ class Products(View):
     def get(self, request):
         return render(request, 'mainsite/products.html')
 
+class Exporter(View):
+    def get(self, request):
+        return render(request, 'mainsite/exporter.html')
+
 class Contacts(View):
     def get(self, request):
         return render(request, 'mainsite/contacts.html')

@@ -1,0 +1,64 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+{% block nav %}
+<nav>
+  <ul>
+    <li><a href="{% url 'mainsite:index_url' %}" >about</a></li>
+    <li><a href="{% url 'mainsite:products_url' %}" style="text-decoration: line-through;">products</a></li>
+    <li><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
+  </ul>
+</nav>
+{% endblock %}
+{% block content %}
+
+    <main>
+      <img class="vector_4" src="{% static 'mainsite/img/Vector4.svg' %}" alt="">
+      <h1 class="main-header">glTF Exporter</h1>
+      <section class="exporter item">
+        <article class="article">
+        <h2 class="header">What is the plugin? </h2>
+        <div class="text">
+          <p>
+            glTF Exporter add-in for Revit exports your project to popular
+            3D glTF format https://www.khronos.org/gltf/. glTF is universal
+             file format for transferring 3D assets which almost every 3D
+              software can handle. With glTF Exporter it has never been
+              easier to get a Revit project in gltf format. Get it from the
+                &nbsp<a href="#">Autodesk App Store</a> or ask for a special
+                quote sending us an email.
+        </div>
+        <h2 class="header"> How does it work?</h2>
+        <div class="text">
+          <p>
+            The add-in is compatible with Revit 2018 or later. Open any 3D
+            view, run the command and choose settings (link to Settings
+            Explained section) for export. The output folder will appear
+            immediately after the export process ends - you can preview the
+            model in standard Windows 10 viewer by double clicking gltf file.
+            Once you have the gltf file you can send it to your client, share
+            on the internet, preview in many gltf viewers or import into your
+            software development project - use it any way you like.
+          </p>
+        </div>
+        <h2 class="header"> How our solution helps clients? </h2>
+        <div class="text">
+          <p>
+            glTF Exporter helps architects to seamlessly bring their projects
+            into real-time visualization environment like Unity or UE - no
+            geometry optimization needed, skip complicated import steps to
+            devote more time to setting up object interactions, reflections,
+            lighting and RTX support for your next-gen real-time visual
+            &nbsp<a href="#">presentation.</a>
+          </p><br>
+          <p>
+            Add-in works out of the box but if you need to
+            adjust output files precisely see our export &nbsp
+            <a href="#">settings explained</a>
+            page.
+          </p>
+        </div>
+        </article>
+      </section>
+    </main>
+
+  {% endblock %}

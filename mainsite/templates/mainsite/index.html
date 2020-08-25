@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    <a href='#footer'><span class="arrow"></span></a>
     <main>
       <section class="intro">
         <img class="vector_1" src="{% static 'mainsite/img/Vector1.svg' %}" alt="">
@@ -19,6 +20,7 @@
       </section>
       <section class="solutions item">
         <h2 class="header">Solutions</h2>
+        <article class="article">
         <div class="text">
           <p>
             We create software which solves
@@ -31,7 +33,7 @@
             This collaboration has resulted in mutually beneficial projects
             we are currently working on. We believe that each peace of work
             produced by our company will become a part of something big in
-            future, follow us to stay informed.
+            future, &nbsp<a href="#">follow us </a>&nbsp to stay informed.
           </p><br>
           <p>
             We create software which
@@ -42,11 +44,12 @@
             programs for your AEC business.
           </p>
         </div>
+        </article>
         <ul class="feature">
-          <li><a href="#">Mobile and web application development</a></li>
-          <li><a href="#">Revit plugins creation</a></li>
-          <li><a href="#">Mixed Reality solutions</a></li>
-          <li><a href="#">Check the list of our products</a></li>
+          <li><p>Mobile and web application development</p></li>
+          <li><p>Revit plugins creation</p></li>
+          <li><p>Mixed Reality solutions</p></li>
+          <li><p>Check the list of our products</p></li>
           <img class="vector_3" src="{% static 'mainsite/img/Vector3.svg' %}" alt="">
         </ul>
       </section>
@@ -64,6 +67,7 @@
       </section>
       <section class="team item">
         <h2 class="header">Team</h2>
+        <article class="article">
         <div class="text">
           <p>
             The core of our team consists of dedicated engineers - specialists who
@@ -78,6 +82,7 @@
             so you can reach us anytime
           </p>
         </div>
+        </article>
         <div class="fotos">
           <div class="foto"></div>
           <div class="foto"></div>
