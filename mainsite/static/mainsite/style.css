@@ -420,13 +420,13 @@ footer{
 
 
 a.header:hover::after {
-  position: relative;
-  left:50px;
+  position: absolute;
+  left:450px;
   content: "click to read more";
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 80px;
   /* identical to box height, or 200% */
   color: #008B61;
@@ -567,7 +567,7 @@ a.header:hover::after {
   height: 25vh;
   background-color:black;
   /* margin-left: 5%; */
-  left: 0%;
+  left: 1%;
   top: 70vh;
   transform: rotate(-90deg) scale(0.6);
   z-index: 10;
@@ -596,8 +596,9 @@ a.header:hover::after {
   position: absolute;
   width: auto;
   height: auto;
-  left: 50%;
-  /* top: 0; */
+  left: 45%;
+  top: 3%;
+  transform: scale(0.8);
   z-index: 1;
   /* background: #8DD2CE;
   filter: blur(10px);
