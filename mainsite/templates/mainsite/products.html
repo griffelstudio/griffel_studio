@@ -14,31 +14,38 @@
     <main>
       <img class="circle" src="{% static 'mainsite/img/circle.svg' %}" alt="">
       <section class="products item">
-        <article class="article">
-          <a class="header" href="{% url 'mainsite:exporter_url' %}" >glTF Exporter ​API</a>
+        <article class="article50">
+          <a class="header" href="{% url 'mainsite:exporter_url' %}" >glTF Exporter</a>
           <div class="text">
             <!-- <p>What is the plugin?</p><br> -->
             <p>
               glTF Exporter​ add-in for Revit exports your project to popular
-               3D glTF format glTF is universal file format for transferring
-                3D assets which almost every 3D software can handle.
-                 With glTF Exporter it has never been easier to get a
-                 Revit project in gltf format. Get it from the Autodesk
-                 App Store or ask for a special quote sending us an email.
+              3D glTF format glTF is universal file format for transferring
+              3D assets which almost every 3D software can handle.
+              With glTF Exporter it has never been easier to get a
+              Revit project in gltf format. Get it from the Autodesk
+              App Store or ask for a special quote sending us an email.
             </p><br>
             <p>
-              Get it from the &nbsp <a href="#">Autodesk App Store</a>&nbspor
-              ask for a special quote sending us <a href="#">&nbspan email.</a>
+              Get it from the &nbsp <a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290">Autodesk App Store</a>&nbspor
+              ask for a special quote sending us <a href="{% url 'mainsite:contacts_url' %}">&nbspan email.</a>
             </p>
           </div>
           <div class="video-container">
-          <div class="video"></div>
-              <!-- <img class="play" src="{% static 'mainsite/img/play.png' %}" alt=""> -->
+          <div class="video">
+            <!-- <video width="100%" height="100%" controls>
+              <source src="https://www.youtube.com/watch?v=2iCgf03rx1I&feature=youtu.be" type="video/mp4">
+            </video> -->
+            <div class="stop">
+              <iframe src="https://drive.google.com/file/d/10nY1UOGnSYZKMGDKv1T59f9u1dIYa-Yd/preview" width="100%" height="100%" allowfullscreen></iframe>
+              <!-- <iframe   width="100%" height="100%" src="https://www.youtube.com/embed/MnIT-DArTeQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen  ></iframe>
+            </div> -->
+          </div>
             </div>
 
         </article>
-        <article class="article article-left"">
-          <h2 class="header">glTF Exporter ​API</h2>
+        <article class="article50"">
+          <a class="header" href="{% url 'mainsite:exporter_api_url' %}" >glTF Exporter ​API</a>
           <div class="text">
             <!-- <p>What is the plugin?</p><br> -->
             <p>
@@ -47,12 +54,12 @@
               transferring 3D assets which almost every 3D software can handle.
             </p><br>
             <p>
-              Get it from the &nbsp <a href="#">Autodesk App Store</a>&nbspor
-              ask for a special quote sending us <a href="#">&nbspan email.</a>
+              Get it from the &nbsp <a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview">Autodesk App Store</a>&nbspor
+              ask for a special quote sending us <a href="{% url 'mainsite:contacts_url' %}">&nbspan email.</a>
             </p>
           </div>
-          <div class="video-container">
-            <div class="video"></div>
+          <!-- <div class="video-container">
+            <div class="video"></div> -->
               <!-- <video class="player"  controls="controls" poster="video/duel.jpg">
                 <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
                 <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -61,7 +68,7 @@
                 <a href="video/duel.mp4">Скачайте видео</a>.
              </video> -->
 
-          </div>
+          <!-- </div> -->
         </article>
       </section>
     </main>

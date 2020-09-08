@@ -12,20 +12,23 @@
 {% block content %}
 
     <main>
+      <div class="darkscreen_off">
+      </div>
       <img class="vector_4" src="{% static 'mainsite/img/Vector4.svg' %}" alt="">
       <h1 class="main-header">glTF Exporter</h1>
       <section class="exporter item">
-        <article class="article">
+        <article class="article50">
         <h2 class="header">What is the plugin? </h2>
         <div class="text">
           <p>
             glTF Exporter add-in for Revit exports your project to popular
-            3D glTF format https://www.khronos.org/gltf/. glTF is universal
-             file format for transferring 3D assets which almost every 3D
-              software can handle. With glTF Exporter it has never been
-              easier to get a Revit project in gltf format. Get it from the
-                &nbsp<a href="#">Autodesk App Store</a> or ask for a special
-                quote sending us an email.
+            &nbsp<a href=" https://www.khronos.org/gltf/">3D glTF format</a>. glTF is universal
+            file format for transferring 3D assets which almost every 3D
+            software can handle. With glTF Exporter it has never been
+            easier to get a Revit project in gltf format.<br> Get it from the
+            &nbsp<a href="{% url 'mainsite:index_url' %}">Autodesk App Store</a> or ask for a special
+            quote sending us an email.
+          </p>
         </div>
         <h2 class="header"> How does it work?</h2>
         <div class="text">
@@ -48,7 +51,7 @@
             geometry optimization needed, skip complicated import steps to
             devote more time to setting up object interactions, reflections,
             lighting and RTX support for your next-gen real-time visual
-            &nbsp<a href="#">presentation.</a>
+            &nbsp<a href="https://www.archdaily.com/892210/how-real-time-rendering-can-revolutionize-design-again">presentation.</a>
           </p><br>
           <p>
             Add-in works out of the box but if you need to
@@ -58,7 +61,17 @@
           </p>
         </div>
         </article>
+        <article class="article50">
+
+          <div class="box-images">
+            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_image_1.png' %}" alt="">
+            <img id='img-scale'class="image" src="{% static 'mainsite/img/exp_image_2.png' %}" alt="">
+            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_image_3.png' %}" alt="">
+            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_image_4.png' %}" alt="">
+          </div>
+        </article>
       </section>
     </main>
+
 
   {% endblock %}

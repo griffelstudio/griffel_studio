@@ -16,6 +16,9 @@ class Products(View):
 class Exporter(View):
     def get(self, request):
         return render(request, 'mainsite/exporter.html')
+class Exporter_api(View):
+    def get(self, request):
+        return render(request, 'mainsite/exporter_api.html')
 
 class Contacts(View):
     def get(self, request):
