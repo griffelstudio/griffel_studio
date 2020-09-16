@@ -13,18 +13,27 @@
 
     <main>
       <div class="darkscreen_off">
-        <img class="scale-img" src="{% static 'mainsite/img/exp_image_1.png' %}" alt="">
+        <!-- <img class="scale-img" src="{% static 'mainsite/img/exp_image_1.png' %}" alt=""> -->
       </div>
       <img class="vector_5" src="{% static 'mainsite/img/Vector5.png' %}" alt="">
       <h1 class="main-header">glTF Exporter API</h1>
       <section class="exporter_api exporter item">
         <article class="article50">
           <div class="box-images">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_1.png' %}" alt="">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_2.png' %}" alt="">
-            <img id='img-scale'class="image" src="{% static 'mainsite/img/exp_api_image_3.png' %}" alt="">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_4.png' %}" alt="">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_5.png' %}" alt="">
+            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_1.jpg' %}" alt="">
+            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_1.jpg' %}" alt="">
+
+            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_2.jpg' %}" alt="">
+            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_2.jpg' %}" alt="">
+
+            <img id='img-scale'class="image" src="{% static 'mainsite/img/exp_api_image_3.jpg' %}" alt="">
+            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_3.jpg' %}" alt="">
+
+            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_4.jpg' %}" alt="">
+            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_4.jpg' %}" alt="">
+
+            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_5.jpg' %}" alt="">
+            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_5.jpg' %}" alt="">
 
           </div>
           <h2 class="header"> Settings Explaine</h2>
@@ -38,7 +47,7 @@
               grouped by materials:
             </p>
           </div>
-          <img class="image" src="{% static 'mainsite/img/exp_api_chair.png' %}" alt="">
+          <img class="image100" src="{% static 'mainsite/img/exp_api_chair.png' %}" alt="">
           <div class="text">
             <p>
               Elements have their Revit Ids and are broken down by Revit
@@ -79,10 +88,11 @@
 
         <div class="blockCode">
           <div class="code">
-            <p>%ProgramData%\Autodesk\ApplicationPlugins\glTF Exporter.bundle\Contents</p>
+            <p id="copy-text1">%ProgramData%\Autodesk\ApplicationPlugins\glTF Exporter.bundle\Contents</p>
           </div>
           <!-- <div class="button">copy</div> -->
-          <input class="copy-bottom" type="submit" value="copy">
+          <!-- <button class="copy-bottom" onclick="myFunction()">Copy text</button> -->
+          <input onclick="copyText(copyText1)" class="copy-bottom" type="submit" value="copy">
         </div>
 
         <div class="text">
@@ -103,14 +113,14 @@
 
         <div class="blockCode">
           <div class="code">
-            <p>
+            <p id="copy-text2">
               var outputPath = @"C:\ExportResult.glb"; var settings = new
               GltfExportSettings(outputPath); var exporter = new
               GltfExporter(settings); exporter.Export(document, view);
             </p>
           </div>
           <!-- <div class="button">copy</div> -->
-          <input class="copy-bottom" type="submit" value="copy">
+          <input onclick="copyText(copyText2)" class="copy-bottom" type="submit" value="copy">
         </div>
 
         <div class="text">
@@ -143,8 +153,8 @@
         </article>
         <article class="article100">
           <div class="box-images">
-            <img class="image100" src="{% static 'mainsite/img/exp_api_image_7.png' %}" alt="">
-            <img class="image100" src="{% static 'mainsite/img/exp_api_image_8.png' %}" alt="">
+            <img class="image49" src="{% static 'mainsite/img/exp_api_image_7.png' %}" alt="">
+            <img class="image49" src="{% static 'mainsite/img/exp_api_image_8.png' %}" alt="">
           </div>
 
         </article>
@@ -159,7 +169,7 @@
             </p>
         </article>
         <article class="article100">
-          <img class="image" src="{% static 'mainsite/img/exp_api_3x_image.png' %}" alt="">
+          <img class="image100" src="{% static 'mainsite/img/exp_api_3x_image.png' %}" alt="">
         </article>
         <article class="article50">
           <div class="text">
@@ -171,7 +181,7 @@
             only disabling Export materials checkbox. This might be useful
             for some geometry analysis.
             </p>
-            <img class="image" src="{% static 'mainsite/img/exp_api_image 10.png' %}" alt="">
+            <img class="image100" src="{% static 'mainsite/img/exp_api_image 10.png' %}" alt="">
             <div class="text">
               <p>
                 Output format option determines files you get. The best choice for
@@ -184,7 +194,7 @@
             </div>
         </article>
         <article class="article100">
-          <img class="image" src="{% static 'mainsite/img/exp_api_image_11.png' %}" alt="">
+          <img class="image100" src="{% static 'mainsite/img/exp_api_image_11.png' %}" alt="">
         </article>
         <article class="article50">
           <div class="text">
@@ -196,7 +206,7 @@
               Difference in file size can be seen from the following export
               results:
             </p>
-            <img class="image" src="{% static 'mainsite/img/exp_api_image_12.png' %}" alt="">
+            <img class="image100" src="{% static 'mainsite/img/exp_api_image_12.png' %}" alt="">
             <div class="text" title="подсказка">
               <p>
                 Create merged LODs model options improves the quality of detailed

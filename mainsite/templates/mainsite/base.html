@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <link rel="icon" href="{% static 'mainsite/logo.png' %}">
+  <link rel="icon" href="{% static 'mainsite/img/logo.png' %}">
   <title> Griffel Studio</title>
   <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
 </head>
@@ -34,8 +34,54 @@
 
     {% endblock %}
 
-    <footer id='footer'>
-      <div class="foot"></div>
+    <footer>
+      <span class="line_1 footer-line"></span>
+      <span class="line_2 footer-line"></span>
+      <span class="line_3 footer-line"></span>
+      <div class="footer-conteiner">
+        <div class="content">
+          <div class="text">
+            <p>
+              We create mobile, desktop and cloud applications to
+              change processes inside the industry to reimage usual
+              workflows, make them faster and simpler, at the same time
+              keeping them deep and reliable as they were for centuries.
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <div>
+            <ul>
+              <li><p>Contacts Us</p></li>
+              <li><p>+1 843 999 1851</p></li>
+              <li><p>management@griffelstudio.com</p></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+                <li>Download Autodesk App</li>
+                <li><a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290">glTF Exporter</a></li>
+                <li><a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview">glTF Exporter ​API</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="{% url 'mainsite:index_url' %}" >About</a></li>
+              <li><a href="{% url 'mainsite:products_url' %}">Products</a></li>
+              <li><a href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
+            </ul>
+          </div>
+          <div><ul>
+                <li>Follow Us</li>
+                <li><a href="#">Linkedin</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+
+
+      </div>
     </footer>
   </div>
   <script src="{% static 'mainsite/myscript.js' %}"></script>
