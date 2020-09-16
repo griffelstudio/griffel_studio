@@ -385,7 +385,7 @@ input:not(:nth-child(5)){
 /* min-width: 340px; */
 width: 30%;
 height: 60px;
-color:rgb(118, 118, 118);
+color:#b0afa2;;
 background: #2F2F2F;
 padding: 15px 20px;
 }
