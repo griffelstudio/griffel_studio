@@ -27,7 +27,14 @@ html {
   background: #FFFFFF;
   overflow: hidden;
 }
-
+.end{
+  position:absolute;
+  top:100%;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  z-index: 20;
+}
 .line_1{
   position: absolute;
 
@@ -137,7 +144,7 @@ html {
   height: auto;
   left: -400px;
   top: -150px;
-  z-index: 1;
+  z-index: -1;
   /* background: #12A276;
   filter: blur(15px);
   */
@@ -155,7 +162,8 @@ html {
    */
 }
 .logo{
-  background-image: url('logo.png');
+  background-image: url('img/logo.png');
+  background-size: contain;
   width: 91px;
   height: 91px;
   left: 678px;
@@ -168,6 +176,7 @@ header{
   align-items: center;
   width: 100%;
   margin-top: 40px;
+  z-index: 3;
 
 }
 
@@ -297,6 +306,9 @@ main{
   padding-left: 1%;
   padding-right: 1%;
 }
+.solutions .article50{
+  justify-content: center;
+}
 .article100{
   display: flex;
   flex-direction: column;
@@ -361,14 +373,12 @@ main{
   z-index: 2;
   margin-top:70px;
   justify-self: start;
-  /* padding-bottom: 100px; */
-  /* border-bottom: 2px solid #2F2F2F; */
   width: 100%;
 }
 .get-connected-form{
   margin-top: 40px;
-  border-bottom: 2px solid #2F2F2F;
-  padding-bottom: 100px;
+  /* border-bottom: 2px solid #2F2F2F;
+  padding-bottom: 100px; */
 }
 form{
   display: flex;
@@ -377,13 +387,10 @@ form{
   widows: 100%;
   height: auto;
 }
-/* .first-line{
-  width: 100%;
-  display: flex;
-} */
+
 input:not(:nth-child(5)){
 /* min-width: 340px; */
-width: 30%;
+width: 45%;
 height: 60px;
 color:#b0afa2;;
 background: #2F2F2F;
@@ -391,6 +398,16 @@ padding: 15px 20px;
 }
 input:focus:not(:nth-child(5)){
   color: #FFFFFF;
+}
+textarea{
+  width: 100%;
+  color:#b0afa2;;
+  background: #2F2F2F;
+  margin-top: 40px;
+  padding: 15px 20px;
+}
+.get-connected input:nth-child(1){
+  margin-right: 10%;
 }
 
 input[type="submit"]{
@@ -410,6 +427,7 @@ input[type="submit"]:hover{
 }
 .team{
   margin-top: 90px;
+  z-index: 5;
 }
 .team .article50:nth-child(2){
   padding-top: 130px;
@@ -435,14 +453,15 @@ footer{
   background-repeat:round;
 }
 footer .text {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 footer .text p{
   color: #b0afa2;
   text-align: left;
   margin-top: 0;
   font-weight: 300;
+  font-size: 20px;
 }
 .footer-line{
   background-color:#b0afa2;
@@ -454,7 +473,7 @@ footer .text p{
   width: 100%;
   padding-left: 6%;
   padding-right: 6%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 .footer-conteiner .content{
   width: 100%;
@@ -492,20 +511,22 @@ footer .text p{
   font-weight: 300;
   text-decoration: none;
   color: #b0afa2;
-  font-size: 16px;
+  font-size: 18px;
   line-height: inherit;
 
 }
 
-.content li{
+.content li, .content li a{
   display: block;
   text-align: left;
   padding-left: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
 }
-.content li:nth-child(1){
+.content li:nth-child(1),.content li:nth-child(1) a{
   margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .products a.header {
@@ -568,7 +589,7 @@ a.header:hover::after {
   height: 250px;
   border:6px solid black ;
 }
-.video{
+.videoCover{
   position: relative;
   width: 100%;
   height: 100%;
@@ -577,7 +598,7 @@ a.header:hover::after {
   background-repeat: no-repeat;
   background-position: center;
 }
-.video:hover::after{
+.videoCover:hover::after{
   content:'click me';
   font-family: Poppins;
   font-style: normal;
@@ -591,7 +612,7 @@ a.header:hover::after {
   top:34%;
 }
 
-.video:hover{
+.videoCover:hover{
   background-image: none;
 }
 
@@ -630,6 +651,10 @@ a.header:hover::after {
 }
 .contacts>.item>.text{
   width: 100%;
+}
+.contacts .text p{
+  font-size: 30px;
+  line-height: 40px;
 }
 .text>ul>li{
   position: relative;
@@ -982,7 +1007,7 @@ input[type='submit'].copy-bottom:focus:hover{
   .image-scale{
     display: none;
   }
-  .content li{
+  .content li,.content li a{
     text-align: center;
   }
   #linkArrow{
@@ -1015,6 +1040,20 @@ header  a {
 .main-header {
     margin-top: 40px;
 }
-
+.text>ul>li>a {
+    font-size: 18px;
+    line-height: 30px;
+}
+.exporter_api li {
+    font-size: 16px;
+    line-height: 40px;
+}
+.exporter_api li::before {
+    margin-right: 15px;
+}
+.contacts .text p{
+  font-size: 24px;
+  line-height: 30px;
+}
 
 }

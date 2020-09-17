@@ -3,13 +3,14 @@ var darkscreen = document.querySelector('.darkscreen_off')
 var unscale = document.querySelectorAll('#img-unscale');
 var arrow = document.querySelector('.arrowbox');
 var videoBox = document.querySelector('.video-container');
-var video = document.querySelector('.video');
+var videoCover = document.querySelector('.videoCover');
 var player = document.querySelector('.player');
+var video = document.querySelector("#video");
 var links = document.querySelectorAll('.link');
 var linkarrow = document.querySelector('#linkArrow');
 var copyText1 = document.querySelector("#copy-text1");
 var copyText2 = document.querySelector("#copy-text2");
-
+var end = document.querySelector('.end')
 function copyText(copyText) {
   let area = document.createElement("textarea");
   area.value = copyText.textContent;
@@ -21,7 +22,8 @@ function copyText(copyText) {
 if(videoBox){
 videoBox.addEventListener('click',function(){
   player.style.display = 'block';
-  video.style.display = 'none';
+  videoCover.style.display = 'none';
+  video.setAttribute("autoplay","autoplay");
 
 })}
 var scale = function(image,index){
@@ -51,6 +53,11 @@ if(darkscreen){
 }
 
 if(arrow){
+//   var scrollHeight = Math.max(
+//   document.body.scrollHeight, document.documentElement.scrollHeight,
+//   document.body.offsetHeight, document.documentElement.offsetHeight,
+//   document.body.clientHeight, document.documentElement.clientHeight
+// );
   arrow.addEventListener('click',function(){
   if (window.pageYOffset > 2000){
     window.scroll(0, 0);
@@ -73,7 +80,7 @@ if(arrow){
 
 var moveArrow = function(link){
   link.addEventListener('mouseover', function(){
-    console.log('mouse');
+    // console.log('mouse');
     linkarrow.style.left = 1 + '%';
     linkarrow.style.transition = '0.5s';
     linkarrow.style.top = link.getBoundingClientRect().top - 70 + 'px'

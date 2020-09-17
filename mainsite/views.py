@@ -28,7 +28,7 @@ def form(request,string = '#'):
     if request.method == "POST":
         user = models.Order.objects.create(name=request.POST['name'],
         email=request.POST['email'],
-        phone=request.POST['phone'],
+        message=request.POST['message'],
         )
         # send_mail('order',request.POST['phone'],request.POST['email'],
         # ['nicolay.krischenovich@gmail.com'], fail_silently=False,)

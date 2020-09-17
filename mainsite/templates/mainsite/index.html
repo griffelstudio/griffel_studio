@@ -4,6 +4,7 @@
 {% block content %}
     <div class="arrowbox"><div class="arrow"></div></div>
     <main>
+
       <section class="intro">
         <img class="vector_1" src="{% static 'mainsite/img/Vector1.svg' %}" alt="">
         <div class="intro-header">
@@ -18,11 +19,11 @@
           </p>
         </div>
       </section>
+
       <section class="solutions item">
         <article class="article50">
         <h2 class="header">Solutions</h2>
           <!-- <h2 class="header test">Solutions</h2> -->
-
         <div class="text">
           <p>
             We create software which solves
@@ -52,31 +53,14 @@
             <li><p>Mobile and web application development</p></li>
             <li><p>Revit plugins creation</p></li>
             <li><p>Mixed Reality solutions</p></li>
-            <li><p>Check the list of our products</p></li>
             <img class="vector_3" src="{% static 'mainsite/img/Vector3.svg' %}" alt="">
           </ul>
         </article>
       </section>
-      <section id="get-connected" class="get-connected">
-        <article class="article100">
-        <h2 class="header">Get connected</h2>
-        <div class="get-connected-form">
-          <form action="{% url 'mainsite:form_url' %}" method="post">
-            {% csrf_token %}
-            <!-- <div class="first-line"> -->
-              <input type="text" name="name" placeholder="your name" required>
-              <input type="tel" name="phone" placeholder="phone number" required>
-              <input type="email" name="email" placeholder="email adres" required>
-            <!-- </div> -->
-            <input  type="submit" value="send">
-          </form>
-        </div>
-        </article>
-      </section>
+
       <section class="team item">
         <article class="article50">
         <h2 class="header">Team</h2>
-
         <div class="text">
           <p>
             The core of our team consists of dedicated engineers - specialists who
@@ -98,5 +82,21 @@
           <div class="foto"></div>
         </article>
       </section>
+
+      <section id="get-connected" class="get-connected">
+        <article class="article100">
+        <h2 class="header">Get connected</h2>
+        <div class="get-connected-form">
+          <form action="{% url 'mainsite:form_url' %}" method="post">
+            {% csrf_token %}
+              <input type="text" name="name" placeholder="your name" required>
+              <input type="email" name="email" placeholder="email adress" required>
+              <textarea name="message" placeholder="your message" rows="12" cols="80"></textarea>
+            <input  type="submit" value="send">
+          </form>
+        </div>
+        </article>
+      </section>
+
     </main>
 {% endblock %}
