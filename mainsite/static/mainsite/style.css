@@ -1065,3 +1065,9 @@ header  a {
 }
 
 }
+@media (max-width: 500px)
+{
+.video-container {
+    width: 100%;
+    height: calc(100vw/2);
+}
