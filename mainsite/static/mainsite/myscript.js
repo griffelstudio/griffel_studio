@@ -1,8 +1,6 @@
 var images = document.querySelectorAll('#img-scale');
-var darkscreen = document.querySelector('.darkscreen_off')
 var unscale = document.querySelectorAll('#img-unscale');
 var arrow = document.querySelector('.arrowbox');
-var videoBox = document.querySelector('.video-container');
 var videoCover = document.querySelector('.videoCover');
 var player = document.querySelector('.player');
 var video = document.querySelector("#video");
@@ -10,7 +8,11 @@ var links = document.querySelectorAll('.link');
 var linkarrow = document.querySelector('#linkArrow');
 var copyText1 = document.querySelector("#copy-text1");
 var copyText2 = document.querySelector("#copy-text2");
-var end = document.querySelector('.end')
+var end = document.querySelector('.end');
+
+var dscreen = document.createElement('div');
+dscreen.classList.add('darkscreen_on');
+
 function copyText(copyText) {
   let area = document.createElement("textarea");
   area.value = copyText.textContent;
@@ -19,33 +21,46 @@ function copyText(copyText) {
   area.remove();
 }
 
-if(videoBox){
-videoBox.addEventListener('click',function(){
-  player.style.display = 'block';
-  videoCover.style.display = 'none';
-  video.setAttribute("autoplay","autoplay");
+if(videoCover){
+    videoCover.addEventListener('mouseover',function(){
+      player.style.display = 'block';
+      document.querySelector('main').appendChild(dscreen);
+      if(dscreen){
+        dscreen.addEventListener('click',function(){
+          dscreen.remove();
+          player.classList.remove('player');
+          player.classList.add('squeeze');
+        })
+        document.addEventListener('keydown', function(event) {
+          if (event.code == 'Escape'){
+            dscreen.remove();
+            player.classList.remove('player');
+            player.classList.add('squeeze');
+          }
+        })
+      }
+    })
+}
 
-})}
 var scale = function(image,index){
   image.addEventListener('mouseover',function(){
-    darkscreen.classList.toggle('darkscreen_on');
+    document.querySelector('main').appendChild(dscreen);
     unscale[index].classList.toggle('scale-img');
   })
 }
 var unscaleimg = function(image,index){
   image.addEventListener('mouseout',function(){
-    darkscreen.classList.toggle('darkscreen_on');
+    document.querySelector('main').appendChild(dscreen);
     unscale[index].classList.toggle('scale-img');
 })
 }
-
 for (var i = 0; i < images.length; i++) {
   scale(images[i],i);
 }
 
-if(darkscreen){
-  darkscreen.addEventListener('click',function(){
-    darkscreen.classList.toggle('darkscreen_on');
+if(dscreen){
+  dscreen.addEventListener('click',function(){
+    dscreen.remove();
     for (var i = 0; i < images.length; i++) {
       unscale[i].classList.remove('scale-img');
     }
@@ -53,11 +68,7 @@ if(darkscreen){
 }
 
 if(arrow){
-//   var scrollHeight = Math.max(
-//   document.body.scrollHeight, document.documentElement.scrollHeight,
-//   document.body.offsetHeight, document.documentElement.offsetHeight,
-//   document.body.clientHeight, document.documentElement.clientHeight
-// );
+
   arrow.addEventListener('click',function(){
   if (window.pageYOffset > 2000){
     window.scroll(0, 0);
