@@ -20,40 +20,51 @@ function copyText(copyText) {
   document.execCommand("copy");
   area.remove();
 }
-
-if(videoCover){
-    videoCover.addEventListener('mouseover',function(){
-      player.style.display = 'block';
-      document.querySelector('main').appendChild(dscreen);
-      if(dscreen){
-        dscreen.addEventListener('click',function(){
-          dscreen.remove();
-          player.classList.remove('player');
-          player.classList.add('squeeze');
-        })
-        document.addEventListener('keydown', function(event) {
-          if (event.code == 'Escape'){
+if(screen.availWidth > 767){
+  if(videoCover){
+      videoCover.addEventListener('mouseover',function(){
+        player.style.display = 'block';
+        document.querySelector('main').appendChild(dscreen);
+        if(dscreen){
+          dscreen.addEventListener('click',function(){
             dscreen.remove();
             player.classList.remove('player');
             player.classList.add('squeeze');
-          }
-        })
-      }
+          })
+          document.addEventListener('keydown', function(event) {
+            if (event.code == 'Escape'){
+              dscreen.remove();
+              player.classList.remove('player');
+              player.classList.add('squeeze');
+            }
+          })
+        }
+      })
+  }
+}else{
+  if(videoCover){
+    videoCover.addEventListener('mouseover',function(){
+      player.style.display = 'block';
+      player.classList.add('squeeze');
     })
+  }
 }
-
-var scale = function(image,index){
-  image.addEventListener('mouseover',function(){
-    document.querySelector('main').appendChild(dscreen);
-    unscale[index].classList.toggle('scale-img');
+if(screen.availWidth > 767){
+  var scale = function(image,index){
+    image.addEventListener('mouseover',function(){
+      document.querySelector('main').appendChild(dscreen);
+      unscale[index].classList.toggle('scale-img');
+    })
+  }
+}
+// if(screen.availWidth > 767){
+  var unscaleimg = function(image,index){
+    image.addEventListener('mouseout',function(){
+      document.querySelector('main').appendChild(dscreen);
+      unscale[index].classList.toggle('scale-img');
   })
-}
-var unscaleimg = function(image,index){
-  image.addEventListener('mouseout',function(){
-    document.querySelector('main').appendChild(dscreen);
-    unscale[index].classList.toggle('scale-img');
-})
-}
+  }
+// }
 for (var i = 0; i < images.length; i++) {
   scale(images[i],i);
 }
@@ -68,7 +79,6 @@ if(dscreen){
 }
 
 if(arrow){
-
   arrow.addEventListener('click',function(){
   if (window.pageYOffset > 2000){
     window.scroll(0, 0);
