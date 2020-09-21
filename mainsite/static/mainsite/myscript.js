@@ -49,26 +49,26 @@ if(screen.availWidth > 767){
     })
   }
 }
-if(screen.availWidth > 767){
+
   var scale = function(image,index){
     image.addEventListener('mouseover',function(){
       document.querySelector('main').appendChild(dscreen);
       unscale[index].classList.toggle('scale-img');
     })
   }
-}
-// if(screen.availWidth > 767){
+
+
   var unscaleimg = function(image,index){
     image.addEventListener('mouseout',function(){
       document.querySelector('main').appendChild(dscreen);
       unscale[index].classList.toggle('scale-img');
   })
   }
-// }
-for (var i = 0; i < images.length; i++) {
-  scale(images[i],i);
+if(screen.availWidth > 767){
+  for (var i = 0; i < images.length; i++) {
+    scale(images[i],i);
+  }
 }
-
 if(dscreen){
   dscreen.addEventListener('click',function(){
     dscreen.remove();
