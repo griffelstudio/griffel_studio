@@ -1066,7 +1066,7 @@ header  a {
 
 }
 
-@media (max-width: 500px)
+@media (max-width:500px)
 {
 .video-container {
     width: 100%;

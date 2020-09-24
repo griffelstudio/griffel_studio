@@ -20,6 +20,7 @@ function copyText(copyText) {
   document.execCommand("copy");
   area.remove();
 }
+
 if(screen.availWidth > 767){
   if(videoCover){
       videoCover.addEventListener('mouseover',function(){
