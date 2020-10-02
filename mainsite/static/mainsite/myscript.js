@@ -104,14 +104,12 @@ if(arrow){
 
 var moveArrow = function(link){
   link.addEventListener('mouseover', function(){
-    // console.log('mouse');
-    linkarrow.style.left = 1 + '%';
+    linkarrow.style.left = 1 + 'vw';
     linkarrow.style.transition = '0.5s';
-    linkarrow.style.top = link.getBoundingClientRect().top - 70 + 'px'
+    linkarrow.style.top = link.getBoundingClientRect().top - 65 + 'px'
   })
   link.addEventListener('mouseout', function(){
-    console.log('mouse');
-    linkarrow.style.left = -5 + '%';
+    linkarrow.style.left = -10 + '%';
       linkarrow.style.transition = '0.5s';
   })
 }

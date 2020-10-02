@@ -87,12 +87,12 @@
         <article class="article100">
         <h2 class="header">Get connected</h2>
         <div class="get-connected-form">
-          <form onsubmit="alert('submit!')" action="{% url 'mainsite:form_url' %}" method="post">
+          <form onsubmit="alert('Your message has been sent.')" action="{% url 'mainsite:form_url' %}" method="post">
             {% csrf_token %}
               <input type="text" name="name" placeholder="your name" required>
               <input type="email" name="email" placeholder="email adress" required>
               <textarea name="message" placeholder="your message" rows="12" cols="80"></textarea>
-            <input class="btn" type="submit" value="send">
+              <button   class=" btn " type="submit" value="copy">send</button>
           </form>
         </div>
         </article>
