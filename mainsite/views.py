@@ -30,6 +30,6 @@ def form(request,string = '#'):
         email=request.POST['email'],
         message=request.POST['message'],
         )
-        # send_mail('order',request.POST['phone'],request.POST['email'],
+        # send_mail('order',request.POST['email'],
         # ['nicolay.krischenovich@gmail.com'], fail_silently=False,)
         return render(request, 'mainsite/index.html')
