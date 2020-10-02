@@ -26,6 +26,7 @@ if(screen.availWidth > 767){
       videoCover.addEventListener('mouseover',function(){
         player.style.display = 'block';
         document.querySelector('main').appendChild(dscreen);
+        videoCover.style.display = 'none';
         if(dscreen){
           dscreen.addEventListener('click',function(){
             dscreen.remove();
@@ -47,6 +48,7 @@ if(screen.availWidth > 767){
     videoCover.addEventListener('mouseover',function(){
       player.style.display = 'block';
       player.classList.add('squeeze');
+      videoCover.style.display = 'none';
     })
   }
 }
