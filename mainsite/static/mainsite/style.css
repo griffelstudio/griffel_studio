@@ -978,8 +978,12 @@ header  a {
   line-height: 30px;
 }
 .video-container {
-    width: 100%;
-    height: 250px;
+  width: 100%;
+  height: 250px;
+}
+.blockCode {
+  width: 102%;
+  margin-left: -1%;
 }
 
 }
