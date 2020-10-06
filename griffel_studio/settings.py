@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -77,12 +76,8 @@ WSGI_APPLICATION = 'griffel_studio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'griffeldb',
-        'USER': 'nicolayadmin@griffelserver',
-        'PASSWORD': 'Banderas021290',
-        'HOST': 'griffelserver.postgres.database.azure.com',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -136,3 +131,11 @@ db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
 # django_heroku.settings(locals())
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'nicolay.krischenovich@gmail.com'
+EMAIL_HOST_PASSWORD = 'banderas021290                       '
+DEFAULT_FROM_EMAIL = 'nicolay_kr'
+DEFAULT_TO_EMAIL = 'nicolay.krischenovich@gmail.com'

@@ -26,10 +26,10 @@ class Contacts(View):
 
 def form(request,string = '#'):
     if request.method == "POST":
-        user = models.Order.objects.create(name=request.POST['name'],
-        email=request.POST['email'],
-        message=request.POST['message'],
-        )
-        # send_mail('order',request.POST['email'],
-        # ['nicolay.krischenovich@gmail.com'], fail_silently=False,)
+        # user = models.Order.objects.create(name=request.POST['name'],
+        # email=request.POST['email'],
+        # message=request.POST['message'],
+        # )
+        send_mail('order from {}'.format(request.POST['name']),request.POST['message'],request.POST['email'],
+        ['nicolay.krischenovich@gmail.com'], fail_silently=False,)
         return render(request, 'mainsite/index.html')
