@@ -61,12 +61,12 @@ if(screen.availWidth > 767){
   }
 
 
-  let unscaleimg = function(image,index){
-    image.addEventListener('mouseout',function(){
-      document.querySelector('main').appendChild(dscreen);
-      unscale[index].classList.toggle('scale-img');
-  })
-  }
+  // let unscaleimg = function(image,index){
+  //   image.addEventListener('mouseout',function(){
+  //     document.querySelector('main').appendChild(dscreen);
+  //     unscale[index].classList.toggle('scale-img');
+  // })
+  // }
 if(screen.availWidth > 767){
   for (var i = 0; i < images.length; i++) {
     scale(images[i],i);
