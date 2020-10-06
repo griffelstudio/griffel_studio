@@ -1,6 +1,6 @@
 const images = document.querySelectorAll('#img-scale');
 const unscale = document.querySelectorAll('#img-unscale');
-var arrow = document.querySelector('.arrowbox');
+const arrow = document.querySelector('.arrowbox');
 const videoCover = document.querySelector('.videoCover');
 const player = document.querySelector('.player');
 const video = document.querySelector("#video");
@@ -10,7 +10,7 @@ const copyText1 = document.querySelector("#copy-text1");
 const copyText2 = document.querySelector("#copy-text2");
 const end = document.querySelector('.end');
 
-var dscreen = document.createElement('div');
+let dscreen = document.createElement('div');
 dscreen.classList.add('darkscreen_on');
 
 function copyText(copyText) {
@@ -53,7 +53,7 @@ if(screen.availWidth > 767){
   }
 }
 
-  var scale = function(image,index){
+  let scale = function(image,index){
     image.addEventListener('mouseover',function(){
       document.querySelector('main').appendChild(dscreen);
       unscale[index].classList.toggle('scale-img');
@@ -61,7 +61,7 @@ if(screen.availWidth > 767){
   }
 
 
-  var unscaleimg = function(image,index){
+  let unscaleimg = function(image,index){
     image.addEventListener('mouseout',function(){
       document.querySelector('main').appendChild(dscreen);
       unscale[index].classList.toggle('scale-img');
@@ -102,7 +102,7 @@ if(arrow){
   }
 }
 
-var moveArrow = function(link){
+let moveArrow = function(link){
   link.addEventListener('mouseover', function(){
     linkarrow.style.left = 1 + 'vw';
     linkarrow.style.transition = '0.5s';
