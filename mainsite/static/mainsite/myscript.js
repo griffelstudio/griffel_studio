@@ -1,4 +1,4 @@
-const images = document.querySelectorAll('#img-scale');
+const images = document.querySelectorAll('.img-normal');
 const unscale = document.querySelectorAll('#img-unscale');
 const arrow = document.querySelector('.arrowbox');
 const videoCover = document.querySelector('.videoCover');
@@ -56,17 +56,10 @@ if(screen.availWidth > 767){
   let scale = function(image,index){
     image.addEventListener('mouseover',function(){
       document.querySelector('main').appendChild(dscreen);
-      unscale[index].classList.toggle('scale-img');
+      images[index].classList.add('scale-img');
     })
-  }
+}
 
-
-  // let unscaleimg = function(image,index){
-  //   image.addEventListener('mouseout',function(){
-  //     document.querySelector('main').appendChild(dscreen);
-  //     unscale[index].classList.toggle('scale-img');
-  // })
-  // }
 if(screen.availWidth > 767){
   for (var i = 0; i < images.length; i++) {
     scale(images[i],i);
@@ -76,7 +69,7 @@ if(dscreen){
   dscreen.addEventListener('click',function(){
     dscreen.remove();
     for (var i = 0; i < images.length; i++) {
-      unscale[i].classList.remove('scale-img');
+      images[i].classList.remove('scale-img');
     }
   })
 }

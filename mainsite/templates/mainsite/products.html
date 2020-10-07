@@ -10,14 +10,12 @@
 </nav>
 {% endblock %}
 {% block content %}
-
     <main>
       <img class="circle" src="{% static 'mainsite/img/circle.svg' %}" alt="">
       <section class="products item">
         <div class="article50">
           <a class="header" href="{% url 'mainsite:exporter_url' %}" >glTF Exporter</a>
           <div class="text">
-            <!-- <p>What is the plugin?</p><br> -->
             <p>
               glTF Exporter​ add-in for Revit exports your project to popular
               3D glTF format glTF is universal file format for transferring
@@ -40,12 +38,10 @@
             <div class="videoCover">
             </div>
           </div>
-
         </div>
         <div class="article50">
           <a class="header" href="{% url 'mainsite:exporter_api_url' %}" >glTF Exporter ​API</a>
           <div class="text">
-            <!-- <p>What is the plugin?</p><br> -->
             <p>
               glTF Exporter API .NET library allows you to export projects to
               the popular glTF 3D format. glTF is universal file format for
@@ -56,19 +52,7 @@
               ask for a special quote sending us <a href="{% url 'mainsite:index_url' %}#get-connected">&nbspan email.</a>
             </p>
           </div>
-          <!-- <div class="video-container">
-            <div class="video"></div> -->
-              <!-- <video class="player"  controls="controls" poster="video/duel.jpg">
-                <source src="video/duel.ogv" type='video/ogg; codecs="theora, vorbis"'>
-                <source src="video/duel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-                <source src="video/duel.webm" type='video/webm; codecs="vp8, vorbis"'>
-                Тег video не поддерживается вашим браузером.
-                <a href="video/duel.mp4">Скачайте видео</a>.
-             </video> -->
-
-          <!-- </div> -->
         </div>
       </section>
     </main>
-
   {% endblock %}

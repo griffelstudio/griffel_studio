@@ -11,13 +11,10 @@
   <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
 </head>
 <body>
-
   <div class="container">
-
     <span class="line_1"></span>
     <span class="line_2"></span>
     <span class="line_3"></span>
-    <!-- {% block arrow %}<a href='#footer'><span class="arrow"></span></a>{% endblock %} -->
     <header>
       <a href="{% url 'mainsite:index_url' %}">
         <div class="logo"></div>
@@ -33,9 +30,7 @@
       {% endblock %}
     </header>
     {% block content %}
-
     {% endblock %}
-
     <footer>
       <span class="line_1 footer-line"></span>
       <span class="line_2 footer-line"></span>
@@ -63,7 +58,6 @@
             <ul>
                 <li>Download Autodesk App</li>
                 <li><a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290">glTF Exporter</a></li>
-
                 <li><a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview">glTF Exporter ​API</a></li>
             </ul>
           </div>
@@ -83,7 +77,6 @@
         </div>
       </div>
     </footer>
-
   </div>
   <script src="{% static 'mainsite/myscript.js' %}"></script>
 </body>

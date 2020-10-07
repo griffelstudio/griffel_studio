@@ -10,32 +10,28 @@
 </nav>
 {% endblock %}
 {% block content %}
-
     <main>
-      <div class="darkscreen_off">
-        <!-- <img class="scale-img" src="{% static 'mainsite/img/exp_image_1.png' %}" alt=""> -->
-      </div>
-      <img class="vector_5" src="{% static 'mainsite/img/Vector5.webp' %}" alt="">
+      <img class="vector_5" src="{% static 'mainsite/img/Vector5.png' %}" alt="">
       <h1 class="main-header">glTF Exporter API</h1>
       <section class="exporter_api exporter item">
         <div class="article50">
           <div class="box-images">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_1.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_1.jpg' %}" alt="">
-
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_2.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_2.jpg' %}" alt="">
-
-            <img id='img-scale'class="image" src="{% static 'mainsite/img/exp_api_image_3.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_3.jpg' %}" alt="">
-
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_4.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_4.jpg' %}" alt="">
-
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_api_image_5.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_api_image_5.jpg' %}" alt="">
-
-          </div>
+            <div class="image">
+              <img class='img-normal'  src="{% static 'mainsite/img/exp_api_image_1.jpg' %}" alt="">
+            </div>
+            <div class="image">
+              <img class='img-normal'  src="{% static 'mainsite/img/exp_api_image_2.jpg' %}" alt="">
+              </div>
+            <div class="image">
+              <img class='img-normal' src="{% static 'mainsite/img/exp_api_image_3.jpg' %}" alt="">
+            </div>
+            <div class="image">
+              <img class='img-normal' src="{% static 'mainsite/img/exp_api_image_4.jpg' %}" alt="">
+            </div>
+            <div class="image">
+              <img class='img-normal' src="{% static 'mainsite/img/exp_api_image_5.jpg' %}" alt="">
+            </div>
+            </div>
           <h2 class="header"> Settings Explaine</h2>
           <div class="text">
             <p>
@@ -64,8 +60,6 @@
             </p>
           </div>
         </div>
-
-
         <div class="article50">
         <h2 class="header">What is the plugin? </h2>
         <div class="text">
@@ -85,14 +79,11 @@
             add-in project get &nbsp<a href="#">GS.Revit.GltfExporterAPI.dll</a> under
           </p>
         </div>
-
         <div class="blockCode">
           <div class="code">
             <p id="copy-text1">%ProgramData%\Autodesk\ApplicationPlugins\glTF Exporter.bundle\Contents</p>
           </div>
-          <!-- <div class="button">copy</div> -->
-          <!-- <button class="copy-bottom" onclick="myFunction()">Copy text</button> -->
-            <button  onclick="copyText(copyText2)" class=" btn copy-bottom" type="submit" value="copy">copy</button>
+        <button  onclick="copyText(copyText2)" class=" btn copy-bottom" type="submit" value="copy">copy</button>
         </div>
         <div class="text">
           <p><br>
@@ -109,7 +100,6 @@
             following code after license validation to run the export:
           </p>
         </div>
-
         <div class="blockCode">
           <div class="code">
             <p id="copy-text2">
@@ -214,8 +204,6 @@
                 specifically useful for Windows Mixed Reality developers.
               </p>
         </div>
-
       </section>
     </main>
-
   {% endblock %}

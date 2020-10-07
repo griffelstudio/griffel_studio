@@ -10,10 +10,9 @@
 </nav>
 {% endblock %}
 {% block content %}
-
     <main>
       <img class="vector_4" src="{% static 'mainsite/img/Vector4.svg' %}" alt="">
-      <h1 class="header">glTF Exporter</h1>
+      <h1 class="main-header">glTF Exporter</h1>
       <section class="exporter item">
         <div class="article50">
         <h2 class="header">What is the plugin? </h2>
@@ -61,18 +60,20 @@
         </div>
         <div class="article50">
           <div class="box-images">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_image_1.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_image_1.jpg' %}" alt="">
-            <img id='img-scale'class="image" src="{% static 'mainsite/img/exp_image_2.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_image_2.jpg' %}" alt="">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_image_3.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_image_3.jpg' %}" alt="">
-            <img id='img-scale' class="image" src="{% static 'mainsite/img/exp_image_4.jpg' %}" alt="">
-            <img id='img-unscale' class=" image unscale-image" src="{% static 'mainsite/img/exp_image_4.jpg' %}" alt="">
+            <div class="image">
+              <img class='img-normal' src="{% static 'mainsite/img/exp_image_1.jpg' %}" alt="">
+            </div>
+            <div class="image">
+              <img class='img-normal' src="{% static 'mainsite/img/exp_image_2.jpg' %}" alt="">
+            </div>
+            <div class="image">
+              <img class='img-normal' src="{% static 'mainsite/img/exp_image_3.jpg' %}" alt="">
+            </div>
+            <div class="image">
+              <img class='img-normal'  src="{% static 'mainsite/img/exp_image_4.jpg' %}" alt="">
+            </div>
           </div>
         </div>
       </section>
     </main>
-
-
   {% endblock %}
