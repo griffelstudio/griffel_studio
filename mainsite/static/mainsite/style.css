@@ -240,7 +240,7 @@ main{
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: calc(2.5rem + 1.25 * (100vw / 1536));
+  font-size: 3.75rem;
   line-height: 5rem;
   text-align: center;
 }
@@ -251,7 +251,7 @@ main{
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: calc(1.5rem + 1 * (100vw / 1536));
+  font-size: 2.5rem;
   line-height: 3.75rem;
 }
 .test{
@@ -944,5 +944,11 @@ header  a {
 .video-container {
     width: 100%;
     height: calc(100vw/2);
+  }
+  .main-header{
+    font-size: 2.5rem;
+  }
+  .header{
+    font-size: 2rem;  
   }
 }
