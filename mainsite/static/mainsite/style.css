@@ -113,7 +113,7 @@ html {
   left: 0px;
   top: 0px;
   opacity: 0.15;
-  z-index: 1;
+  z-index: 0;
 }
 .vector_1{
   position: absolute;
@@ -121,7 +121,7 @@ html {
   height: auto;
   left: -400px;
   top: -150px;
-  z-index: -1;
+  z-index: 0;
 }
 .vector_3{
   position: absolute;
@@ -253,6 +253,7 @@ main{
   font-weight: bold;
   font-size: 2.5rem;
   line-height: 3.75rem;
+  z-index: 2;
 }
 .test{
   font-style: normal;
@@ -949,6 +950,6 @@ header  a {
     font-size: 2.5rem;
   }
   .header{
-    font-size: 2rem;  
+    font-size: 2rem;
   }
 }
