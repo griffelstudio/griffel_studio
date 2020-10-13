@@ -3,6 +3,7 @@ from . import models
 from django.shortcuts import redirect
 from django.views.generic import View
 from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 
 
 class Index(View):
@@ -30,6 +31,16 @@ def form(request,string = '#'):
         # email=request.POST['email'],
         # message=request.POST['message'],
         # )
-        send_mail('message from {}'.format(request.POST['name']),request.POST['message'],request.POST['email'],
-        ['nicolay.krischenovich@gmail.com'], fail_silently=False,)
+
+        # msg = EmailMessage(
+        #   subject=u'Тема письма',
+        #   body = request.POST['message'],
+        #   from_email=request.POST['email'],
+        #   to=('Nicolay022@yandex.ru',),
+        #   headers={'From': request.POST['email']}
+        # )
+        # msg.content_subtype = 'html'
+        # msg.send()
+        send_mail('message from {} email: {}'.format(request.POST['name'],request.POST['email'] ),request.POST['message'],'kiryl@griffelstudio.com' ,
+        ['kiryl@griffelstudio.com'], fail_silently=False,)
         return render(request, 'mainsite/index.html')
