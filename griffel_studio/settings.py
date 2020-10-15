@@ -137,7 +137,7 @@ DATABASES['default'].update(db_from_env)
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
 # EMAIL_HOST_USER = 'nicolay.krischenovich@gmail.com'
-# EMAIL_HOST_PASSWORD = 'banderas021290                       '
+# EMAIL_HOST_PASSWORD =                       '
 # DEFAULT_FROM_EMAIL = 'nicolay_kr'
 # DEFAULT_TO_EMAIL = 'nicolay.krischenovich@gmail.com'
 EMAIL_USE_TLS = True
