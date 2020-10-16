@@ -143,7 +143,4 @@ DATABASES['default'].update(db_from_env)
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'kiryl@griffelstudio.com'
-EMAIL_HOST_PASSWORD = '23109027qweGS'
-DEFAULT_FROM_EMAIL = 'nicolay_kr'
 DEFAULT_TO_EMAIL = 'kiryl@griffelstudio.com'
