@@ -9,6 +9,7 @@ const linkarrow = document.querySelector('#linkArrow');
 const copyText1 = document.querySelector("#copy-text1");
 const copyText2 = document.querySelector("#copy-text2");
 const end = document.querySelector('.end');
+let activeLink = document.querySelector('.active-link');
 
 let dscreen = document.createElement('div');
 dscreen.classList.add('darkscreen_on');
@@ -102,10 +103,13 @@ let moveArrow = function(link){
     linkarrow.style.top = link.getBoundingClientRect().top - 65 + 'px'
   })
   link.addEventListener('mouseout', function(){
-    linkarrow.style.left = -10 + '%';
+      linkarrow.style.left = -10 + '%';
       linkarrow.style.transition = '0.5s';
   })
 }
 for (var i = 0; i < links.length; i++) {
   moveArrow(links[i]);
+}
+function getnoneActev(){
+  activeLink.classList.remove('active-link');
 }

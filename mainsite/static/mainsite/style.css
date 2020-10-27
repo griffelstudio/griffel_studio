@@ -359,6 +359,7 @@ textarea{
   margin-right: 10%;
 }
 .btn{
+  font-size: 20px;
   min-width: 200px;
   height: 62px;
   color:#2F2F2F;
@@ -458,7 +459,7 @@ footer .text p{
 
 .products{
   margin-top: 0px;
-  margin-bottom: 400px;
+  /* margin-bottom: 400px; */
 }
 .content:nth-child(2) a{
   font-weight: 300;
@@ -509,7 +510,7 @@ a.header:hover::after {
 }
 .products .article50:nth-child(2){
   position: relative;
-  margin-top: 100px;
+  /* margin-top: 100px; */
 }
 .video-container{
   position: relative;
@@ -557,7 +558,7 @@ a.header:hover::after {
 .contacts{
   position: relative;
   margin-top: 0px;
-  margin-bottom: 400px;
+  /* margin-bottom: 400px; */
 }
 .contacts>.item{
   margin-top: 100px;
@@ -577,7 +578,7 @@ a.header:hover::after {
   padding-left: 0;
   padding-bottom: 15px;
 }
-.text>ul>li>a{
+.link a{
   color: black;
   font-family: Poppins;
   font-style: normal;
@@ -585,13 +586,19 @@ a.header:hover::after {
   font-size: 24px;
   line-height: 36px;
   text-align: justify;
-  color: #2F2F2F;
+  /* color: #2F2F2F; */
+  color: #008B61;
 }
-.text>ul>li:hover>a{
+.link:hover>a{
   color: #008B61;
   font-weight: bold;
   text-decoration: underline;
 }
+ /* .link .active-link{
+  color: #008B61;
+  font-weight: bold;
+  text-decoration: underline;
+} */
 .contacts .article50:nth-child(2){
   padding-left: 0px;
   padding-right: 0px;
@@ -604,6 +611,7 @@ a.header:hover::after {
   filter: grayscale(1);
 }
 .vector_11{
+  transform: scale(0.7);
   position: absolute;
   width: auto;
   height: auto;
