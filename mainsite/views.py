@@ -41,6 +41,6 @@ def form(request,string = '#'):
         # )
         # msg.content_subtype = 'html'
         # msg.send()
-        send_mail('message from {} email: {}'.format(request.POST['name'],request.POST['email'] ),request.POST['message'],'kiryl@griffelstudio.com' ,
-        ['kiryl@griffelstudio.com'], fail_silently=False,)
+        send_mail('message from {} email: {}'.format(request.POST['name'],request.POST['email'] ),request.POST['message'],'contact@griffelstudio.com' ,
+        ['contact@griffelstudio.com'], fail_silently=False,)
         return render(request, 'mainsite/index.html')
