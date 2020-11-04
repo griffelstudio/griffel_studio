@@ -55,7 +55,7 @@ if(screen.availWidth > 767){
 }
 
   let scale = function(image,index){
-    image.addEventListener('mouseover',function(){
+    image.addEventListener('click',function(){
       document.querySelector('main').appendChild(dscreen);
       images[index].classList.add('scale-img');
     })

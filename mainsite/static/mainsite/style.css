@@ -8,9 +8,13 @@
   padding: 0;
   box-sizing:border-box;
   font-family: 'Poppins', sans-serif;
-  cursor:url('img/ellipse.png'),auto;
+  /* cursor:url('img/ellipse.png'),auto; */
 
 }
+
+/* :root {
+  font-size: 10px;
+} */
 html {
   scroll-behavior: smooth;
 }
@@ -169,7 +173,7 @@ a:hover{
 li>a{
   text-decoration-line: none;
   color: #2F2F2F;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   font-weight: 500;
 }
 li:hover>a{
@@ -300,7 +304,7 @@ main{
 .feature{
   position: relative;
   display:block;
-  padding-top: 120px;
+  padding-top: 180px;
   padding-left: 60px;
   width: 100%;
 }
@@ -309,7 +313,7 @@ main{
   z-index: 2;
   display:block;
   padding-left:0px;
-  padding-bottom: 30px;
+  padding-bottom: 57px;
   width: auto;
 }
 .feature li p{
@@ -341,6 +345,7 @@ form{
 input:not(:nth-child(5)){
 width: 45%;
 height: 60px;
+font-size: 20px;
 color:#2F2F2F;
 background: #2F2F2F;
 padding: 15px 20px;
@@ -350,6 +355,7 @@ input:focus:not(:nth-child(5)){
 }
 textarea{
   width: 100%;
+  font-size: 20px;
   color:#b0afa2;;
   background: #2F2F2F;
   margin-top: 40px;
@@ -379,13 +385,13 @@ textarea{
   z-index: 5;
 }
 .team .article50:nth-child(2){
-  padding-top: 130px;
+  padding-top: 140px;
   flex-direction: row;
   justify-content: space-around;
 }
 .foto{
   width: 200px;
-  height: 216px;
+  height: 245px;
   margin-bottom: 40px;
   filter: grayscale(0.9);
   background-size: cover;
@@ -568,7 +574,7 @@ a.header:hover::after {
   width: 100%;
 }
 .contacts .text p{
-  font-size: 1.87rem;
+  font-size: 1.5rem;
   line-height: 40px;
 }
 .text>ul>li{
@@ -594,18 +600,12 @@ a.header:hover::after {
   font-weight: bold;
   text-decoration: underline;
 }
- /* .link .active-link{
-  color: #008B61;
-  font-weight: bold;
-  text-decoration: underline;
-} */
 .contacts .article50:nth-child(2){
   padding-left: 0px;
   padding-right: 0px;
 }
 .rectangle{
   width: 100%;
-  margin-top:40px;
   height: auto;
   z-index: 1;
   filter: grayscale(1);
@@ -654,10 +654,9 @@ a.header:hover::after {
   position: absolute;
   width: auto;
   height: auto;
-  left: 45%;
-  top: 3%;
+  top: 5%;
   transform: scale(0.8);
-  z-index: 0.5;
+  z-index: 1;
 }
 .article50 .header{
   height: 100px;
@@ -728,7 +727,7 @@ input[type='submit'].copy-bottom:focus:hover{
 }
 .exporter_api .image{
   height: auto;
-  margin-top: 40px;
+  margin-bottom:80px;
 }
 .article100 .box-images{
   margin-top: 40px;
@@ -767,44 +766,50 @@ input[type='submit'].copy-bottom:focus:hover{
   z-index: 5;
   transition: 0.3s ease;
 }
+
 .box-images{
+  margin-top: 140px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   flex-direction: column;
   justify-content:space-between;
 }
+.exporter .box-images{
+  height: 100%;
+}
 .image:nth-of-type(1){
   width: 60%;
   margin-left: 10%;
   margin-right: 30%;
   height: auto;
-  margin-top: 12%;
-  margin-bottom: 80px;
+  /* margin-top: 12%; */
+  /* margin-bottom: 80px; */
 }
 .image:nth-of-type(2){
   width: 40%;
   height: auto;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
   margin-left: 50%;
   margin-right: 10%;
 }
 .image:nth-of-type(3){
   width: 50%;
   height: auto;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   margin-left: 10%;
   margin-right: 40%;
 }
 .image:nth-of-type(4){
   width: 50%;
   height: auto;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
   margin-left: 25%;
   margin-right: 25%;
 }
 .img-normal{
   position: relative;
+  border: 6px solid;
   width: 100%;
   transition: 0.3s ease;
   z-index: 2;
@@ -938,8 +943,42 @@ header  a {
   height: 250px;
 }
 .blockCode {
-  width: 102%;
+  width: 100%;
   margin-left: -1%;
+}
+.box-images {
+    margin-top: 0px;
+}
+
+.image:nth-of-type(1){
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+    margin-bottom: 40px;
+}
+.image:nth-of-type(2){
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+    margin-bottom: 40px;
+}
+.image:nth-of-type(3){
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+    margin-bottom: 40px;
+}
+.image:nth-of-type(4){
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-bottom: 40px;
+}
+.box-images .image:nth-of-type(5) {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 40px;
 }
 
 }
