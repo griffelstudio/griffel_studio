@@ -346,7 +346,7 @@ input:not(:nth-child(5)){
 width: 45%;
 height: 60px;
 font-size: 20px;
-color:#2F2F2F;
+color: #b0afa2;
 background: #2F2F2F;
 padding: 15px 20px;
 }
@@ -694,11 +694,12 @@ input[type='submit'].copy-bottom:focus:hover{
 .code p{
   background-color: black;
   width: 100%;
+  font-size: medium;
   display: block;
   padding-left: 2%;
   padding-right: 2%;
   color: white;
-  line-height: 40px;
+  line-height: 60px;
 }
 .exporter_api .text~.header{
   margin-top: 40px;
