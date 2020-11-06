@@ -3,9 +3,9 @@
 {% block nav %}
 <nav>
   <ul>
-    <li><a href="{% url 'mainsite:index_url' %}" >about</a></li>
-    <li><a href="{% url 'mainsite:products_url' %}" style="text-decoration: line-through;font-weight:600;">products</a></li>
-    <li><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
+    <li class="nav__item"><a href="{% url 'mainsite:index_url' %}" >about</a></li>
+    <li class="nav__item"><a href="{% url 'mainsite:products_url' %}" style="text-decoration: line-through;font-weight:600;">products</a></li>
+    <li class="nav__item"><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
   </ul>
 </nav>
 {% endblock %}
@@ -25,7 +25,7 @@
             file format for transferring 3D assets which almost every 3D
             software can handle. With glTF Exporter it has never been
             easier to get a Revit project in gltf format.<br> Get it from the
-            &nbsp<a href="{% url 'mainsite:index_url' %}">Autodesk App Store</a> or ask for a special
+            &nbsp<a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290">Autodesk App Store</a> or ask for a special
             quote sending us an email.
           </p>
         </div>
@@ -52,12 +52,12 @@
             lighting and RTX support for your next-gen real-time visual
             &nbsp<a href="https://www.archdaily.com/892210/how-real-time-rendering-can-revolutionize-design-again">presentation.</a>
           </p><br>
-          <p>
+          <!-- <p>
             Add-in works out of the box but if you need to
             adjust output files precisely see our export &nbsp
             <a href="#">settings explained</a>
             page.
-          </p>
+          </p> -->
         </div>
         </div>
         <div class="article50">

@@ -3,9 +3,9 @@
 {% block nav %}
 <nav>
   <ul>
-    <li><a href="{% url 'mainsite:index_url' %}" >about</a></li>
-    <li><a href="{% url 'mainsite:products_url' %}" style="text-decoration: line-through;font-weight:600;">products</a></li>
-    <li><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
+    <li class="nav__item"><a href="{% url 'mainsite:index_url' %}" >about</a></li>
+    <li class="nav__item"><a href="{% url 'mainsite:products_url' %}" style="text-decoration: line-through;font-weight:600;">products</a></li>
+    <li class="nav__item"><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
   </ul>
 </nav>
 {% endblock %}
@@ -76,7 +76,7 @@
         <div class="text">
           <p>
             To make use of glTF export functionality in your Revit
-            add-in project get &nbsp<a href="#">GS.Revit.GltfExporterAPI.dll</a> under
+            add-in project get &nbsp<strong>GS.Revit.GltfExporterAPI.dll</strong> under
           </p>
         </div>
         <div class="blockCode">
@@ -87,16 +87,17 @@
         </div>
         <div class="text">
           <p><br>
-            directory after the &nbsp<a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215">add-in</a> installation or
+            directory after the &nbsp<a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215">add-in</a> installation.
+            <!-- directory after the &nbsp<a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215">add-in</a> installation or
             &nbsp<a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview">download it</a> from our
-            website.
+            website. -->
             <br><br>
             1. Reference GS.Revit.GltfExporterAPI.dll from your
             Revit add-in development C# project (use the library from the
             appropriate folder for your targeting Revit version).<br> 2. You
             need to pass your &nbsp<a href="https://www.revitapidocs.com/2020/8d3b257a-7b99-a6ee-b146-f635c35f425c.htm">personal user ID</a> to validate the license before
             starting the export (you can grab it once and keep in the settings
-            of the add-in): &nbsp<a href="#">Validate.License(developerId).</a><br> 3. Add the
+            of the add-in): &nbsp<a href="https://www.revitapidocs.com/2020/8d3b257a-7b99-a6ee-b146-f635c35f425c.htm">Validate.License(developerId).</a><br> 3. Add the
             following code after license validation to run the export:
           </p>
         </div>
@@ -188,7 +189,7 @@
           <div class="text">
             <p>
               Projects, exported with the last two options can be saved only as
-              glb files: &nbsp<a href="#">Draco compression</a> minimizes file size as much as
+              glb files: &nbsp<a href="https://github.com/google/draco">Draco compression</a> minimizes file size as much as
               possible. It’s extremely useful for large projects, but remember
               that not all third party software can handle compressed files.
               Difference in file size can be seen from the following export

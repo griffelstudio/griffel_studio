@@ -73,9 +73,22 @@
         </div>
       </div>
         <div class="article50">
-          <div class="foto"></div>
-          <div class="foto"></div>
-          <div class="foto"></div>
+          <div class="foto-conteiner">
+            <div class="foto"></div>
+            <strong>Aliaksandr Mikhasenak</strong><br>
+            Chief executive officer
+          </div>
+          <div class="foto-conteiner">
+            <div class="foto"></div>
+            <strong>Kiryll Ambrazheichyk</strong><br>
+            Chief technical director
+
+          </div>
+          <div class="foto-conteiner">
+            <div class="foto"></div>
+            <strong>Aliaksandr Volodin</strong><br>
+            Chief informational officer
+          </div>
         </div>
       </section>
       <section id="get-connected" class="get-connected">
@@ -85,7 +98,7 @@
           <form onsubmit="alert('Your message has been sent.')" action="{% url 'mainsite:form_url' %}" method="post">
             {% csrf_token %}
               <input type="text" name="name" placeholder="your name" required>
-              <input type="email" name="email" placeholder="email adress" required>
+              <input type="email" name="email" placeholder="email address" required>
               <textarea name="message" placeholder="your message" rows="8" cols="80"></textarea>
               <button   class=" btn " type="submit" value="copy">send</button>
           </form>
