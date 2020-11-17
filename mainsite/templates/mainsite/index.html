@@ -97,10 +97,23 @@
         <div class="get-connected-form">
           <form onsubmit="alert('Your message has been sent.')" action="{% url 'mainsite:form_url' %}" method="post">
             {% csrf_token %}
-              <input type="text" name="name" placeholder="your name" required>
-              <input type="email" name="email" placeholder="email address" required>
-              <textarea name="message" placeholder="your message" rows="8" cols="80"></textarea>
-              <button   class=" btn " type="submit" value="copy">send</button>
+            <div class="article50">
+              <div class="inputBox">
+                  <input class="inputArea"  type="text" name="name" required>
+                  <span class="placeholder">your name</span>
+              </div>
+              <div class="inputBox">
+                  <input class="inputArea" type="text" name="email" required>
+                  <span class="placeholder">email address</span>
+              </div>
+            </div>
+            <div class="article50">
+              <div class="inputBox">
+                  <textarea class="inputBox"  name="message"  rows="6" cols="80" required></textarea>
+                  <span class="placeholder">text your message</span>
+              </div>
+              <button   class=" btn btnForm " type="submit" value="copy">send</button>
+            </div>
           </form>
         </div>
       </div>
