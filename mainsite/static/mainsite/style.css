@@ -352,7 +352,7 @@ color: #b0afa2;
 background: #2F2F2F;
 padding: 15px 20px;
 }
-input:focus:not(:nth-child(5)){
+input:focus:not(:nth-child(5)),textarea:focus{
   color: #FFFFFF;
 }
 
