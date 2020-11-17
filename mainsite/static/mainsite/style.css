@@ -377,6 +377,8 @@ textarea{
   padding: 15px 20px;
   font-size: 20px;
   color: #b0afa2;
+  transition: 0.5s;
+  pointer-events: none;
 }
 .inputArea:focus~.placeholder,
 .inputArea:valid~.placeholder,
