@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import Index,Products,Contacts,Exporter,Exporter_api,form
+from .views import Index,Products,Contacts,Exporter,Exporter_api,form,Privacy
 
 urlpatterns = [
     path('', Index.as_view(), name='index_url'),
@@ -9,5 +9,5 @@ urlpatterns = [
     path('products/exporter_api/', Exporter_api.as_view(), name='exporter_api_url'),
     path('contacts/', Contacts.as_view(), name='contacts_url'),
     path('form/', views.form, name='form_url'),
-
+    path('privacy_policy/', Privacy.as_view(), name='privacy_url'),
 ]

@@ -25,6 +25,10 @@ class Contacts(View):
     def get(self, request):
         return render(request, 'mainsite/contacts.html')
 
+class Privacy(View):
+    def get(self, request):
+        return render(request, 'mainsite/privacy_policy.html')
+
 def form(request,string = '#'):
     if request.method == "POST":
         # user = models.Order.objects.create(name=request.POST['name'],

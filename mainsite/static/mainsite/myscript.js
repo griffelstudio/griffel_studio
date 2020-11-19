@@ -102,6 +102,7 @@ let moveArrow = function(link){
     linkarrow.style.transition = '0.5s';
     linkarrow.style.top = link.getBoundingClientRect().top - 65 + 'px'
   })
+
   link.addEventListener('mouseout', function(){
       linkarrow.style.left = -10 + '%';
       linkarrow.style.transition = '0.5s';

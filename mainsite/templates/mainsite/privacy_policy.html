@@ -1,0 +1,35 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+
+{% block content %}
+<main>
+  <section class="privacy">
+    <div class="article100">
+            <h2 class="header">Privacy Policy</h2>
+            <div class="text">
+              <p>All add-ins (the App) published by Griffel Studio in Autodesk App Store follows the next statements:</p>
+              <ol>
+                  <li>
+                      <p>The App may access User ID of the user to verify the licence via Autodesk Entitlement API.</p>
+                  </li>
+                  <li>
+                      <p>The App collects model information as it is necessary for the App to perform its intended functions.</p>
+                  </li>
+                  <li>
+                      <p>Data described in clauses 1 and 2 is not shared with any third parties.</p>
+                  </li>
+                  <li>
+                      <p>Data described in clauses 1 and 2 is not stored anywhere. It is deleted once the App exits.</p>
+                  </li>
+                  <li>
+                      <p>If the user does not agree with any clause of the policy the user should not use the App.</p>
+                  </li>
+              </ol>
+          </div>
+          <p class='link'><a class="active-link" href="{% url 'mainsite:index_url' %}#get-connected">contact@griffelstudio.com</a></p>
+    </div>
+  </section>
+</main>
+
+
+{% endblock %}

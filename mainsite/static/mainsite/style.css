@@ -893,6 +893,27 @@ input[type='submit'].copy-bottom:focus:hover{
   transition: all 0.5s ease, z-index 0s, position 0s;
 }
 
+.privacy{
+  width: 100%;
+}
+.privacy .article100{
+  gap:30px;
+  align-items: flex-start;
+  padding-left: 3%;
+}
+.privacy ol{
+  padding-left: 3%;
+  padding-top: 30px;
+}
+.privacy li{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 150%;
+
+}
+
 @media (max-width:1270px)
 {
   .link-block__item{
