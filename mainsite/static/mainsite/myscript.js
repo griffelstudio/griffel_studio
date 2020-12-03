@@ -9,6 +9,9 @@ const linkarrow = document.querySelector('#linkArrow');
 const copyText1 = document.querySelector("#copy-text1");
 const copyText2 = document.querySelector("#copy-text2");
 const end = document.querySelector('.end');
+const fotoBox = document.querySelector(".foto-box");
+const arrowLeft = document.querySelector(".arrowLeft");
+const arrowRight = document.querySelector(".arrowRight");
 let activeLink = document.querySelector('.active-link');
 
 let dscreen = document.createElement('div');
@@ -114,3 +117,42 @@ for (var i = 0; i < links.length; i++) {
 function getnoneActev(){
   activeLink.classList.remove('active-link');
 }
+
+const team = [
+  ['Alexander Mikhasenak','Chief executive officer','/static/mainsite/img/mih.jpg'],
+  ['Kiryl Ambrazheichyk','Chief technical director','/static/mainsite/img/kirya.jpg'],
+  ['Alexander Volodin','Chief informational officer','/static/mainsite/img/volod.jpg'],
+  ['Maryna Karaban','Promotion specialist ','/static/mainsite/img/maryna.jpg'],
+]
+function createTeam(team){
+  let conteiner;
+  let foto;
+  let name;
+  for(let i = 0; i < 3;i++){
+    conteiner =  document.createElement('div');
+    conteiner.classList.add(`foto-conteiner`);
+    conteiner.textContent = team[i][1]
+    foto = document.createElement('div');
+    foto.classList.add(`foto`);
+    foto.style.backgroundImage = `url(${team[i][2]})`;
+    foto.style.backgroundSize = `cover`;
+    foto.style.backgroundPosition = `center`;
+    name =  document.createElement('div');
+    name.inrerHTML = `${team[i][0]}`
+    name.textContent = team[i][0];
+    conteiner.prepend(name);
+    conteiner.prepend(foto);
+    fotoBox.append(conteiner)
+  }
+}
+createTeam(team)
+arrowLeft.addEventListener('click',()=>{
+  team[team.length-1] = team.shift();
+  fotoBox.innerHTML = '';
+  createTeam(team)
+})
+arrowRight.addEventListener('click',()=>{
+  team.unshift(team.pop())
+  fotoBox.innerHTML = '';
+  createTeam(team)
+})
