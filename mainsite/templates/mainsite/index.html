@@ -85,7 +85,7 @@
           <form onsubmit="alert('Your message has been sent.')" action="{% url 'mainsite:form_url' %}" method="post">
             {% csrf_token %}
             <div class="article50">
-              <div class="inputBox">
+              <div class="inputBox firstField">
                   <input class="inputArea"  type="text" name="name" required>
                   <span class="placeholder">your name</span>
               </div>
