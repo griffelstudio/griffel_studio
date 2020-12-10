@@ -4,7 +4,7 @@ const arrow = document.querySelector('.arrowbox');
 const videoCover = document.querySelector('.videoCover');
 const player = document.querySelector('.player');
 const video = document.querySelector("#video");
-const links = document.querySelectorAll('.link');
+const links = document.querySelectorAll('.activelink');
 const linkarrow = document.querySelector('#linkArrow');
 const copyText1 = document.querySelector("#copy-text1");
 const copyText2 = document.querySelector("#copy-text2");
@@ -12,9 +12,10 @@ const end = document.querySelector('.end');
 const fotoBox = document.querySelector(".foto-box");
 const arrowLeft = document.querySelector(".arrowLeft");
 const arrowRight = document.querySelector(".arrowRight");
+const teamBlock = document.querySelector(".team");
 let activeLink = document.querySelector('.active-link');
-
 let dscreen = document.createElement('div');
+
 dscreen.classList.add('darkscreen_on');
 
 function copyText(copyText) {
@@ -145,14 +146,18 @@ function createTeam(team){
     fotoBox.append(conteiner)
   }
 }
-createTeam(team)
-arrowLeft.addEventListener('click',()=>{
-  team[team.length-1] = team.shift();
-  fotoBox.innerHTML = '';
-  createTeam(team)
-})
-arrowRight.addEventListener('click',()=>{
-  team.unshift(team.pop())
-  fotoBox.innerHTML = '';
-  createTeam(team)
-})
+
+
+if(teamBlock){
+  createTeam(team);
+  arrowLeft.addEventListener('click',()=>{
+    team[team.length-1] = team.shift();
+    fotoBox.innerHTML = '';
+    createTeam(team)
+  })
+  arrowRight.addEventListener('click',()=>{
+    team.unshift(team.pop())
+    fotoBox.innerHTML = '';
+    createTeam(team)
+  })
+}

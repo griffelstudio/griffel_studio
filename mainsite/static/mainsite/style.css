@@ -261,6 +261,11 @@ main{
   line-height: 3.75rem;
   z-index: 2;
 }
+h3.header{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
 .test{
   font-style: normal;
   font-weight: bold;
@@ -674,7 +679,7 @@ a.header:hover::after {
   padding-left: 0;
   padding-bottom: 15px;
 }
-.link a{
+.link a,.link{
   color: black;
   font-family: Poppins;
   font-style: normal;
@@ -939,6 +944,17 @@ input[type='submit'].copy-bottom:focus:hover{
   line-height: 150%;
 
 }
+.mobile_privacy .article100{
+  gap:2rem;
+  align-items: flex-start;
+  padding-left: 3%;
+}
+.mobile_privacy ol {
+    padding-left: 3%;
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
 @media (max-width:1505px)
 {
   .team .article50:nth-child(2) {
@@ -1049,10 +1065,13 @@ header {
     margin-left: 30px;
     margin-right: 30px;
 }
+.header h3 {
+  font-size: 2rem;
+}
 header li {
     display: block;
 }
-header  a {
+header a {
     line-height: 35px;
 }
 .feature {
@@ -1150,4 +1169,23 @@ header  a {
   .header{
     font-size: 2rem;
   }
+  .text p{
+    font-size: 1rem;
+  }
+  .mobile_privacy .article100, .privacy .article100 {
+    gap: 1.5rem;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+  .header{
+    font-size: 1.75rem;
+  }
+  h3.header{
+    font-size: 1.5rem;
+  }
+
+element.style {
+}
+.link a, .link {
+  font-size: 1rem;
 }

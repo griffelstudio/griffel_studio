@@ -28,6 +28,9 @@ class Contacts(View):
 class Privacy(View):
     def get(self, request):
         return render(request, 'mainsite/privacy_policy.html')
+class Privacy_mobile(View):
+    def get(self, request):
+        return render(request, 'mainsite/mobile_apps_privacy_policy.html')
 
 def form(request,string = '#'):
     if request.method == "POST":
