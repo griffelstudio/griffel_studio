@@ -679,7 +679,7 @@ a.header:hover::after {
   padding-left: 0;
   padding-bottom: 15px;
 }
-.link a,.link{
+.link a,.link,.activelink a{
   color: black;
   font-family: Poppins;
   font-style: normal;
@@ -690,7 +690,7 @@ a.header:hover::after {
   /* color: #2F2F2F; */
   color: #008B61;
 }
-.link:hover>a{
+.link:hover>a,.activelink:hover a{
   color: #008B61;
   font-weight: bold;
   text-decoration: underline;
