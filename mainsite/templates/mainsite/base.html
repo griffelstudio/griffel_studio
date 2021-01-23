@@ -6,108 +6,81 @@
   <meta charset="UTF-8">
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <meta property="og:image" content="mainsite/img/logomini.png" />
-  <meta property="og:image:type" content="image/png" />
-  <link rel="icon" href="{% static 'mainsite/img/logomini.png' %}">
+  <meta property="og:image" content="mainsite/img/logo.png" />
+  <meta property="og:image:type" content="{% static 'mainsite/img/logo.png' %}" />
+  <link rel="icon" href="{% static 'mainsite/img/logo.png' %}">
+  <link rel="icon" href="css/">
+
+
   <title> Griffel Studio</title>
   <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
   <meta name="google-site-verification" content="dnVPdGRVYN_fS693C4B1KIuRNamqRyevNIhSF1T8xN8" />
 </head>
 <body>
-  <div class="container">
-    <span class="line_1"></span>
-    <span class="line_2"></span>
-    <span class="line_3"></span>
-    <header>
-      <a href="{% url 'mainsite:index_url' %}">
-        <div class="logo"></div>
-      </a>
-      {% block nav %}
-      <nav>
-        <ul>
-          <li class="nav__item"><a href="{% url 'mainsite:index_url' %}" style="text-decoration: line-through; font-weight:600;">about</a></li>
-          <li class="nav__item"><a href="{% url 'mainsite:products_url' %}">products</a></li>
-          <li class="nav__item"><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
-        </ul>
-      </nav>
-      {% endblock %}
-    </header>
+  {% block hover %}
+  {% endblock %}
+  <header>
+    <div class="wrapper">
+      <div class="header__content">
+        <a href="{% url 'mainsite:index_url' %}" class="logo">
+          <div class="logo__img">
+          </div>
+          <div class="logo__title">Griffel Studio</div>
+        </a>
+        {% block nav %}
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a class="menu__link menu__link_active" href="{% url 'mainsite:products_url' %}">Products</a></li>
+            <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:news_url' %}">News</a></li>
+            <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:team_url' %}">Our team</a></li>
+            <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="button button__header">Get in touch</div>
+        {% endblock %}
+      </div>
+    </div>
+  </header>
+
+
     {% block content %}
     {% endblock %}
-    <footer>
-      <span class="line_1 footer-line"></span>
-      <span class="line_2 footer-line"></span>
-      <span class="line_3 footer-line"></span>
-      <div class="footer-conteiner">
-        <div class="content">
-          <div class="text">
-            <p>
-              We create mobile, desktop and cloud applications to
-              change processes inside the industry to reimage usual
-              workflows, make them faster and simpler, at the same time
-              keeping them deep and reliable as they were for centuries.
-            </p>
-          </div>
+
+  <footer class="footter">
+    <div class="wrapper">
+      <div class="footer__content">
+        <div class="footer__menu">
+          <ul class="footer__list">
+            <h3 class="footer__title">Contact Us</h3>
+            <li class="footer__item_active"><a class="footer__link footer__link_active" href="mailto:contact@griffelstudio.com">contact@griffelstudio.com</a></li>
+          </ul>
         </div>
-        <div class="content">
-          <div class="link-blocks">
-            <div class="link-block">
-              <ul class="link-block__menu">
-                <li class="link-block__item_title"><p>Contact Us</p></li>
-                  <li class="link-block__item">
-                    <a  class="link-block__link" href="{% url 'mainsite:index_url' %}#get-connected">contact@griffelstudio.com</a>
-                  </li>
-              </ul>
-            </div>
-            <div class="link-block">
-              <ul class="link-block__menu">
-                  <li class="link-block__item_title">Download Autodesk App</li>
-                  <li class="link-block__item">
-                    <a class="link-block__link" href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290">glTF Exporter</a>
-                  </li>
-                  <li li class="link-block__item">
-                    <a class="link-block__link" href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview">glTF Exporter ​API</a>
-                  </li>
-              </ul>
-            </div>
-          </div>
-          <div class="link-blocks">
-              <div class="link-block">
-                <ul class="link-block__menu">
-                  <li class="link-block__item_title">About</li>
-                  <li class="link-block__item">
-                    <a class="link-block__link" href="{% url 'mainsite:products_url' %}">Products</a>
-                  </li>
-                  <li class="link-block__item">
-                    <a class="link-block__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a>
-                  </li>
-                  <li class="link-block__item">
-                    <a class="link-block__link" href="{% url 'mainsite:privacy_url' %}">Policy for Autodesk Store</a>
-                  </li>
-                  <li class="link-block__item">
-                    <a class="link-block__link" href="{% url 'mainsite:mobile_privacy_url' %}">Policy for App Store, Play Market</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="link-block">
-                <ul class="link-block__menu">
-                    <li class="link-block__item_title">Follow Us</li>
-                    <li class="link-block__item">
-                      <a class="link-block__link" href="https://www.linkedin.com/company/griffel-studio">Linkedin</a>
-                    </li>
-                    <li class="link-block__item">
-                      <a class="link-block__link" href="https://www.facebook.com/griffellstudio">Facebook</a>
-                    </li class="link-block__item">
-                    <li class="link-block__item">
-                      <a class="link-block__link" href="https://apps.autodesk.com/en/Publisher/PublisherHomepage?ID=CZGFPBBQ2P6D">Autodesk App</a>
-                    </li>
-                </ul>
-              </div>
-          </div>
+        <div class="footer__menu">
+          <ul class="footer__list">
+            <h3 class="footer__title">Download Autodesk App</h3>
+            <li class="footer__item"><a class="footer__link" href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290">glTF Exporter</a></li>
+            <li class="footer__item"><a class="footer__link" href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview">glTF Exporter ​API</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu_min">
+          <ul class="footer__list">
+            <h3 class="footer__title">About</h3>
+            <li class="footer__item"><a class="footer__link" href="{% url 'mainsite:products_url' %}">Products</a></li>
+            <li class="footer__item"><a class="footer__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
+            <li class="footer__item"><a class="footer__link" href="{% url 'mainsite:privacy_url' %}">Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu_min">
+          <ul class="footer__list">
+            <h3 class="footer__title">Follow Us</h3>
+            <li class="footer__item"><a class="footer__link" href="https://www.linkedin.com/company/griffel-studio">Linkedin</a></li>
+            <li class="footer__item"><a class="footer__link"  href="https://www.facebook.com/griffellstudio">Facebook</a></li>
+            <li class="footer__item"><a class="footer__link"  href="https://apps.autodesk.com/en/Publisher/PublisherHomepage?ID=CZGFPBBQ2P6D">Autodesk App</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
-  </div>
-  <script src="{% static 'mainsite/myscript.js' %}"></script>
+    </div>
+  </footer>
+  <!-- <script src="{% static 'mainsite/myscript.js' %}"></script> -->
 </body>
 </html>

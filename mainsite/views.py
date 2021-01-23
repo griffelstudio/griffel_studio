@@ -14,6 +14,14 @@ class Products(View):
     def get(self, request):
         return render(request, 'mainsite/products.html')
 
+class News(View):
+    def get(self, request):
+        return render(request, 'mainsite/news.html')
+
+class Team(View):
+    def get(self, request):
+        return render(request, 'mainsite/team.html')
+
 class Exporter(View):
     def get(self, request):
         return render(request, 'mainsite/exporter.html')

@@ -1,0 +1,101 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+
+{% block nav %}
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item"><a class="menu__link " href="{% url 'mainsite:products_url' %}" >Products</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:news_url' %}">News</a></li>
+    <li class="menu__item"><a class="menu__link menu__link_active" href="{% url 'mainsite:team_url' %}">Our team</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
+  </ul>
+</nav>
+<div class="button button__header">Get in touch</div>
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="block team">
+      <div class="wrapper">
+        <div class="team__content">
+          <h2 class=" block__title team__maintitle">Our team</h2>
+          <p class=" block__text team__text">
+            The core of our team consists of dedicated engineers — specialists
+            who hold industry specific knowledge, implement software development best practices and are capable of working beyond AEC and IT fields, masterfully leveraging working principles of both and bringing the best of each into the other.
+          </p>
+          <div class="team__items">
+            <div class="team__item">
+              <img src="{% static 'mainsite/img/team__img1.png' %}" class="team__img">
+              <div class="team__subtextBlock">
+                <h3 class="block__subtitle team__subtitle">Alexander Mikhasenak</h3>
+              <p class=" block__text team__subtext">Chief executive officer</p>
+              </div>
+            </div>
+
+            <div class="team__item">
+              <img src="{% static 'mainsite/img/team__img2.png' %}" class="team__img">
+              <div class="team__subtextBlock">
+                <h3 class="block__subtitle team__subtitle">Kiryl Ambrazheichyk</h3>
+              <p class=" block__text team__subtext">Chief technical director</p>
+              </div>
+            </div>
+
+            <div class="team__item">
+              <img src="{% static 'mainsite/img/team__img3.png' %}" class="team__img">
+              <div class="team__subtextBlock">
+                <h3 class="block__subtitle team__subtitle">Alexander Volodin</h3>
+              <p class=" block__text team__subtext">Chief informational officer</p>
+              </div>
+            </div>
+
+            <div class="team__item">
+              <img src="{% static 'mainsite/img/team__img4.png' %}" class="team__img">
+              <div class="team__subtextBlock">
+                <h3 class="block__subtitle team__subtitle">Maryna Karaban</h3>
+              <p class=" block__text team__subtext">Marketing specialist</p>
+              </div>
+            </div>
+
+            <div class="team__item">
+              <img src="{% static 'mainsite/img/team__img5.png' %}" class="team__img">
+              <div class="team__subtextBlock">
+                <h3 class="block__subtitle team__subtitle">Nicolay Krischenovich</h3>
+              <p class=" block__text team__subtext">Developer</p>
+              </div>
+            </div>
+
+            <div class="team__item">
+              <img src="{% static 'mainsite/img/team__img6.png' %}" class="team__img">
+              <div class="team__subtextBlock">
+                <h3 class="block__subtitle team__subtitle">NKatie Cudelina</h3>
+              <p class=" block__text team__subtext">MEP Engineer, .NET Developer</p>
+              </div>
+            </div>
+
+            <div class="team__item">
+              <img src="{% static 'mainsite/img/team__img7.png' %}" class="team__img">
+              <div class="team__subtextBlock">
+                <h3 class="block__subtitle team__subtitle">Dmitry Dronov</h3>
+              <p class=" block__text team__subtext">Structural Engineer, Software Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block worldWide">
+      <div class="wrapper">
+        <div class="worldWide__content">
+          <h2 class=" block__title worldWide__title">We are worldwide</h2>
+          <p class=" block__text worldWide__text">Having departments in Sydney Australia,
+            Atlanta USA and Minsk Belarus we are working 24 hours a day, so you
+            can reach us anytime
+          </p>
+          <img src="{% static 'mainsite/img/team_img8.png' %}" class="worldWide__img">
+        </div>
+      </div>
+    </section>
+
+  </main>
+{% endblock %}

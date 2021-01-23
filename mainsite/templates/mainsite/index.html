@@ -1,109 +1,157 @@
 {% extends 'mainsite/base.html' %}
 {% load static %}
 
+
+{% block nav %}
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item"><a class="menu__link menu__link" href="{% url 'mainsite:products_url' %}">Products</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:news_url' %}">News</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:team_url' %}">Our team</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
+  </ul>
+</nav>
+<div class="button button__header">Get in touch</div>
+{% endblock %}
+{% block hover %}
+<div class="hover"></div>
+{% endblock %}
+
 {% block content %}
-    <!-- <div class="arrowbox"><div class="arrow"></div></div> -->
-    <main>
-      <section class="intro">
-        <img class="vector_1" src="{% static 'mainsite/img/Vector1.svg' %}" alt="">
-        <div class="intro-header">
-          <h1>Griffel Studio develops automation solutions for the AEC industry.</h1>
-        </div>
-        <div class="intro-text">
-          <p>
-            We create mobile, desktop and cloud applications to
-            change processes inside the industry to reimage usual
-            workflows, make them faster and simpler, at the same time
-            keeping them deep and reliable as they were for centuries.
-          </p>
-        </div>
-      </section>
-      <section class="solutions item">
-        <div class="article50">
-        <h2 class="header">Solutions</h2>
-        <div class="text">
-          <p>
-            We create software which solves
-            the industry questions on how to implement BIM in a company easier,
-            what's the best way to use VR in the office.
-          </p><br>
-          <p>
-            Griffel Studio collaborates
-            with architectural firms to understand what's needed for them now.
-            This collaboration has resulted in mutually beneficial projects
-            we are currently working on. We believe that each peace of work
-            produced by our company will become a part of something big in
-            future, &nbsp<a href="{% url 'mainsite:contacts_url' %}">follow us </a>&nbsp to stay informed.
-          </p><br>
-          <p>
-            We create software which
-            improves design workflows and helps to get the job done better ,
-            delivering impressive results to customers faster. Apart of this,
-            if you need a custom solution to fulfill your design needs - just
-            get in touch, we are here to discuss, share ideas and create decisive
-            programs for your AEC business.
+<main>
+  <section class="intro">
+    <div class="wrapper">
+        <div class="intro__content">
+          <h1 class="intro__title">
+            Griffel Studio develops automation solutions for the AEC industry.
+          </h1>
+          <p class="intro__subtitle">
+              We create mobile, desktop and cloud applications to
+              change processes inside the industry to reimage usual
+              workflows, make them faster and simpler, at the same time
+              keeping them deep and reliable as they were for centuries.
           </p>
         </div>
       </div>
-        <div class="article50">
-          <ul class="feature">
-            <li><p>Mobile and web application development</p></li>
-            <li><p>Revit plugins creation</p></li>
-            <li><p>Mixed Reality solutions</p></li>
-            <img class="vector_3" src="{% static 'mainsite/img/Vector3.svg' %}" alt="">
-          </ul>
-        </div>
-      </section>
-      <section class="team item">
-        <div class="article50">
-        <h2 class="header">Team</h2>
-        <div class="text">
-          <p>
-            The core of our team consists of dedicated engineers - specialists who
-            hold industry specific knowledge, implement software development best
-            practices and are capable of working beyond AEC and IT fields,
-            masterfully leveraging working principles of both and bringing
-            the best of each into the other.
-          </p><br>
-          <p>
-            Having departments in Sydney Australia, Atlanta
-            USA and Minsk Belarus we are working 24 hours a day,
-            so you can reach us anytime
-          </p>
+    </section>
+
+    <section class="block solutions">
+      <div class="wrapper">
+        <div class="solutions__content">
+          <h2 class=" block__title solutions__title">Solutions</h2>
+          <div class="solutions__item">
+            <div class="banner">
+              <h3 class="banner__title">
+                BIM technologies
+              </h3>
+              <p class="banner__text">
+                We follow the latest trends of the BIM world and
+                try to develop new design principles and approaches.
+                We introduce Mixed Reality technology to the design process.
+              </p>
+            </div>
+            <img src="{% static 'mainsite/img/solution_img1.png' %}" class="solutions_img">
+          </div>
+          <div class="solutions__item">
+            <img src="{% static 'mainsite/img/solution_img2.png' %}" class="solutions_img">
+            <div class="banner">
+              <h3 class="banner__title">
+                Custom solutions
+              </h3>
+              <p class="banner__text">
+                If you need a custom solution for your design needs — just
+                get in touch! We are always here to create decisive programs
+                for your AEC business.
+              </p>
+            </div>
+          </div>
+          <div class="solutions__item">
+            <div class="banner">
+              <h3 class="banner__title">
+                Collaborations
+              </h3>
+              <p class="banner__text">
+                We always look for new mates to learn from them and to
+                share our ideas. We keep tight bonds with our partners to
+                deliver mutually beneficial projects.
+              </p>
+            </div>
+            <img src="{% static 'mainsite/img/solution_img3.png' %}" class="solutions_img">
+          </div>
         </div>
       </div>
-        <div class="article50">
-          <div class="arrowLeft"></div>
-          <div class="foto-box"></div>
-          <div class="arrowRight"></div>
+    </section>
+
+  <section class="block whatWeDo">
+    <div class="wrapper">
+      <div class="whatWeDo__content">
+        <h2 class="block__title whatWeDo__title">What we do?</h2>
+        <div class="whatwedo__list">
+          <div class="whatWeDo__item">
+            <img src="{% static 'mainsite/img/we_do_img1.png' %}" class="whatWeDo__img">
+            <p class="whatWeDo__subtite">Add-ins for Revit</p>
+          </div>
+          <div class="whatWeDo__item">
+            <img src="{% static 'mainsite/img/we_do_img2.png' %}" class="whatWeDo__img">
+            <p class="whatWeDo__subtite">Mobile and web application development</p>
+          </div>
+          <div class="whatWeDo__item">
+            <img src="{% static 'mainsite/img/we_do_img3.png' %}" class="whatWeDo__img">
+            <p class="whatWeDo__subtite">Mixed Reality solutions</p>
+          </div>
         </div>
-      </section>
-      <section id="get-connected" class="get-connected">
-        <div class="article100">
-        <h2 class="header">Get connected</h2>
-        <div class="get-connected-form">
-          <form onsubmit="alert('Your message has been sent.')" action="{% url 'mainsite:form_url' %}" method="post">
-            {% csrf_token %}
-            <div class="article50">
-              <div class="inputBox firstField">
-                  <input class="inputArea"  type="text" name="name" required>
-                  <span class="placeholder">your name</span>
-              </div>
-              <div class="inputBox">
-                  <input class="inputArea" type="text" name="email" required>
-                  <span class="placeholder">email address</span>
-              </div>
+
+        <a href="{% url 'mainsite:products_url' %}" class="button button__regular">Our products</a>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="get-connected" class="block connect">
+
+    <div class="connect__bg">
+      <div class="connect__formBlock">
+        <div class="connect__formBlockContent">
+          <h2 class=" block__title connect__title">Let’s create together</h2>
+          <p class="connect__subtitle">Send us a message</p>
+          <form action="" class="form">
+            <div class="form__name">
+              <input class="inputArea"  type="text" name="name" required>
+              <span class="placeholder">Name</span>
             </div>
-            <div class="article50">
-              <div class="inputBox">
-                  <textarea class="inputBox"  name="message"  rows="6" cols="80" required></textarea>
-                  <span class="placeholder">text your message</span>
-              </div>
-              <button class=" btn btnForm " type="submit" value="copy">send</button>
+            <div class="form__email">
+              <input class="inputArea" type="email" name="email" required>
+              <span class="placeholder">E-mail</span>
             </div>
+            <div class="form__mesage">
+              <textarea class="inputBox"  name="message"  rows="4" cols="80" required></textarea>
+              <span class="placeholder">Describe your task</span>
+            </div>
+            <button class="button button__form" type="submit">Send</button>
           </form>
         </div>
       </div>
-      </section>
-    </main>
+      <div class="connect__img">
+      </div>
+    </div>
+
+  </section>
+
+  <section class="block about">
+    <div class="wrapper">
+      <div class="about__block">
+        <div class="about__img"></div>
+        <div class="about__text">
+          <p class="about__subtitle">
+            We create mobile, desktop and cloud applications
+            to change processes inside the industry to reimage usual
+            workflows, make them faster and simpler, at the same
+            time keeping them deep and reliable as they were for centuries.
+          </p>
+          <p class="about__sign">Griffel Studio team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 {% endblock %}

@@ -1,0 +1,123 @@
+{% extends 'mainsite/base.html' %}
+{% load static %}
+
+{% block nav %}
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item"><a class="menu__link " href="{% url 'mainsite:products_url' %}" >Products</a></li>
+    <li class="menu__item"><a class="menu__link menu__link_active" href="{% url 'mainsite:news_url' %}" style="color: #12A276">News</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:team_url' %}">Our team</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
+  </ul>
+</nav>
+<div class="button button__header">Get in touch</div>
+{% endblock %}
+
+{% block content %}
+<main>
+    <seaction class="block news">
+      <div class="wrapper">
+        <div class="news__content">
+          <h2 class="block__subtitle news__mainTitle">News</h2>
+          <div class="news__items">
+
+            <div class="news__item">
+              <img class="news_img" src="{% static 'mainsite/img/news_img1.png' %}">
+              <div class="news__textWrapper">
+                <div class="news__data">01.12.2021</div>
+                <h3 class="news__title">
+                  Two factors for the effectiveness of the AR / VR implementation...
+                </h3>
+                <p class="news__text">
+                  2 factors for the effectiveness of the AR / VR
+                  implementation in the field...
+                </p>
+                <div class="news_botton">Read more</div>
+              </div>
+
+            </div>
+
+            <div class="news__item">
+              <img class="news_img" src="{% static 'mainsite/img/news_img2.png' %}">
+              <div class="news__textWrapper">
+                <div class="news__data">01.12.2021</div>
+                <h3 class="news__title">
+                  Who we are
+                </h3>
+                <p class="news__text">
+                  Griffel Studio develops automation solutions for the AEC industry.
+                  We create software which solves the industry questions on how to implement #BIM in a company...
+                </p>
+                <div class="news_botton">Read more</div>
+              </div>
+            </div>
+
+            <div class="news__item">
+              <img class="news_img" src="{% static 'mainsite/img/news_img3.png' %}">
+              <div class="news__textWrapper">
+                <div class="news__data">01.12.2021</div>
+                <h3 class="news__title">
+                  Another area of ​​active application of AR/VR
+                </h3>
+                <p class="news__text">
+                  Griffel Studio is no exception as we offer our solutions in
+                  the field of AR / VR for creating educational conte...
+                </p>
+                <div class="news_botton">Read more</div>
+              </div>
+            </div>
+
+            <div class="news__item">
+              <img class="news_img" src="{% static 'mainsite/img/news_img1.png' %}">
+              <div class="news__textWrapper">
+                <div class="news__data">01.12.2021</div>
+                <h3 class="news__title">
+                  Two factors for the effectiveness of the AR / VR implementation...
+                </h3>
+                <p class="news__text">
+                  2 factors for the effectiveness of the AR / VR
+                  implementation in the field...
+                </p>
+                <div class="news_botton">Read more</div>
+              </div>
+            </div>
+
+            <div class="news__item">
+              <img class="news_img" src="{% static 'mainsite/img/news_img2.png' %}">
+              <div class="news__textWrapper">
+                <div class="news__data">01.12.2021</div>
+                <h3 class="news__title">
+                  Who we are
+                </h3>
+                <p class="news__text">
+                  Griffel Studio develops automation solutions for the AEC industry.
+                  We create software which solves the industry questions on how to implement #BIM in a company...
+                </p>
+                <div class="news_botton">Read more</div>
+              </div>
+            </div>
+
+            <div class="news__item">
+              <img class="news_img" src="{% static 'mainsite/img/news_img3.png' %}">
+              <div class="news__textWrapper">
+                <div class="news__data">01.12.2021</div>
+                <h3 class="news__title">
+                  Another area of ​​active application of AR/VR
+                </h3>
+                <p class="news__text">
+                  Griffel Studio is no exception as we offer our solutions in
+                  the field of AR / VR for creating educational conte...
+                </p>
+                <div class="news_botton">Read more</div>
+              </div>
+            </div>
+          </div>
+          <div class="button button__regular news__mainbutton">Show more</div>
+        </div>
+      </div>
+    </seaction>
+
+
+
+  </main>
+{% endblock %}

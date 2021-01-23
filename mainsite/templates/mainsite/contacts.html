@@ -1,34 +1,75 @@
 {% extends 'mainsite/base.html' %}
 {% load static %}
 {% block nav %}
-<nav>
-  <ul>
-    <li class="nav__item"><a href="{% url 'mainsite:index_url' %}" >about</a></li>
-    <li class="nav__item"><a href="{% url 'mainsite:products_url' %}" >products</a></li>
-    <li class="nav__item"><a href="{% url 'mainsite:contacts_url' %}" style="text-decoration: line-through; font-weight:600;">contacts</a></li>
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item"><a class="menu__link " href="{% url 'mainsite:products_url' %}" >Products</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:news_url' %}">News</a></li>
+    <li class="menu__item"><a class="menu__link " href="{% url 'mainsite:team_url' %}">Our team</a></li>
+    <li class="menu__item"><a class="menu__link menu__link_active" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
   </ul>
 </nav>
+<div class="button button__header">Get in touch</div>
 {% endblock %}
 {% block content %}
-    <main>
-      <span id="linkArrow"></span>
-      <section class="contacts item">
-        <div class="article50">
-          <h1 class="header">Connect</h1>
-          <div class="text">
-          <p>Interested in working together?</p><br><br>
-          <ul>
-              <li onmousemove="getnoneActev()" class='link activelink'><a class="active-link" href="{% url 'mainsite:index_url' %}#get-connected">contact@griffelstudio.com</a></li>
-              <li class='activelink'><a href="https://www.linkedin.com/company/griffel-studio">LinkedIn</a></li>
-              <li class='activelink'><a href="https://www.facebook.com/griffellstudio/">Facebook</a></li>
-              <li class='activelink'><a href="https://apps.autodesk.com/en/Publisher/PublisherHomepage?ID=CZGFPBBQ2P6D">Autodesk App</a></li>
-          </ul>
+<main>
+<section class="block contacts">
+  <div class="wrapper">
+    <div class="contacts__content">
+      <h1 class="block__title contacts__title">Contacts</h1>
+      <p class=" block__text32 contacts__text">
+        Feel free to write and call us. We really
+        love to communicate with our clients.
+      </p>
+
+      <div class="contacts__info">
+        <div class="contacts__links">
+          <div class="links__firstBlock">
+            <div class="block__text links__phone">Phone: <a class=" block__link block__link_phone" href="tel:+13 674 567 75 54">​+1 843 999 1851</a></div>
+            <div class="block__text links__email">E-mail: <a class="block__link" href="mailto:contact@griffelstudio.com">contact@griffelstudio.com</a></div>
           </div>
+          <div class="secondBlock">
+            <a href="https://www.linkedin.com/company/griffel-studio" class="secondBlock__item">
+              <img src="{% static 'mainsite/img/contacts_img1.png' %}"  class="secondBlock__img">
+              <p class="block__text secondBlock__text">LinkedIn</p>
+            </a>
+
+            <a href="https://www.facebook.com/griffellstudio" class="secondBlock__item">
+              <img src="{% static 'mainsite/img/contacts_img2.png' %}"  class="secondBlock__img">
+              <p class="block__text secondBlock__text">Facebook</p>
+            </a>
+
+            <a href="https://apps.autodesk.com/en/Publisher/PublisherHomepage?ID=CZGFPBBQ2P6D" class="secondBlock__item">
+              <img src="{% static 'mainsite/img/contacts_img3.png' %}"  class="secondBlock__img">
+              <p class="block__text secondBlock__text">Autodesk App Store</p>
+            </a>
+          </div>
+
         </div>
-        <div class="article50">
-          <img class="rectangle"  src="{% static 'mainsite/img/Rectangle.png' %}" alt="">
-        <img class="vector_11" src="{% static 'mainsite/img/Rectangle_11.png' %}" alt="">
+        <div class="contacts__form">
+          <form action="" class="form">
+            <div class="form__field form__name">
+              <input class="inputArea"  type="text" name="name" required>
+              <span class="placeholder">Name</span>
+            </div>
+            <div class="form__field form__email">
+              <input class="inputArea" type="email" name="email" required>
+              <span class="placeholder">E-mail</span>
+            </div>
+            <div class="form__field form__mesage">
+              <textarea class="inputBox"  name="message"  rows="4" cols="80" required></textarea>
+              <span class="placeholder">Describe your task</span>
+            </div>
+            <button class="button button__form" type="submit">Send</button>
+          </form>
+
         </div>
-      </section>
-    </main>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
   {% endblock %}

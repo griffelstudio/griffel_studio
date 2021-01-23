@@ -1,81 +1,286 @@
 {% extends 'mainsite/base.html' %}
 {% load static %}
+
+
 {% block nav %}
-<nav>
-  <ul>
-    <li class="nav__item"><a href="{% url 'mainsite:index_url' %}" >about</a></li>
-    <li class="nav__item"><a href="{% url 'mainsite:products_url' %}" style="text-decoration: line-through;font-weight:600;">products</a></li>
-    <li class="nav__item"><a href="{% url 'mainsite:contacts_url' %}">contacts</a></li>
+<nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item"><a class="menu__link menu__link" href="{% url 'mainsite:products_url' %}">Products</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:news_url' %}">News</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:team_url' %}">Our team</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
   </ul>
 </nav>
+<div class="button button__header">Get in touch</div>
 {% endblock %}
+
 {% block content %}
-    <main>
-      <div class="vector_4">
-        <img  src="{% static 'mainsite/img/Vector4.svg' %}" alt="">
+<main>
+    <section class="block exporter">
+      <div class="wrapper">
+          <div class="exporter__content">
+            <h1 class="exporter__title">glTF Exporter</h1>
+            <p class="block__text exporter__text">
+              Add-in for Revit which exports projects to 3D 
+              glTF format. glTF is universal file format for
+              transferring 3D assets which almost every 3D
+              software can handle.
+            </p>
+          </div>
+          <div class="exporter__buttons">
+            <div class="buttonAutodesk">
+              <img class="buttonAutodesk__img" src="{% static 'mainsite/img/autodesk.png' %}" >
+              <a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290" class="buttonAutodesk__text">
+                Download on the
+                AUTODESK APP STORE
+              </a>
+            </div>
+            <div class="buttonAutodesk__note">
+              *or ask for a special quote sending us an <a class="block__link" href="mailto:contact@griffelstudio.com">e-mail.</a>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <section class="block rayTraceView">
+      <div class="wrapper">
+        <div class="HowItWorks__content">
+          <img class="rayTraceView__img" src="{% static 'mainsite/img/raytrace.png' %}">
+          <p class="block__text rayTraceView__text">
+            Ray Trace view of the model in Revit compared
+            to the same model exported and opened in default
+            Windows 10 application.
+          </p>
       </div>
-      <h1 class="main-header">glTF Exporter</h1>
-      <section class="exporter item">
-        <div class="article50">
-        <h2 class="header">What is the plugin? </h2>
-        <div class="text">
-          <p>
-            glTF Exporter add-in for Revit exports your project to popular
-            &nbsp<a href=" https://www.khronos.org/gltf/">3D glTF format</a>. glTF is universal
-            file format for transferring 3D assets which almost every 3D
-            software can handle. With glTF Exporter it has never been
-            easier to get a Revit project in gltf format.<br> Get it from the
-            &nbsp<a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290">Autodesk App Store</a> or ask for a special
-            quote sending us an email.
-          </p>
-        </div>
-        <h2 class="header"> How does it work?</h2>
-        <div class="text">
-          <p>
-            The add-in is compatible with Revit 2018 or later. Open any 3D
-            view, run the command and choose settings (link to Settings
-            Explained section) for export. The output folder will appear
-            immediately after the export process ends - you can preview the
-            model in standard Windows 10 viewer by double clicking gltf file.
-            Once you have the gltf file you can send it to your client, share
-            on the internet, preview in many gltf viewers or import into your
-            software development project - use it any way you like.
-          </p>
-        </div>
-        <h2 class="header"> How our solution helps clients? </h2>
-        <div class="text">
-          <p>
-            glTF Exporter helps architects to seamlessly bring their projects
-            into real-time visualization environment like Unity or UE - no
-            geometry optimization needed, skip complicated import steps to
-            devote more time to setting up object interactions, reflections,
-            lighting and RTX support for your next-gen real-time visual
-            &nbsp<a href="https://www.archdaily.com/892210/how-real-time-rendering-can-revolutionize-design-again">presentation.</a>
-          </p><br>
-          <!-- <p>
-            Add-in works out of the box but if you need to
-            adjust output files precisely see our export &nbsp
-            <a href="#">settings explained</a>
-            page.
-          </p> -->
-        </div>
-        </div>
-        <div class="article50">
-          <div class="box-images">
-            <div class="image">
-              <img class='img-normal' src="{% static 'mainsite/img/exp_image_1.jpg' %}" alt="">
+    </section>
+
+    <section class="block options">
+      <div class="wrapper">
+        <div class="options__content">
+          <div class="options__list">
+            <div class="options__item">
+              <h3 class="block__title options__title">Options</h3>
+              <ul class="block__text options__sublist">
+                <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
+                <li class="options__subitem">Choice to export materials or not.</li>
+                <li class="options__subitem"> Selection the level of detail for the geometry.</li>
+                <li class="options__subitem">Mesh baking by elements or materials.</li>
+                <li class="options__subitem">Compression meshes using Draco compression</li>
+                <li class="options__subitem">Exporting a model with multiple LODs combined into one file.</li>
+              </ul>
             </div>
-            <div class="image">
-              <img class='img-normal' src="{% static 'mainsite/img/exp_image_2.jpg' %}" alt="">
+            <div class="options__item">
+              <img class="options__img" src="{% static 'mainsite/img/options.png' %}">
             </div>
-            <div class="image">
-              <img class='img-normal' src="{% static 'mainsite/img/exp_image_3.jpg' %}" alt="">
+          </div>s
+          <div class=" button options__button">Settings explained</div>
+      </div>
+    </section>
+
+    <section class="block howItWork howItWork_exporter">
+      <div class="wrapper">
+        <div class="howItWork__content">
+          <h2 class=" block__title howItWork__title">How does it work?</h2>
+
+          <div class="howItWork__item howItWork__item_first">
+            <div class="banner">
+              <h3 class="banner__title">
+                1. Opening
+              </h3>
+              <p class="banner__text">
+                Open any 3D view in Revit 2018 or later version and run the command glTF export.
+              </p>
             </div>
-            <div class="image">
-              <img class='img-normal'  src="{% static 'mainsite/img/exp_image_4.jpg' %}" alt="">
+            <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute">
+          </div>
+
+          <div class="howItWork__item">
+            <img src="{% static 'mainsite/img/howItWork_img2.png' %}" class="howItWork_img">
+            <div class="banner">
+              <h3 class="banner__title">
+                2. Saving
+              </h3>
+              <p class="banner__text">
+                Select the settings for export and click the button. The files in the folder
+                will be available to you.
+              </p>
+              <img src="{% static 'mainsite/img/howItWork_img2.2.png' %}" class="baner_img">
+            </div>
+          </div>
+
+          <div class="howItWork__item">
+            <div class="banner banner_top">
+              <h3 class="banner__title">
+                3. Using
+              </h3>
+              <p class="banner__text ">
+                Once you have the gltf file you can send it to 
+                your client, share on the internet, preview in 
+                many gltf viewers or import into your software development project.
+              </p>
+            </div>
+            <img src="{% static 'mainsite/img/howItWork_img3.png' %}" class="howItWork_img">
+          </div>
+          <div class="howItWork__item howItWork__item_absolute">
+            <img src="{% static 'mainsite/img/howItWork_img4.png' %}" class="howItWork_img">
+            <div class="banner">
+              <p class="banner__text">
+                Use it any way you like.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-    </main>
-  {% endblock %}
+      </div>
+    </section>
+
+    <section class="block howHelp">
+      <div class="wrapper">
+        <div class="howHelp__content">
+          <h2 class=" block__title howHelp__title">
+            How our solution helps clients?
+          </h2>
+          <p class="block__text howHelp__text">
+            glTF Exporter helps architects to seamlessly bring their
+            projects into real-time visualization environment like Unity or UE.
+            No geometry optimization is needed. Skip complicated import steps to
+            devote more time to setting up object interactions, reflections,
+            lighting and RTX support for your next-gen real-time visual presentation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block settings">
+      <div class="wrapper">
+        <div class="settings__content">
+          <h2 class=" block__title settings__title">
+            Settings Explained
+          </h2>
+          <div class="settings__groupMeshes groupMeshes">
+            <h3 class="block__subtitle groupMeshes__title">Group meshes</h3>
+            <ul class="groupMeshes__list">
+              <li class="block__text groupMeshes__item">
+                Group meshes by element or by material option influences output file size,
+                3D model performance and file structure.
+              </li>
+              <li class="block__text groupMeshes__item">
+                Elements have their Revit Ids and are broken down by Revit Category, so 
+                the output file has nice structure.
+              </li>
+              <li class="block__text groupMeshes__item">
+                When grouping by materials there are as much nodes in the file tree
+                as materials in Revit project.
+              </li>
+            </ul>
+            <div class="groupMeshes__oneImgBlock oneImgBlock">
+              <img class="oneImgBlock__img" src="{% static 'mainsite/img/settings_img1.png' %}">
+              <div class="oneImgBlock__textBlock">
+                <p class="block__text oneImgBlock__text ">Model on the left has meshes grouped by element.</p>
+                <p class="block__text oneImgBlock__text">Model on the right has meshes grouped by materials.</p>
+              </div>
+            </div>
+            <div class="groupMeshes__twoImgBlock twoImgBlock">
+              <div class="twoImgBlock__item">
+                <img class="twoImgBlock__img" src="{% static 'mainsite/img/settings_img2.png' %}">
+                <p class="block__text twoImgBlock__text">
+                  Large projects exported by elements may have less FPS rate.
+                  Number of draw calls for this model is 6494.
+                </p>
+              </div>
+              <div class="twoImgBlock__item">
+                <img class="twoImgBlock__img" src="{% static 'mainsite/img/settings_img3.png' %}">
+                <p class="block__text">
+                  Gain more FPS exporting by materials — only 55 draw calls — the same as
+                  number of materials. Though file size for the model is increased from
+                  18MB to 29MB.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings__levelDetails levelDetails">
+            <h3 class="block__subtitle levelDetails__title">Level of details</h3>
+            <div class="levelDetails__imgList">
+              <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img4.png' %}">
+              <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img5.png' %}">
+              <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img6.png' %}">
+            </div>
+            <div class="levelDetails__textBlock">
+              <p class="block__text">
+                Level of details determines how many polygons 3D model has. It relates mostly for rounded
+                objects and may dramatically impact the file size.
+              </p><br>
+              <p class="block__text">
+                The same model of torus exported with LOD 1, LOD 3 and LOD 15 (5KB, 15KB and
+                396KB corresponding). LOD values ​​from 5 to 7 are generally sufficient.
+              </p>
+            </div>
+          </div>
+
+          <div class="settings__ExportMat ExportMat">
+            <h3 class="block__subtitle ExportMat__title">Export materials</h3>
+            <img class="ExportMat__img" src="{% static 'mainsite/img/settings_img7.png' %}">
+            <div class="ExportMat__textBlock">
+              <p class="block__text">
+                glTF Exporter maps Revit materials to PBR materials (and to KHR if you
+                choose export with merged LODs option) so you can get beautifully looking 3D model.
+              </p><br>
+              <p class="block__text">
+                But if you what to experiment or get some statistics you can skip materials and export
+                geometry only disabling Export materials checkbox. This might be useful for some geometry analysis.
+              </p>
+            </div>
+          </div>
+
+          <div class="settings__oututFormat oututFormat">
+            <h3 class="block__subtitle oututFormat__title">Export materials</h3>
+            <img class="oututFormat__img" src="{% static 'mainsite/img/settings_img8.png' %}">
+            <div class="oututFormat__textWidthImg">
+              <div class="oututFormat__textBlock">
+                <p class="block__text .oututFormat__text">
+                  Output format option determines files you get. The best choice for
+                  projects which are going to be send by the Internet is glb format — there
+                  will be only single file you can immediately email to a client, for instance.
+                </p>
+                <p class="block__text .oututFormat__text">
+                  If you are planning to edit textures or want to see the file structure — choose gltf
+                  format. You can open gltf file with any text editor and edit materials from Textures
+                  folder.
+                </p>
+              </div>
+              <img class="oututFormat__img" src="{% static 'mainsite/img/settings_img9.png' %}">
+            </div>
+          </div>
+
+          <div class="settings__dracoCompres dracoCompres">
+            <h3 class="block__subtitle dracoCompres__title">Draco compression</h3>
+            <p class=" block__text dracoCompres__text">
+              Draco compression minimizes file size as much as possible. It’s extremely
+              useful for large projects, but remember that not all third party software
+              can handle compressed files. Exported projects with this option can be saved
+              only as glb files. Difference in file size can be seen from the following export
+              results:
+            </p>
+            <img class="dracoCompres__img" src="{% static 'mainsite/img/settings_img10.png' %}">
+          </div>
+
+          <div class="settings__creating creating">
+            <h3 class=" block__subtitle creating__title">Creating merged LODs model </h3>
+             <p class=" block__text creating__text">
+              Create merged LODs model options improves the quality of detailed Revit
+              models handling. With this checkbox enabled glTF Exporter creates tree
+              files: one with specified LOD and two other with degrading LOD, and merges
+              them into single file. Thismight be specifically useful for Windows Mixed
+              Reality developers.
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+{% endblock %}
