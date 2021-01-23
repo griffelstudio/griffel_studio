@@ -102,10 +102,10 @@
                 get GS.Revit.GltfExporterAPI.dll under:
               </p>
               <div class="getLink__linkBlock linkBlock">
-                <p class="linkBlock__text">
+                <p id="copy-text1" class="linkBlock__text">
                   %ProgramData%\Autodesk\ApplicationPlugins\glTF Exporter.bundle\Contents
                 </p>
-                <div class="linkBlock__copybutton copybutton">
+                <div onclick="copyText(copyText1)" class="linkBlock__copybutton copybutton">
                   <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
                   <div class="copybutton__text">Copy</div>
                 </div>
@@ -138,12 +138,14 @@
                 <div class="instruction__linkBlock linkBlock linkBlock_code">
 
                   <code class="linkBlock__text">
-                    <p> var outputPath = @"C:\ExportResult.glb";</p>
-                    <p> var settings = new GltfExportSettings(outputPath);</p>
-                    <p> var exporter = new GltfExportSettings(settings);</p>
-                    <p> exporter.Export(document, view);</p>
+                    <p id="copy-text2">
+                      var outputPath = @"C:\ExportResult.glb";<br>
+                      var settings = new GltfExportSettings(outputPath);<br>
+                      var exporter = new GltfExportSettings(settings);<br>
+                      exporter.Export(document, view);
+                    </p>
                   </code>
-                  <div class="linkBlock__copybutton copybutton">
+                  <div onclick="copyText(copyText2)" class="linkBlock__copybutton copybutton">
                     <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
                     <div class="copybutton__text">Copy</div>
                   </div>

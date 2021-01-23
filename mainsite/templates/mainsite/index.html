@@ -114,20 +114,21 @@
         <div class="connect__formBlockContent">
           <h2 class=" block__title connect__title">Let’s create together</h2>
           <p class="connect__subtitle">Send us a message</p>
-          <form action="" class="form">
+          <form onsubmit="succesSend()" class="form" action="{% url 'mainsite:form_url' %}" method="post">
+            {% csrf_token %}
             <div class="form__name">
-              <input class="inputArea"  type="text" name="name" required>
-              <span class="placeholder">Name</span>
+              <input class="inputArea" placeholder="Name"  type="text" name="name" required>
+              <!-- <span class="placeholder">Name</span> -->
             </div>
             <div class="form__email">
-              <input class="inputArea" type="email" name="email" required>
-              <span class="placeholder">E-mail</span>
+              <input class="inputArea" placeholder="E-mail" type="email" name="email" required>
+              <!-- <span class="placeholder">E-mail</span> -->
             </div>
             <div class="form__mesage">
-              <textarea class="inputBox"  name="message"  rows="4" cols="80" required></textarea>
-              <span class="placeholder">Describe your task</span>
+              <textarea class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80" required></textarea>
+              <!-- <span class="placeholder">Describe your task</span> -->
             </div>
-            <button class="button button__form" type="submit">Send</button>
+            <button  class="button button__form" type="submit">Send</button>
           </form>
         </div>
       </div>

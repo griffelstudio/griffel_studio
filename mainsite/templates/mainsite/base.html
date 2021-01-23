@@ -19,7 +19,7 @@
 <body>
   {% block hover %}
   {% endblock %}
-  <header>
+  <header class="header">
     <div class="wrapper">
       <div class="header__content">
         <a href="{% url 'mainsite:index_url' %}" class="logo">
@@ -81,6 +81,6 @@
       </div>
     </div>
   </footer>
-  <!-- <script src="{% static 'mainsite/myscript.js' %}"></script> -->
+  <script src="{% static 'mainsite/myscript.js' %}"></script>
 </body>
 </html>
