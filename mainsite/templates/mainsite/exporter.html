@@ -58,9 +58,9 @@
     <section class="block options">
       <div class="wrapper">
         <div class="options__content">
+          <h3 class="block__title options__title">Options</h3>
           <div class="options__list">
             <div class="options__item">
-              <h3 class="block__title options__title">Options</h3>
               <ul class="block__text options__sublist">
                 <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
                 <li class="options__subitem">Choice to export materials or not.</li>
@@ -92,12 +92,13 @@
                 Open any 3D view in Revit 2018 or later version and run the command glTF export.
               </p>
             </div>
-            <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute">
+            <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute1">
           </div>
 
           <div class="howItWork__item">
             <img src="{% static 'mainsite/img/howItWork_img2.png' %}" class="howItWork_img">
             <div class="banner">
+
               <h3 class="block__text32 banner__title">
                 2. Saving
               </h3>
@@ -200,7 +201,7 @@
           </div>
 
           <div class="settings__levelDetails levelDetails">
-            <h3 class="block__subtitle levelDetails__title">Level of details</h3>
+            <h3 class="block block__subtitle levelDetails__title">Level of details</h3>
             <div class="levelDetails__imgList">
               <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img4.png' %}">
               <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img5.png' %}">
@@ -219,7 +220,7 @@
           </div>
 
           <div class="settings__ExportMat ExportMat">
-            <h3 class="block__subtitle ExportMat__title">Export materials</h3>
+            <h3 class="block block__subtitle ExportMat__title">Export materials</h3>
             <img class="ExportMat__img" src="{% static 'mainsite/img/settings_img7.png' %}">
             <div class="ExportMat__textBlock">
               <p class="block__text">
@@ -234,7 +235,7 @@
           </div>
 
           <div class="settings__oututFormat oututFormat">
-            <h3 class="block__subtitle oututFormat__title">Export materials</h3>
+            <h3 class="block block__subtitle oututFormat__title">Export materials</h3>
             <img class="oututFormat__img" src="{% static 'mainsite/img/settings_img8.png' %}">
             <div class="oututFormat__textWidthImg">
               <div class="oututFormat__textBlock">
@@ -249,12 +250,12 @@
                   folder.
                 </p>
               </div>
-              <img class="oututFormat__img" src="{% static 'mainsite/img/settings_img9.png' %}">
+              <img class="oututFormat__img_mini" src="{% static 'mainsite/img/settings_img9.png' %}">
             </div>
           </div>
 
           <div class="settings__dracoCompres dracoCompres">
-            <h3 class="block__subtitle dracoCompres__title">Draco compression</h3>
+            <h3 class="block block__subtitle dracoCompres__title">Draco compression</h3>
             <p class=" block__text dracoCompres__text">
               Draco compression minimizes file size as much as possible. It’s extremely
               useful for large projects, but remember that not all third party software
@@ -265,8 +266,8 @@
             <img class="dracoCompres__img" src="{% static 'mainsite/img/settings_img10.png' %}">
           </div>
 
-          <div class="settings__creating creating">
-            <h3 class=" block__subtitle creating__title">Creating merged LODs model </h3>
+          <div class="block settings__creating creating">
+            <h3 class="block block__subtitle creating__title">Creating merged LODs model </h3>
              <p class=" block__text creating__text">
               Create merged LODs model options improves the quality of detailed Revit
               models handling. With this checkbox enabled glTF Exporter creates tree
@@ -275,6 +276,7 @@
               Reality developers.
             </p>
           </div>
+
 
 
         </div>
