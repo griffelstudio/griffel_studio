@@ -9,6 +9,17 @@
   text-align: left;
 }
 
+.block__textH32 {
+  font-family: Poppins;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.6rem;
+  letter-spacing: 0em;
+  text-align: left;
+  line-height: 3.2rem;
+}
+
 .block__text32 {
   font-family: Poppins;
   font-size: 2.4rem;
@@ -19,6 +30,15 @@
   text-align: left;
   font-size: 3.2rem;
   line-height: 4.8rem;
+}
+.block__text18 {
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .block__link {
@@ -67,9 +87,9 @@ body {
 }
 
 .wrapper {
-  position: relative;
-  width: 141.6rem;
+  width: 75%;
   height: 100%;
+  padding: 0 1.6rem;
   margin: 0 auto;
 }
 
@@ -230,24 +250,22 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 93rem;
+  max-width: 93rem;
   margin: 15.2rem auto 0 auto;
 }
 
 .intro__title {
-  padding-bottom: 2.8rem;
-  border-bottom: 0.6rem solid;
   font-family: Poppins;
   font-size: 6.4rem;
   line-height: 9.6rem;
   font-style: normal;
   font-weight: 600;
   text-align: center;
+  padding-bottom: 2.8rem;
+  border-bottom: 0.6rem solid;
 }
 
 .intro__subtitle {
-  margin-top: 2.8rem;
-  width: 93.6rem;
   font-family: Poppins;
   font-size: 2.4rem;
   font-style: normal;
@@ -255,7 +273,8 @@ body {
   line-height: 3.6rem;
   letter-spacing: 0em;
   text-align: center;
-
+  margin-top: 2.8rem;
+  max-width: 93.6rem;
 }
 
 .block {
@@ -293,8 +312,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
 }
 
@@ -308,32 +325,19 @@ body {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 58rem;
+  min-width: 41%;
 }
 
 .banner__title {
-  font-family: Poppins;
-  font-size: 3.2rem;
-  font-style: normal;
   font-weight: 600;
-  line-height: 4.8rem;
-  text-align: left;
 }
 
 .banner__text {
   margin-top: 3.4rem;
-  font-family: Poppins;
-  font-size: 2.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 3.6rem;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 .solutions_img {
-  width: 81.5rem;
-  height: 58rem;
+  max-width: 57.5%;
 }
 
 .whatWeDo {
@@ -368,18 +372,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   gap: 2rem;
 }
 
 .whatWeDo__item {
-  width: 45rem;
+  width: 31.7%;
 }
 
 .whatWeDo__img {
-  width: 45rem;
-  height: 28rem;
+  width: 100%;
 }
 
 .whatWeDo__subtite {
@@ -407,7 +408,8 @@ body {
   display: flex;
   margin-top: 20rem;
   width: 100%;
-  height: 87rem;
+  min-height: 66rem;
+  height: 45vw;
 }
 
 .connect__bg {
@@ -415,7 +417,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 87rem;
+  height: 100%;
 }
 
 .connect__formBlock {
@@ -444,18 +446,11 @@ body {
           flex-direction: column;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 70rem;
+  width: 36vw;
 }
 
 .connect__subtitle {
   margin-top: 4rem;
-  font-family: Poppins;
-  font-size: 2.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 3.6rem;
-  letter-spacing: 0em;
-  text-align: left;
 }
 
 .form {
@@ -564,7 +559,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 96.4rem;
+  height: 50vw;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(41.15%, rgba(0, 0, 0, 0)), to(rgba(47, 47, 47, 0.8))), url("img/about_bg.png");
   background: linear-gradient(white 50%, transparent), url("img/about_bg.png");
   background-size: cover;
@@ -578,7 +573,7 @@ body {
 }
 
 .about__img {
-  margin-top: 20.1rem;
+  margin-top: 10.4vw;
   width: 12.9rem;
   height: 9.7rem;
   background-image: url("img/about_img1.png");
@@ -587,32 +582,22 @@ body {
 }
 
 .about__text {
-  width: 118rem;
-  margin-top: 30.1rem;
+  width: 83%;
+  margin-top: 15.6vw;
 }
 
 .about__subtitle {
-  font-family: Poppins;
-  font-size: 3.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 5.4rem;
-  letter-spacing: 0em;
   text-align: center;
 }
 
 .about__sign {
   margin-top: 4rem;
-  font-family: Poppins;
-  font-size: 24px;
   font-style: italic;
   font-weight: 300;
-  line-height: 36px;
-  letter-spacing: 0em;
   text-align: center;
 }
 
-.footter {
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -637,7 +622,7 @@ body {
 }
 
 .footer__menu {
-  width: 31rem;
+  width: 15vw;
 }
 
 .footer__menu_min {
@@ -701,10 +686,10 @@ body {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: center;
+  gap:2.4rem;
   margin-top: 8rem;
   width: 100%;
-  height: 70rem;
   display: flex;
   justify-content: space-between;
 }
@@ -721,7 +706,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 5rem 4rem 6rem 4rem;
-  width: 69.6rem;
+  width: 36.4vw;
+  height: 67rem;
   -webkit-box-shadow: 0px 9px 16px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 9px 16px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
@@ -753,6 +739,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap:2.4rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -781,7 +768,6 @@ body {
           box-shadow: 2px 2px 11px rgba(47, 47, 47, 0.4);
   border-radius: 0.5rem;
   cursor: pointer;
-  text-decoration: none;
 }
 
 .buttonAutodesk:hover {
@@ -790,7 +776,7 @@ body {
 }
 
 .buttonAutodesk__body {
-  width: 29.6rem;
+  min-width: 29.6rem;
 }
 
 .buttonAutodesk__img {
@@ -803,8 +789,8 @@ body {
   font-family: Poppins;
   font-size: 1.6rem;
   font-style: normal;
-  text-align: left;
   text-decoration: none;
+  text-align: left;
   color: #ffffff;
 }
 
@@ -825,7 +811,8 @@ body {
 }
 
 .button__readmore {
-  width: 29.6rem;
+  width: 15.4vw;
+  min-width: 14.8rem;
   height: 6rem;
 }
 
@@ -1401,7 +1388,7 @@ body {
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: space-between;
   -ms-grid-columns: 45.6rem 45.6rem 45.6rem;
       grid-template-columns: 45.6rem 45.6rem 45.6rem;
   -ms-grid-rows: 70rem 70rem;
@@ -1445,22 +1432,9 @@ body {
 }
 
 .news__title {
-  font-family: Poppins;
-  font-size: 3.2rem;
-  font-style: normal;
   font-weight: 600;
-  line-height: 4.8rem;
-  text-align: left;
 }
 
-.news__text {
-  font-family: Poppins;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 400;
-  text-align: left;
-  margin-top: 1.6rem;
-}
 
 .news_botton {
   margin-top: auto;
@@ -1679,5 +1653,34 @@ body {
 
 .contacts .form__name {
   margin-top: 0;
+}
+
+@media (max-width: 1367px) {
+  .block__text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+  .block__text32 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+  .block__title {
+    font-size: 4.4rem;
+    line-height: 6.6rem;
+  }
+  .intro__title {
+    font-size: 4.8rem;
+    line-height: 7.2rem;
+  }
+  .products__list {
+    flex-wrap: wrap;
+
+  }
+}
+
+@media (max-width: 1250px) {
+  .wrapper {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

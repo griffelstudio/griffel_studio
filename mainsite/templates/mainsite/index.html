@@ -41,10 +41,10 @@
           <h2 class=" block__title solutions__title">Solutions</h2>
           <div class="solutions__item">
             <div class="banner">
-              <h3 class="banner__title">
+              <h3 class="block__text banner__title">
                 BIM technologies
               </h3>
-              <p class="banner__text">
+              <p class="block__text banner__text">
                 We follow the latest trends of the BIM world and
                 try to develop new design principles and approaches.
                 We introduce Mixed Reality technology to the design process.
@@ -55,10 +55,10 @@
           <div class="solutions__item">
             <img src="{% static 'mainsite/img/solution_img2.png' %}" class="solutions_img">
             <div class="banner">
-              <h3 class="banner__title">
+              <h3 class="block__text banner__title">
                 Custom solutions
               </h3>
-              <p class="banner__text">
+              <p class="block__text banner__text">
                 If you need a custom solution for your design needs — just
                 get in touch! We are always here to create decisive programs
                 for your AEC business.
@@ -67,10 +67,10 @@
           </div>
           <div class="solutions__item">
             <div class="banner">
-              <h3 class="banner__title">
+              <h3 class="block__text banner__title">
                 Collaborations
               </h3>
-              <p class="banner__text">
+              <p class="block__text banner__text">
                 We always look for new mates to learn from them and to
                 share our ideas. We keep tight bonds with our partners to
                 deliver mutually beneficial projects.
@@ -108,12 +108,11 @@
   </section>
 
   <section id="get-connected" class="block connect">
-
     <div class="connect__bg">
       <div class="connect__formBlock">
         <div class="connect__formBlockContent">
           <h2 class=" block__title connect__title">Let’s create together</h2>
-          <p class="connect__subtitle">Send us a message</p>
+          <p class="block__textH32 connect__subtitle">Send us a message</p>
           <form onsubmit="succesSend()" class="form" action="{% url 'mainsite:form_url' %}" method="post">
             {% csrf_token %}
             <div class="form__name">
@@ -135,7 +134,6 @@
       <div class="connect__img">
       </div>
     </div>
-
   </section>
 
   <section class="block about">
@@ -143,13 +141,13 @@
       <div class="about__block">
         <div class="about__img"></div>
         <div class="about__text">
-          <p class="about__subtitle">
+          <p class="block__text32 about__subtitle">
             We create mobile, desktop and cloud applications
             to change processes inside the industry to reimage usual
             workflows, make them faster and simpler, at the same
             time keeping them deep and reliable as they were for centuries.
           </p>
-          <p class="about__sign">Griffel Studio team</p>
+          <p class="block__text about__sign">Griffel Studio team</p>
         </div>
       </div>
     </div>

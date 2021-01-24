@@ -3,7 +3,8 @@ const copyText1 = document.querySelector("#copy-text1");
 const copyText2 = document.querySelector("#copy-text2");
 const playbtn = document.querySelector(".HowItWorks__play");
 const video = document.querySelector("#video");
-const footer = document.querySelector(".footer__content");
+const footerContent = document.querySelector(".footer__content");
+const footer = document.querySelector(".footer");
 const formContent = document.querySelector(".connect__formBlockContent");
 
 window.addEventListener("scroll", ()=>{
@@ -32,7 +33,8 @@ if(video){
 
 window.addEventListener("load",()=>{
   if(window.location.pathname == "/"){
-    footer.style.borderTop = 'none';
+    footerContent.style.borderTop = 'none';
+    footer.style.marginTop = '0';
 
   }
 })
