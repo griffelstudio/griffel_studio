@@ -27,6 +27,11 @@
           </div>
           <h1 class="logo__title">Griffel Studio</h1>
         </a>
+        <div class="container" onclick="burger(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
         {% block nav %}
         <nav class="menu">
           <ul class="menu__list">
@@ -41,6 +46,37 @@
       </div>
     </div>
   </header>
+
+  <div class="burger displayOff">
+    <div class="wrapper">
+      <div class="burger__content">
+        <nav class="burger__menu">
+          <ul class="burger__list">
+            <li class="burger__item"><a class="burger__link" href="{% url 'mainsite:products_url' %}">Products</a></li>
+            <li class="burger__item"><a class="burger__link" href="{% url 'mainsite:news_url' %}">News</a></li>
+            <li class="burger__item"><a class="burger__link" href="{% url 'mainsite:team_url' %}">Our team</a></li>
+            <li class="burger__item"><a class="burger__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="burger__links">
+          <div class="block__text phone"><a class=" block__link block__link_phone" href="tel:+13 674 567 75 54">​+1 843 999 1851</a></div>
+          <div class="block__text email"><a class="block__link" href="mailto:contact@griffelstudio.com">contact@griffelstudio.com</a></div>
+          <div class="burger__social">
+            <a href="https://www.linkedin.com/company/griffel-studio" class="secondBlock__item">
+              <img src="{% static 'mainsite/img/contacts_img1.png' %}"  class="secondBlock__img">
+            </a>
+            <a href="https://www.facebook.com/griffellstudio" class="secondBlock__item">
+              <img src="{% static 'mainsite/img/contacts_img2.png' %}"  class="secondBlock__img">
+            </a>
+            <a href="https://apps.autodesk.com/en/Publisher/PublisherHomepage?ID=CZGFPBBQ2P6D" class="secondBlock__item">
+              <img src="{% static 'mainsite/img/contacts_img3.png' %}"  class="secondBlock__img">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     {% block content %}

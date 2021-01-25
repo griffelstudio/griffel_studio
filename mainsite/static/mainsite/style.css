@@ -77,6 +77,7 @@
 }
 
 * {
+  font-family: Poppins;
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
@@ -88,6 +89,9 @@ body {
   width: 100%;
   height: 100%;
   margin: 0;
+}
+.displayOff{
+  display: none;
 }
 
 .wrapper {
@@ -241,6 +245,93 @@ body {
 .button__header {
   height: 4rem;
   width: 15.2rem;
+}
+{
+
+}
+/* burger */
+.container {
+  display: none;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 22px;
+  height: 2px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-4px, -8px);
+  transform: rotate(45deg) translate(-5px, -8px);
+}
+.scrollOff {
+  overflow:  hidden;
+}
+
+.burger{
+  position: fixed;
+  width: 100%;
+  height: 110vh;
+  top: -6rem;
+  background-color: #FFFFFF;
+}
+.burger__content{
+  height: 100%;
+  padding-top: 16rem;
+  padding-bottom: 5rem;
+}
+.burger__list{
+  height: 21.6rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  opacity: 1;
+}
+.burger__link{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  color: black;
+  text-decoration: none;
+  opacity: 1;
+}
+.burger__menu{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(47, 47, 47, 0.2);
+}
+.burger__links{
+  margin-top: 2.4rem;
+  width: 100%;
+  height: 13.8rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.phone{
+  font-weight: 600;
+
+}
+.burger__social{
+  display:flex;
+  gap:4rem;
 }
 
 .intro {
@@ -870,9 +961,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 9rem;
-  width: 61rem;
+  width: 43%;
 }
 
 .rayTraceView {
@@ -907,7 +999,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 40.8vw;
+  /* height: 40.8vw; */
   /* margin-top: 20rem; */
 }
 
@@ -933,9 +1025,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 56.3rem;
+  /* height: 56.3rem; */
   gap:2.4rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .options__sublist {
@@ -952,18 +1044,21 @@ body {
   margin-top: 4rem;
   padding-left: 3rem;
   width: 100%;
-  height: 60%;
+  /* height: 60%; */
 }
 
 .options__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   width: 50%;
-  height: 100%
 }
 .options__item:last-child {
-  align-self: center;
+  align-self: center ;
 }
 
 .options__img {
+  align-self:center;
   width: 100%;
   -webkit-box-shadow: 0px 0px 8px -4px #2F2F2F;
           box-shadow: 0px 0px 8px -4px #2F2F2F;
@@ -973,6 +1068,7 @@ body {
       -ms-grid-row-align: center;
       align-self: center;
   width: 33.6rem;
+  margin-top: 8rem;
   height: 6rem;
 }
 
@@ -1020,7 +1116,7 @@ body {
 }
 
 .howItWork .banner {
-  width: 30.8rem;
+  width: 21.7%;
 }
 
 .banner_top {
@@ -1204,6 +1300,7 @@ body {
   align-items: flex-start;
 }
 .oututFormat__img{
+  margin-top: 4rem;
   width:100%;
   /* height: 38vw; */
 }
@@ -1722,8 +1819,8 @@ body {
     line-height: 6.6rem;
   }
   .block__subtitle{
-    font-size: 4.4rem;
-    line-height: 6.6rem;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
   }
   .intro__title {
     font-size: 4.8rem;
@@ -1742,7 +1839,26 @@ body {
 
 @media (max-width: 1250px) {
   .wrapper {
-    /* width: 100%; */
+    width: 100%;
   }
+
+}
+@media (max-width: 1000px) {
+  .container{
+    display: block;
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .menu, .button__header {
+    display:none;
+  }
+  .header{
+    box-shadow: 0px 4px 30px rgba(47, 47, 47, 0.2);
+  }
+  .header__content{
+    margin-top: 0;
+  }
+
 }
 /*# sourceMappingURL=style.css.map */

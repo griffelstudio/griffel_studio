@@ -6,6 +6,13 @@ const video = document.querySelector("#video");
 const footerContent = document.querySelector(".footer__content");
 const footer = document.querySelector(".footer");
 const formContent = document.querySelector(".connect__formBlockContent");
+const burgerMenu = document.querySelector(".burger");
+
+function burger(x) {
+  x.classList.toggle("change");
+  burgerMenu.classList.toggle("displayOff")
+  document.body.classList.toggle("scrollOff")
+}
 
 window.addEventListener("scroll", ()=>{
   if(window.pageYOffset > 150){
