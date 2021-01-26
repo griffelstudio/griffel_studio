@@ -73,8 +73,8 @@
             <div class="options__item">
               <img class="options__img" src="{% static 'mainsite/img/options.png' %}">
             </div>
-          </div>s
-          <div class=" button options__button">Settings explained</div>
+          </div>
+          <a href="#settings" class=" button options__button">Settings explained</a>
       </div>
     </section>
 
@@ -106,7 +106,7 @@
                 Select the settings for export and click the button. The files in the folder
                 will be available to you.
               </p>
-              <img src="{% static 'mainsite/img/howItWork_img2.2.png' %}" class="baner_img">
+              <img src="{% static 'mainsite/img/howItWork_img2.2.png' %}" class="banner__img">
             </div>
           </div>
 
@@ -154,9 +154,13 @@
 
     <section class="block settings">
       <div class="wrapper">
-        <div class="settings__content">
+        <div id="settings" class="settings__content">
           <h2 class=" block__title settings__title">
             Settings Explained
+            <div onclick="copyText(link)" class="linkBlock__copybutton copybutton">
+              <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
+              <div class="copybutton__text">Copy</div>
+            </div>
           </h2>
           <div class="settings__groupMeshes groupMeshes">
             <h3 class="block__subtitle groupMeshes__title">Group meshes</h3>

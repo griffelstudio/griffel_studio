@@ -115,18 +115,13 @@
           <p class="block__textH32 connect__subtitle">Send us a message</p>
           <form onsubmit="succesSend()" class="form" action="{% url 'mainsite:form_url' %}" method="post">
             {% csrf_token %}
-            <div class="form__name">
-              <input class="inputArea" placeholder="Name"  type="text" name="name" required>
-              <!-- <span class="placeholder">Name</span> -->
-            </div>
-            <div class="form__email">
-              <input class="inputArea" placeholder="E-mail" type="email" name="email" required>
-              <!-- <span class="placeholder">E-mail</span> -->
-            </div>
-            <div class="form__mesage">
-              <textarea class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80" required></textarea>
-              <!-- <span class="placeholder">Describe your task</span> -->
-            </div>
+
+            <input class="inputArea" placeholder="Name"  type="text" name="name" required>
+
+            <input class="inputArea" placeholder="E-mail" type="email" name="email" required>
+
+            <textarea class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80" required></textarea>
+
             <button  class="button button__form" type="submit">Send</button>
           </form>
         </div>

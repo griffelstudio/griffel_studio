@@ -83,6 +83,9 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   position: relative;
@@ -119,6 +122,7 @@ body {
   top: -0.2rem;
   width: 100%;
   height: 6rem;
+
 }
 
 .header__content {
@@ -137,6 +141,7 @@ body {
           align-items: center;
   margin-top: 4rem;
   width: 100%;
+  z-index: 3;
 }
 
 .logo {
@@ -547,7 +552,7 @@ body {
   width: 100%;
 }
 
-.form__name {
+.inputArea[type="text"] {
   position: relative;
   width: 100%;
   height: 5.2rem;
@@ -567,6 +572,9 @@ body {
   text-align: left;
   padding: 1rem 2rem;
 }
+.contacts__form .inputArea{
+  border: 0.1rem solid rgba(47, 47, 47, 0.4);
+}
 
 .placeholder {
   position: absolute;
@@ -583,19 +591,19 @@ body {
   pointer-events: none;
 }
 
-.form__email {
+.inputArea[type="email"] {
   position: relative;
   margin-top: 2.4rem;
   width: 100%;
   height: 5.2rem;
 }
 
-.form__mesage {
+/* .form__mesage {
   position: relative;
   margin-top: 2.4rem;
   width: 100%;
   background: #ffffff;
-}
+} */
 
 .inputBox {
   width: 100%;
@@ -611,6 +619,10 @@ body {
   text-align: left;
   padding: 1rem 2rem;
   resize: none;
+  margin-top: 2.4rem;
+}
+.contacts__form .inputBox{
+    border: 0.1rem solid rgba(47, 47, 47, 0.4);
 }
 
 .button__form {
@@ -814,6 +826,11 @@ body {
 
 .banner__title_main + .banner__text {
   margin-top: 4rem;
+}
+.banner__img{
+  margin-top: 2rem;
+  width: 100%;
+  height: 48.8%;
 }
 
 .banner__buttons {
@@ -1170,6 +1187,9 @@ body {
 
 .settings__content {
   width: 100%;
+}
+.settings__title{
+  position: relative;
 }
 
 .settings__groupMeshes {

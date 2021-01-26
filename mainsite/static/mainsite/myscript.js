@@ -16,12 +16,17 @@ function burger(x) {
 
 window.addEventListener("scroll", ()=>{
   if(window.pageYOffset > 150){
-    header.style.backgroundColor = "rgb(255,255,255,0.8)"
+    header.style.backgroundColor = "rgb(255,255,255,0.95)"
     header.opacity = "0.6"
+    // header.style.filter = "blur(4px)";
+    header.style.boxShadow = "0px 4px 30px rgba(47, 47, 47, 0.2)";
   }
   else{
     header.style.backgroundColor = "transparent"
     header.opacity = "0"
+    if (window.screen.width > 1000){
+      header.style.boxShadow = "none";
+    }
   }
 })
 
@@ -34,7 +39,8 @@ function copyText(copyText) {
 }
 if(video){
   video.addEventListener("click",()=>{
-  playbtn.classList.toggle("unvisiable")
+  playbtn.classList.toggle("unvisiable");
+  console.log('video')
   })
 }
 
