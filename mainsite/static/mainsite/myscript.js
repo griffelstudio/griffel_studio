@@ -7,6 +7,8 @@ const footerContent = document.querySelector(".footer__content");
 const footer = document.querySelector(".footer");
 const formContent = document.querySelector(".connect__formBlockContent");
 const burgerMenu = document.querySelector(".burger");
+const link = document.createElement('div');
+link.text
 
 function burger(x) {
   x.classList.toggle("change");
@@ -33,6 +35,15 @@ window.addEventListener("scroll", ()=>{
 function copyText(copyText) {
   let area = document.createElement("textarea");
   area.value = copyText.textContent;
+  document.body.appendChild(area).select();
+  document.execCommand("copy");
+  area.remove();
+}
+
+function copyLink(link) {
+  console.log("copy");
+  let area = document.createElement("textarea");
+  area.value = link;
   document.body.appendChild(area).select();
   document.execCommand("copy");
   area.remove();
