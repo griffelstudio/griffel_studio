@@ -1207,6 +1207,7 @@ body {
 }
 .settings__title .copybutton{
   width: 12rem;
+  min-width: 10rem;
   opacity: 0.5;
   position:static;
 }
@@ -1619,6 +1620,10 @@ body {
 
 .news__title {
   font-weight: 600;
+  margin-top: 2.4rem;
+}
+.news__text {
+  margin-top: 2.4rem;
 }
 
 
@@ -1912,6 +1917,7 @@ body {
   }
   .products__list {
     flex-wrap: wrap;
+    margin-top: 2.4rem;
   }
   .products__item {
     /* width: 50.4rem; */
@@ -2394,6 +2400,13 @@ body {
   }
   .levelDetails__imgItem{
     width: 100%;
+  }
+  .news__title {
+    font-weight: 600;
+    margin-top: 1.6rem;
+  }
+  .news__text {
+    margin-top: 1.6rem;
   }
 
 }
