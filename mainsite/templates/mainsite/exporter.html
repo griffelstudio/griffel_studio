@@ -58,21 +58,21 @@
     <section class="block options">
       <div class="wrapper">
         <div class="options__content">
+          <h3 class="block__title options__title">Options</h3>
           <div class="options__list">
-            <div class="options__item">
-              <h3 class="block__title options__title">Options</h3>
-              <ul class="block__text options__sublist">
-                <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
-                <li class="options__subitem">Choice to export materials or not.</li>
-                <li class="options__subitem"> Selection the level of detail for the geometry.</li>
-                <li class="options__subitem">Mesh baking by elements or materials.</li>
-                <li class="options__subitem">Compression meshes using Draco compression</li>
-                <li class="options__subitem">Exporting a model with multiple LODs combined into one file.</li>
-              </ul>
-            </div>
-            <div class="options__item">
-              <img class="options__img" src="{% static 'mainsite/img/options.png' %}">
-            </div>
+              <div class="options__item">
+                <ul class="block__text options__sublist">
+                  <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
+                  <li class="options__subitem">Choice to export materials or not.</li>
+                  <li class="options__subitem"> Selection the level of detail for the geometry.</li>
+                  <li class="options__subitem">Mesh baking by elements or materials.</li>
+                  <li class="options__subitem">Compression meshes using Draco compression</li>
+                  <li class="options__subitem">Exporting a model with multiple LODs combined into one file.</li>
+                </ul>
+              </div>
+              <div class="options__item">
+                <img class="options__img" src="{% static 'mainsite/img/options.png' %}">
+             </div>
           </div>
           <a href="#settings" class=" button options__button">Settings explained</a>
       </div>
@@ -88,6 +88,7 @@
               <h3 class="block__text32 banner__title">
                 1. Opening
               </h3>
+              <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute1 howItWork_img_absolute2">
               <p class="block__text banner__text">
                 Open any 3D view in Revit 2018 or later version and run the command glTF export.
               </p>

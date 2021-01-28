@@ -82,6 +82,7 @@ body {
   text-align: left;
 }
 
+
 .block__subtitle {
   font-size: 3.2rem;
   font-style: normal;
@@ -855,6 +856,7 @@ body {
   width: 29.6rem;
 }
 
+
 .buttonAutodesk {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -976,6 +978,7 @@ body {
   line-height: 4.8rem;
   text-align: left;
   width: 66%;
+
 }
 
 .exporter__buttons {
@@ -985,7 +988,8 @@ body {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 9rem;
-  width: 43%;
+  max-width: 64rem;
+  /* width: 43%; */
 }
 
 .rayTraceView {
@@ -1147,13 +1151,16 @@ body {
 
 .howItWork_img {
   width: 75%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .howItWork_img_absolute1 {
   position: absolute;
   right: 0;
   width: 85%;
+}
+.howItWork_img_absolute2{
+  display: none;
 }
 
 .baner_img {
@@ -1274,6 +1281,7 @@ body {
 
 .levelDetails__imgList {
   margin-top: 4.1rem;
+  display: flex;
 }
 .levelDetails__imgItem{
   width: 32%;
@@ -1390,6 +1398,7 @@ body {
 }
 
 .connectingProject__title {
+  font-size: 4.8rem;
   font-weight: 600;
 }
 
@@ -1411,7 +1420,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 93.6rem;
-  height: 9.4rem;
+  /* height: 9.4rem; */
   padding: 3.2rem 2.4rem;
   background-color: #000000;
 }
@@ -1470,7 +1479,9 @@ body {
   margin-top: 1.5rem;
   width: 100%;
   height: 37vw;
-
+}
+.connectingProject__img1_hiden{
+  display: none;
 }
 .connectingProject__getLink{
   width:66%;
@@ -1499,7 +1510,7 @@ body {
 
 .linkBlock_code {
   width: 69.6rem;
-  height: 16.2rem;
+  /* height: 16.2rem; */
 }
 
 .howHelp__text {
@@ -1878,7 +1889,7 @@ body {
     font-size: 4.4rem;
     line-height: 6.6rem;
   }
-  .block__subtitle{
+  .block__subtitle {
     font-size: 2.4rem;
     line-height: 3.6rem;
   }
@@ -2069,6 +2080,143 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
   }
+  .exporter__text {
+    width: 100%;
+  }
+  .exporter__buttons{
+    width: 100%;
+  }
+  .options__list{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .options__item:first-child{
+    order: 2;
+    /* margin-top: 4rem; */
+  }
+  .options__item:last-child{
+    order: 1;
+    margin-top: 2.4rem;
+
+  }
+  .rayTraceView__text{
+    width:100%;
+  }
+  .howItWork__item{
+    flex-wrap: wrap;
+      height: auto;
+  }
+  .howItWork_img_absolute1,  .howItWork__item_absolute{
+    position: static;
+  }
+  .howItWork__item_absolute{
+    margin-top: 1.6rem;
+  }
+
+  .howItWork_img_absolute1{
+    display: none;
+  }
+  .howItWork_img_absolute2{
+    display: block;
+    margin-top: 2.4rem;
+  }
+  .howItWork_img {
+    width: 100%;
+    min-width: 28.8rem;
+  }
+  .howItWork .banner{
+    width: 100%;
+  }
+  .banner__img{
+    max-width: 28.8rem;
+    align-self: center;
+  }
+  .howItWork_exporter{
+    height: auto;
+  }
+  .howHelp__content{
+    width: 100%;
+  }
+  .groupMeshes__list{
+    flex-direction: column;
+    width: 100%;
+  }
+  .groupMeshes__item{
+    width: 100%;
+  }
+  .twoImgBlock{
+    margin-top: 2.4rem;
+  }
+  .twoImgBlock__item{
+    width: 100%;
+  }
+  .twoImgBlock__item{
+    width: 100%;
+  }
+  .twoImgBlock__item:last-child{
+    margin-top: 2.4rem;
+  }
+  .levelDetails__textBlock{
+    width: 100%;
+    margin-top: 2.4rem;
+  }
+  .ExportMat__textBlock{
+    width: 100%;
+    margin-top: 2.4rem;
+  }
+  .oututFormat__textWidthImg{
+    margin-top: 2.4rem;
+    height: auto;
+    flex-direction: column;
+  }
+  .oututFormat__textBlock{
+    width: 100%;
+  }
+  .oututFormat__img_mini{
+    width: 100%;
+  }
+  .dracoCompres, .creating{
+    width: 100%;
+  }
+  .connectingProject__getLink{
+    width: 100%;
+  }
+  .getLink__text{
+    width: 100%
+  }
+  .linkBlock{
+      width: 100%;
+      /* height: 12.7rem; */
+  }
+  .instruction__item{
+    width: 100%;
+  }
+  .howItWork__item_absoluteApi{
+    position: static;
+  }
+  .howItWork_img_right{
+    width: 100%;
+  }
+  .howItWork__item_absoluteApi .banner__text {
+    margin-top: 2.4rem;
+  }
+  .copybutton{
+    /* width: 7rem;
+    height: 3rem; */
+    font-size: 1.20rem;
+    line-height: 1.8rem;
+  }
+  .rayTraceView__textBlock{
+    flex-direction: column;
+    gap:0rem;
+  }
+  .rayTraceView__text{
+    margin-top: 1.2rem;
+  }
+  .instruction__item{
+    margin-top: 2.4rem;
+  }
+
 
 }
 @media (max-width: 768px) {
@@ -2081,6 +2229,7 @@ body {
             column-gap: 2.4rem;
             justify-content: center;
   }
+
 
 }
 
@@ -2107,7 +2256,7 @@ body {
     font-size: 3.2rem;
     line-height: 4.8rem;
   }
-  .block__subtitle{
+  .block__subtitle {
     font-size: 1.8rem;
     line-height: 2.7rem;
   }
@@ -2197,7 +2346,42 @@ body {
   .team__text{
     width:100%;
   }
+  .exporter .buttonAutodesk__note{
+    width: 100%;
+  }
+  .options__item{
+    width: 100%;
+  }
+  .wrapper {
+    position: relative;
+    overflow-x: hidden;
+  }
 
+  .howItWork_img_absolute2{
+
+    width: 52.8rem;
+    height: 24.6rem;
+  }
+
+  .connectingProject{
+    overflow-x: hidden;
+  }
+  .connectingProject__img1 {
+    display: none;
+  }
+  .connectingProject__img1_hiden{
+    display: block;
+    width: 100%;
+    /* height: 31.7rem; */
+  }
+  .levelDetails__imgList {
+    display: flex;
+    flex-wrap: wrap;
+    gap:5rem;
+  }
+  .levelDetails__imgItem{
+    width: 100%;
+  }
 
 }
 /*# sourceMappingURL=style.css.map */

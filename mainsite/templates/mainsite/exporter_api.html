@@ -68,9 +68,9 @@
     <section class="block options">
       <div class="wrapper">
         <div class="options__content">
+          <h3 class="block__title options__title">Options</h3>
           <div class="options__list">
             <div class="options__item">
-              <h3 class="block__title options__title">Options</h3>
               <ul class="block__text options__sublist">
                 <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
                 <li class="options__subitem">Choice to export materials or not.</li>
@@ -103,7 +103,7 @@
               </p>
               <div class="getLink__linkBlock linkBlock">
                 <p id="copy-text1" class="linkBlock__text">
-                  %ProgramData%\Autodesk\ApplicationPlugins\glTF Exporter.bundle\Contents
+                  %ProgramData%\Autodesk\<wbr>ApplicationPlugins\<wbr>glTF Exporter.bundle\Contents
                 </p>
                 <div onclick="copyText(link)" class="linkBlock__copybutton copybutton">
                   <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
@@ -114,6 +114,7 @@
 
             <p class="block__text  connectingProject__text">Then:</p>
             <img class="connectingProject__img1" src="{% static 'mainsite/img/exporterapi_img2.png' %}"  >
+            <img class="connectingProject__img1_hiden" src="{% static 'mainsite/img/exporterapi_img2(1).png' %}">
             <div class="connectingProject__instruction instruction">
               <div class="instruction__item">
                 <h3 class="block__subtitle instruction__title">1. Add .dll</h3>
@@ -122,6 +123,7 @@
                   (use the library from the appropriate folder for your targeting Revit version).
                 </p>
               </div>
+              <img class="connectingProject__img1_hiden" src="{% static 'mainsite/img/exporterapi_img2(2).png' %}">
               <div class="instruction__item">
                 <h3 class="block__subtitle instruction__title">2. Validate license</h3>
                 <p class=" block__text instruction__text">
@@ -139,9 +141,9 @@
 
                   <code class="linkBlock__text">
                     <p id="copy-text2">
-                      var outputPath = @"C:\ExportResult.glb";<br>
-                      var settings = new GltfExportSettings(outputPath);<br>
-                      var exporter = new GltfExportSettings(settings);<br>
+                      var outputPath = <wbr>@"C:\ExportResult.glb";<br>
+                      var settings = <wbr>new GltfExportSettings(outputPath);<br>
+                      var exporter = <wbr>new GltfExportSettings(settings);<br>
                       exporter.Export(document, view);
                     </p>
                   </code>
@@ -170,6 +172,7 @@
               <h3 class="block__text32 banner__title">
                 1. Opening
               </h3>
+                <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute1 howItWork_img_absolute2">
               <p class="block__text banner__text">
                 Open any 3D view in Revit 2018 or later version and run the command glTF export.
               </p>
