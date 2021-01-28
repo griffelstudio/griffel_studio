@@ -1860,6 +1860,19 @@ body {
 .contacts .form__name {
   margin-top: 0;
 }
+.privacy__subtitle{
+  font-weight: 600;
+  margin-top: 4rem;
+}
+.privacy .block__text{
+  margin-top: 2.4rem;
+}
+.privacy .policy__list{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding-left: 4rem;
+  font-weight: 600;
+}
 
 @media (max-width: 1610px) {
   .block{

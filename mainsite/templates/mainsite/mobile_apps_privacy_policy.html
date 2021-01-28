@@ -3,53 +3,58 @@
 
 {% block content %}
 <main>
-  <section class="privacy">
-    <div class="article100">
-            <h2 class="header">Privacy Policy</h2>
-            <p>Last updated: December 10, 2020</p>
-            <div class="text">
-              <p>
-                This Privacy Policy explains how personal data is collected,
-                used and stored in relation to applications provided by Griffel Studio.
-              </p>
-              <h3 class="header">Do we collect personal information?</h3>
-              <p>
-                The application (the App) published by Griffel Studio in Apple
-                App Store or Google Play Market follows the next statements:
-              </p>
-              <ol>
-                  <li>
-                      <p>
-                        The App does not collect any personal data.
-                      </p>
-                  </li>
-                  <li>
-                      <p>
-                        The App does not store any personal data.
-                      </p>
-                  </li>
-                  <li>
-                      <p>
-                        The App does not share any personal data with any third parties.
-                      </p>
-                  </li>
-              </ol>
-              <p>If the user does not agree with any clause of the policy the user should not use the App</p>
-              <h3 class="header">Will This Privacy Policy Change?</h3>
-              <p>
-                We may change this Privacy Policy. The updated Privacy Policy will be available here. We will show
-                the date the Privacy Policy was last updated to help you know when we change it. If we make material
-                changes to our Privacy Policy, we will endeavor to provide you with notice before such changes take
-                effect, such as through prominent notice on our website or services or by email.
-              </p>
+  <section class="block privacy">
+    <div class="wrapper">
+      <div class="privacy__content">
+              <h2 class="block__title">Privacy Policy</h2>
+              <pclass="block__text18">Last updated: December 10, 2020</p>
+              <div class="privacy__textBlock">
+                <p class="block__text privacy__text">
+                  This Privacy Policy explains how personal data is collected,
+                  used and stored in relation to applications provided by Griffel Studio.
+                </p>
+                <h3 class="block__text32 privacy__subtitle">Do we collect personal information?</h3>
+                <p class="block__text">
+                  The application (the App) published by Griffel Studio in Apple
+                  App Store or Google Play Market follows the next statements:
+                </p>
+                <ol>
+                    <li>
+                        <p class="block__text">
+                          The App does not collect any personal data.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="block__text">
+                          The App does not store any personal data.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="block__text">
+                          The App does not share any personal data with any third parties.
+                        </p>
+                    </li>
+                </ol>
+                <p class="block__text">If the user does not agree with any clause of the policy the user should not use the App</p>
+                
+                <h3 class="block__text32 privacy__subtitle ">Will This Privacy Policy Change?</h3>
+                <p class="block__text">
+                  We may change this Privacy Policy. The updated Privacy Policy will be available here. We will show
+                  the date the Privacy Policy was last updated to help you know when we change it. If we make material
+                  changes to our Privacy Policy, we will endeavor to provide you with notice before such changes take
+                  effect, such as through prominent notice on our website or services or by email.
+                </p>
 
-              <h3 class="header">How To Contact Us?</h3>
-              <p>
-                If you want to contact us, please use the following contact information. When you do so, please tell
-                us the name of the application about which you are contacting us:
-              </p>
-              <p>By email at: <a class='link' href="{% url 'mainsite:index_url' %}#get-connected">contact@griffelstudio.com</a></p>
-          </div>
+                <h3 class="block__text32 privacy__subtitle ">How To Contact Us?</h3>
+                <p class="block__text">
+                  If you want to contact us, please use the following contact information. When you do so, please tell
+                  us the name of the application about which you are contacting us:
+                </p>
+                <p class="block__text">By email at: <a class='block__link' href="{% url 'mainsite:index_url' %}#get-connected">contact@griffelstudio.com</a></p>
+            </div>
+
+    </div>
+
     </div>
   </section>
 </main>
