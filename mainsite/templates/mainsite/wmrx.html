@@ -14,29 +14,27 @@
 <!-- <div class="button button__header">Get in touch</div> -->
 {% endblock %}
 
-
 {% block content %}
 <main>
     <section class="block exporter">
       <div class="wrapper">
-          <h1 class="exporter__title exporter__title_api">glTF Exporter+API</h1>
           <div class="exporter__content">
+            <h1 class="exporter__title">WMRX</h1>
             <p class="block__text exporter__text">
-              glTF Exporter API .NET library export projects to
-              the universal file format glTF which lots of 3D software
-              can handle. If you don't need API to implement glTF export
-              in your app use the <a class="block__link" href="{% url 'mainsite:exporter_url' %}">glTF Exporter</a> better.
+              Add-in for Revit which exports projects to 3D 
+              glTF format. glTF is universal file format for
+              transferring 3D assets which almost every 3D
+              software can handle.
             </p>
           </div>
           <div class="exporter__buttons">
             <div class="buttonAutodesk">
               <img class="buttonAutodesk__img" src="{% static 'mainsite/img/autodesk.png' %}" >
-              <a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview"
-               class="buttonAutodesk__text">
+              <a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=8451869436709222290" class="buttonAutodesk__text">
                 Download on the
                 AUTODESK APP STORE
-              </div>
-            </a>
+              </a>
+            </div>
             <a href="https://yadi.sk/d/fneLTgmdFBpbww?w=1" class="button button__readmore">Download sample files</a>
             <div class="buttonAutodesk__note">
               *or ask for a special quote sending us an <a class="block__link" href="mailto:contact@griffelstudio.com">e-mail.</a>
@@ -49,20 +47,12 @@
     <section class="block rayTraceView">
       <div class="wrapper">
         <div class="HowItWorks__content">
-          <img class="rayTraceView__img" src="{% static 'mainsite/img/exporterapi_img1.png' %}">
-          <div class="rayTraceView__textBlock">
-            <p class="block__text rayTraceView__text">
-              Ray Trace view of the model in Revit.
-            </p>
-            <p class="block__text rayTraceView__text">
-              Exported and opened in default Windows 10 application.
-            </p>
-            <p class="block__text rayTraceView__text">
-              Using glTF Exporter API in Visual Studio.
-            </p>
-          </div>
-        </div>
-
+          <img class="rayTraceView__img" src="{% static 'mainsite/img/raytrace.png' %}">
+          <p class="block__text rayTraceView__text">
+            Ray Trace view of the model in Revit compared
+            to the same model exported and opened in default
+            Windows 10 application.
+          </p>
       </div>
     </section>
 
@@ -71,109 +61,35 @@
         <div class="options__content">
           <h3 class="block__title options__title">Options</h3>
           <div class="options__list">
-            <div class="options__item">
-              <ul class="block__text options__sublist">
-                <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
-                <li class="options__subitem">Choice to export materials or not.</li>
-                <li class="options__subitem"> Selection the level of detail for the geometry.</li>
-                <li class="options__subitem">Mesh baking by elements or materials.</li>
-                <li class="options__subitem">Compression meshes using Draco compression</li>
-                <li class="options__subitem">Exporting a model with multiple LODs combined into one file.</li>
-                <li class="options__subitem">Export file in glTF format via API with some statistics and validation results.</li>
-              </ul>
-            </div>
-            <div class="options__item">
-              <img class="options__img" src="{% static 'mainsite/img/options.png' %}">
-            </div>
+              <div class="options__item">
+                <ul class="block__text options__sublist">
+                  <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
+                  <li class="options__subitem">Choice to export materials or not.</li>
+                  <li class="options__subitem"> Selection the level of detail for the geometry.</li>
+                  <li class="options__subitem">Mesh baking by elements or materials.</li>
+                  <li class="options__subitem">Compression meshes using Draco compression</li>
+                  <li class="options__subitem">Exporting a model with multiple LODs combined into one file.</li>
+                </ul>
+              </div>
+              <div class="options__item">
+                <img class="options__img" src="{% static 'mainsite/img/options.png' %}">
+             </div>
           </div>
           <a href="#settings" class=" button options__button">Settings explained</a>
       </div>
     </section>
 
-    <section class="block howItWork">
+    <section class="block howItWork howItWork_exporter">
       <div class="wrapper">
         <div class="howItWork__content">
           <h2 class=" block__title howItWork__title">How does it work?</h2>
-
-          <div class="connectingProject">
-            <h3 class="block__title connectingProject__title">Connecting the project to the code</h3>
-            <div class="connectingProject__getLink">
-              <p class="block__text getLink__text">
-                To make use of glTF export functionality in your Revit add-in project
-                get GS.Revit.GltfExporterAPI.dll under:
-              </p>
-              <div class="getLink__linkBlock linkBlock">
-                <p id="copy-text1" class="linkBlock__text">
-                  %ProgramData%\Autodesk\<wbr>ApplicationPlugins\<wbr>glTF Exporter.bundle\Contents
-                </p>
-                <div onclick="copyText(link)" class="linkBlock__copybutton copybutton">
-                  <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
-                  <div class="copybutton__text">Copy</div>
-                </div>
-              </div>
-            </div>
-
-            <p class="block__text  connectingProject__text">Then:</p>
-            <img class="connectingProject__img1" src="{% static 'mainsite/img/exporterapi_img2.png' %}"  >
-            <img class="connectingProject__img1_hiden" src="{% static 'mainsite/img/exporterapi_img2(1).png' %}">
-            <div class="connectingProject__instruction instruction">
-              <div class="instruction__item">
-                <h3 class="block__subtitle instruction__title">1. Add .dll</h3>
-                <p class=" block__text instruction__text">
-                  Reference GS.Revit.GltfExporterAPI.dll from your Revit add-in development C# project
-                  (use the library from the appropriate folder for your targeting Revit version).
-                </p>
-              </div>
-              <img class="connectingProject__img1_hiden" src="{% static 'mainsite/img/exporterapi_img2(2).png' %}">
-              <div class="instruction__item">
-                <h3 class="block__subtitle instruction__title">2. Validate license</h3>
-                <p class=" block__text instruction__text">
-                  You need to pass your personal user ID to validate the license before starting the
-                  export (you can grab it once and keep in the settings of the add-in): Validate.
-                  License(developerId)
-                </p>
-              </div>
-              <div class="instruction__item">
-                <h3 class="block__subtitle instruction__title">3. Create settings</h3>
-                <p class=" block__text instruction__text">
-                  Add the following code after license validation to run the export:
-                </p>
-                <div class="instruction__linkBlock linkBlock linkBlock_code">
-
-                  <code class="linkBlock__text">
-                    <p id="copy-text2">
-                      var outputPath = <wbr>@"C:\ExportResult.glb";<br>
-                      var settings = <wbr>new GltfExportSettings(outputPath);<br>
-                      var exporter = <wbr>new GltfExportSettings(settings);<br>
-                      exporter.Export(document, view);
-                    </p>
-                  </code>
-                  <div onclick="copyText(copyText2)" class="linkBlock__copybutton copybutton">
-                    <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
-                    <div class="copybutton__text">Copy</div>
-                  </div>
-                </div>
-
-              </div>
-              <div class="instruction__item">
-                <h3 class="block__subtitle instruction__title">4. Do the export</h3>
-                <p class=" block__text instruction__text">
-                  Resolve compilation errors using GS.Revit.GltfExporterAPI;
-                  execute the command from a 3D view and see results.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <h3 class="block__title connectingProject__title connectingProject__title_end">Or downloading a file from Revit</h3>
-
 
           <div class="howItWork__item howItWork__item_first">
             <div class="banner">
               <h3 class="block__text32 banner__title">
                 1. Opening
               </h3>
-                <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute1 howItWork_img_absolute2">
+              <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute1 howItWork_img_absolute2">
               <p class="block__text banner__text">
                 Open any 3D view in Revit 2018 or later version and run the command glTF export.
               </p>
@@ -184,6 +100,7 @@
           <div class="howItWork__item">
             <img src="{% static 'mainsite/img/howItWork_img2.png' %}" class="howItWork_img">
             <div class="banner">
+
               <h3 class="block__text32 banner__title">
                 2. Saving
               </h3>
@@ -208,12 +125,7 @@
             </div>
             <img src="{% static 'mainsite/img/howItWork_img3.png' %}" class="howItWork_img">
           </div>
-
-          <div class="block howItWork__item howItWork__item_last">
-            <img src="{% static 'mainsite/img/exporterapi_img4.png' %}" class="howItWork_img_right">
-          </div>
-
-          <div class="howItWork__item howItWork__item_absoluteApi">
+          <div class="howItWork__item howItWork__item_absolute">
             <img src="{% static 'mainsite/img/exporterapi_img5.png' %}" class="howItWork_img">
             <div class="banner">
               <p class="block__text banner__text">
@@ -232,23 +144,12 @@
             How our solution helps clients?
           </h2>
           <p class="block__text howHelp__text">
-            The add-in helps HoloLens and other Mixed Reality developers get
-            fast tiny files with LODs and all the materials right from Revit - no
-            need to convert a Revit project using numerous software and tools to get
-            the file AR compatible devices can handle. It will take you only a few
-            lines of code to get things done!
+            glTF Exporter helps architects to seamlessly bring their
+            projects into real-time visualization environment like Unity or UE.
+            No geometry optimization is needed. Skip complicated import steps to
+            devote more time to setting up object interactions, reflections,
+            lighting and RTX support for your next-gen real-time visual presentation.
           </p>
-          <p class="block__text howHelp__text">
-            glTF Exporter API library features embedded IntelliSense XML documentation
-            and provides flexible export options. Except described on settings explained
-            page they include:
-          </p>
-          <ul class="block__text howHelp__list">
-            <li class="howHelpItem">export materials as doublesided;</li>
-            <li class="howHelpItem">limit vertices count for a single mesh;</li>
-            <li class="howHelpItem">export normals or not;</li>
-            <li class="howHelpItem">format output json file and more.</li>
-          </ul>
         </div>
       </div>
     </section>
@@ -258,7 +159,7 @@
         <div id="settings" class="settings__content">
           <h2 class=" block__title settings__title">
             Settings Explained
-            <div onclick="copyLink('https://griffelstudio.com//products/exporter_api/#settings')" class="linkBlock__copybutton copybutton">
+            <div onclick="copyLink('https://griffelstudio.com//products/exporter/#settings')" class="linkBlock__copybutton copybutton">
               <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
               <div class="copybutton__text">Copy link</div>
             </div>
@@ -371,7 +272,7 @@
             <img class="dracoCompres__img" src="{% static 'mainsite/img/settings_img10.png' %}">
           </div>
 
-          <div class="settings__creating creating">
+          <div class="block settings__creating creating">
             <h3 class="block block__subtitle creating__title">Creating merged LODs model </h3>
              <p class=" block__text creating__text">
               Create merged LODs model options improves the quality of detailed Revit
@@ -381,6 +282,7 @@
               Reality developers.
             </p>
           </div>
+
 
 
         </div>

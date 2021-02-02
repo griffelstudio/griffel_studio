@@ -9,16 +9,12 @@
   <meta property="og:image" content="mainsite/img/logo.png" />
   <meta property="og:image:type" content="{% static 'mainsite/img/logo.png' %}" />
   <link rel="icon" href="{% static 'mainsite/img/logo.png' %}">
-  <link rel="icon" href="css/">
-
-
   <title> Griffel Studio</title>
   <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
   <meta name="google-site-verification" content="dnVPdGRVYN_fS693C4B1KIuRNamqRyevNIhSF1T8xN8" />
 </head>
 <body>
-  {% block hover %}
-  {% endblock %}
+<div class="hover"></div>
   <header class="header">
     <div class="wrapper">
       <div class="header__content">
@@ -41,8 +37,9 @@
             <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
           </ul>
         </nav>
-        <div class="button button__header">Get in touch</div>
         {% endblock %}
+        <a href="{% url 'mainsite:index_url' %}#get-connected" class="button button__header">Get in touch</a>
+
       </div>
     </div>
   </header>
@@ -79,8 +76,8 @@
   </div>
 
 
-    {% block content %}
-    {% endblock %}
+  {% block content %}
+  {% endblock %}
 
   <footer class="block footer">
     <div class="wrapper">

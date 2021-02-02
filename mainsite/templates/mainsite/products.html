@@ -10,7 +10,7 @@
     <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
   </ul>
 </nav>
-<div class="button button__header">Get in touch</div>
+<!-- <div class="button button__header">Get in touch</div> -->
 {% endblock %}
 
 {% block content %}
@@ -38,6 +38,7 @@
                   </p>
                 </div>
                 <div class="banner__buttons">
+                  <a href="{% url 'mainsite:exporter_url' %}" class="button button__readmore">Read more</a>
                   <div class="banner__buttonAutodesk">
                     <div class="buttonAutodesk">
                       <img class="buttonAutodesk__img" src="{% static 'mainsite/img/autodesk.png' %}" >
@@ -50,7 +51,7 @@
                       *or ask for a special quote sending us an <a class="text__link" href="mailto:contact@griffelstudio.com">e-mail.</a>
                     </div>
                   </div>
-                  <a href="{% url 'mainsite:exporter_url' %}" class="button button__readmore">Read more</a>
+
                 </div>
               </div>
 
@@ -71,7 +72,9 @@
                   </p>
                 </div>
                 <div class="banner__buttons">
+                  <a href="{% url 'mainsite:exporter_api_url' %}" class="button button__readmore">Read more</a>
                   <div class="banner__buttonAutodesk">
+
                     <div class="buttonAutodesk">
                       <img class="buttonAutodesk__img" src="{% static 'mainsite/img/autodesk.png' %}" >
                       <a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview" class="buttonAutodesk__text">
@@ -83,7 +86,42 @@
                       *or ask for a special quote sending us an <a class="text__link" href="mailto:contact@griffelstudio.com">e-mail.</a>
                     </div>
                   </div>
-                  <a href="{% url 'mainsite:exporter_api_url' %}" class="button button__readmore">Read more</a>
+
+                </div>
+              </div>
+
+              <div class="products__item">
+                <div class="banner">
+                  <h2 class="banner__title_main">
+                    WMRX
+                  </h2>
+                  <p class="block__text banner__text">
+                    Add-in for Revit which exports projects to 3D glTF format and gives API.
+                  </p>
+                  <h3 class="block__text banner__title">
+                    For whom?
+                  </h3>
+                  <p class="block__text banner__text">
+                    glTF Exporter+API is for VR and AR developers who work with architectural
+                    projects and need a reliable way to get 3D models out of Revit.
+                  </p>
+                </div>
+                <div class="banner__buttons">
+                  <a href="{% url 'mainsite:wmrx_url' %}" class="button button__readmore">Read more</a>
+                  <div class="banner__buttonAutodesk">
+
+                    <div class="buttonAutodesk">
+                      <img class="buttonAutodesk__img" src="{% static 'mainsite/img/autodesk.png' %}" >
+                      <a href="https://apps.autodesk.com/RVT/en/Detail/Index?id=4018039617950599215&appLang=en&os=Win64&mode=preview" class="buttonAutodesk__text">
+                        Download on the
+                        AUTODESK APP STORE
+                      </a>
+                    </div>
+                    <div class="buttonAutodesk__note">
+                      *or ask for a special quote sending us an <a class="text__link" href="mailto:contact@griffelstudio.com">e-mail.</a>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@ const header = document.querySelector(".header");
 const copyText1 = document.querySelector("#copy-text1");
 const copyText2 = document.querySelector("#copy-text2");
 const playbtn = document.querySelector(".HowItWorks__play");
-const video = document.querySelector("#video");
+const videoPlayer = document.querySelector("video");
 const footerContent = document.querySelector(".footer__content");
 const footer = document.querySelector(".footer");
 const formContent = document.querySelector(".connect__formBlockContent");
@@ -48,10 +48,12 @@ function copyLink(link) {
   document.execCommand("copy");
   area.remove();
 }
-if(video){
-  video.addEventListener("click",()=>{
+if(videoPlayer){
+  videoPlayer.addEventListener("play",()=>{
   playbtn.classList.toggle("unvisiable");
-  console.log('video')
+  })
+  videoPlayer.addEventListener("pause",()=>{
+  playbtn.classList.toggle("unvisiable");
   })
 }
 

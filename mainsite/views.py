@@ -25,6 +25,9 @@ class Team(View):
 class Exporter(View):
     def get(self, request):
         return render(request, 'mainsite/exporter.html')
+class Wmrx(View):
+    def get(self, request):
+        return render(request, 'mainsite/wmrx.html')
 class Exporter_api(View):
     def get(self, request):
         return render(request, 'mainsite/exporter_api.html')
