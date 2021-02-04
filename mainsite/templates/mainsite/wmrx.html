@@ -16,15 +16,13 @@
 
 {% block content %}
 <main>
-    <section class="block exporter">
+    <section class="block exporter wmrx">
       <div class="wrapper">
           <div class="exporter__content">
-            <h1 class="exporter__title">WMRX</h1>
+            <h1 class="exporter__title">WMR Experience</h1>
             <p class="block__text exporter__text">
-              Add-in for Revit which exports projects to 3D 
-              glTF format. glTF is universal file format for
-              transferring 3D assets which almost every 3D
-              software can handle.
+              Preview your project in Windows Mixed Reality immersive headset
+              in one click!
             </p>
           </div>
           <div class="exporter__buttons">
@@ -35,7 +33,6 @@
                 AUTODESK APP STORE
               </a>
             </div>
-            <a href="https://yadi.sk/d/fneLTgmdFBpbww?w=1" class="button button__readmore">Download sample files</a>
             <div class="buttonAutodesk__note">
               *or ask for a special quote sending us an <a class="block__link" href="mailto:contact@griffelstudio.com">e-mail.</a>
             </div>
@@ -44,42 +41,24 @@
         </div>
     </section>
 
-    <section class="block rayTraceView">
+    <section class="block ranwmrx">
       <div class="wrapper">
-        <div class="HowItWorks__content">
-          <img class="rayTraceView__img" src="{% static 'mainsite/img/raytrace.png' %}">
-          <p class="block__text rayTraceView__text">
-            Ray Trace view of the model in Revit compared
-            to the same model exported and opened in default
-            Windows 10 application.
+        <div class="ranwmrx__content">
+          <p class="block__text ranwmrx__text">
+            Run WMR Experience command and the add-in will make all necessary
+            preparations for Mixed Reality Portal. Find your project title in
+            the Places picker to walk it in a virtual reality headset.
+            Griffel Studio's Windows Mixed Reality Experience is the fastest
+            and simplest way to take the first look at your project in real scale.
+          </p><br>
+          <p class="block__text18 ranwmrx__text">
+            * you must have one of the <a class="block__link" href="https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality">Windows Mixed Reality headsets set up </a> and running on your PC.<br>
+            ** WMR Experience command is working only on <a class="block__link" href="https://docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality">Windows 10 version 1803 and later.</a>
           </p>
       </div>
     </section>
 
-    <section class="block options">
-      <div class="wrapper">
-        <div class="options__content">
-          <h3 class="block__title options__title">Options</h3>
-          <div class="options__list">
-              <div class="options__item">
-                <ul class="block__text options__sublist">
-                  <li class="options__subitem">Choosing a file format between gltf and packed glb.</li>
-                  <li class="options__subitem">Choice to export materials or not.</li>
-                  <li class="options__subitem"> Selection the level of detail for the geometry.</li>
-                  <li class="options__subitem">Mesh baking by elements or materials.</li>
-                  <li class="options__subitem">Compression meshes using Draco compression</li>
-                  <li class="options__subitem">Exporting a model with multiple LODs combined into one file.</li>
-                </ul>
-              </div>
-              <div class="options__item">
-                <img class="options__img" src="{% static 'mainsite/img/options.png' %}">
-             </div>
-          </div>
-          <a href="#settings" class=" button options__button">Settings explained</a>
-      </div>
-    </section>
-
-    <section class="block howItWork howItWork_exporter">
+    <section class="block howItWork howItWork_wmrx">
       <div class="wrapper">
         <div class="howItWork__content">
           <h2 class=" block__title howItWork__title">How does it work?</h2>
@@ -87,204 +66,50 @@
           <div class="howItWork__item howItWork__item_first">
             <div class="banner">
               <h3 class="block__text32 banner__title">
-                1. Opening
+                1. Launch the add-in.
               </h3>
-              <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute1 howItWork_img_absolute2">
               <p class="block__text banner__text">
-                Open any 3D view in Revit 2018 or later version and run the command glTF export.
+                Click 'WMR Experience' button and let the preparation finish.
               </p>
             </div>
-            <img src="{% static 'mainsite/img/howItWork_img1.png' %}" class="howItWork_img howItWork_img_absolute1">
+            <img src="{% static 'mainsite/img/wmrx_img1.png' %}" class="howItWork_img">
           </div>
 
-          <div class="howItWork__item">
-            <img src="{% static 'mainsite/img/howItWork_img2.png' %}" class="howItWork_img">
+          <div class="howItWork__item howItWork__item_middle">
+            <img src="{% static 'mainsite/img/wmrx_img2.png' %}" class="howItWork_img">
             <div class="banner">
-
               <h3 class="block__text32 banner__title">
-                2. Saving
+                2. Mixed Reality Portal
               </h3>
               <p class="block__text banner__text">
-                Select the settings for export and click the button. The files in the folder
-                will be available to you.
+                Start 'Mixed Reality Portal' Windows application.
               </p>
-              <img src="{% static 'mainsite/img/howItWork_img2.2.png' %}" class="banner__img">
             </div>
           </div>
 
           <div class="howItWork__item">
-            <div class="banner banner_top">
+            <div class="banner ">
               <h3 class="block__text32 banner__title">
-                3. Using
+                3. Places Picker
               </h3>
               <p class="block__text banner__text ">
-                Once you have the gltf file you can send it to 
-                your client, share on the internet, preview in 
-                many gltf viewers or import into your software development project.
+                Find your project in the 'Places Picker'.
               </p>
             </div>
-            <img src="{% static 'mainsite/img/howItWork_img3.png' %}" class="howItWork_img">
-          </div>
-          <div class="howItWork__item howItWork__item_absolute">
-            <img src="{% static 'mainsite/img/exporterapi_img5.png' %}" class="howItWork_img">
-            <div class="banner">
-              <p class="block__text banner__text">
-                Use it any way you like.
-              </p>
-            </div>
+            <img src="{% static 'mainsite/img/wmrx_img3.png' %}" class="howItWork_img">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="block howHelp">
+    <section class="block HowItWorks">
       <div class="wrapper">
-        <div class="howHelp__content">
-          <h2 class=" block__title howHelp__title">
-            How our solution helps clients?
-          </h2>
-          <p class="block__text howHelp__text">
-            glTF Exporter helps architects to seamlessly bring their
-            projects into real-time visualization environment like Unity or UE.
-            No geometry optimization is needed. Skip complicated import steps to
-            devote more time to setting up object interactions, reflections,
-            lighting and RTX support for your next-gen real-time visual presentation.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="block settings">
-      <div class="wrapper">
-        <div id="settings" class="settings__content">
-          <h2 class=" block__title settings__title">
-            Settings Explained
-            <div onclick="copyLink('https://griffelstudio.com//products/exporter/#settings')" class="linkBlock__copybutton copybutton">
-              <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
-              <div class="copybutton__text">Copy link</div>
-            </div>
-          </h2>
-          <div class="settings__groupMeshes groupMeshes">
-            <h3 class="block__subtitle groupMeshes__title">Group meshes</h3>
-            <ul class="groupMeshes__list">
-              <li class="block__text groupMeshes__item">
-                Group meshes by element or by material option influences output file size,
-                3D model performance and file structure.
-              </li>
-              <li class="block__text groupMeshes__item">
-                Elements have their Revit Ids and are broken down by Revit Category, so 
-                the output file has nice structure.
-              </li>
-              <li class="block__text groupMeshes__item">
-                When grouping by materials there are as much nodes in the file tree
-                as materials in Revit project.
-              </li>
-            </ul>
-            <div class="groupMeshes__oneImgBlock oneImgBlock">
-              <img class="oneImgBlock__img" src="{% static 'mainsite/img/settings_img1.png' %}">
-              <div class="oneImgBlock__textBlock">
-                <p class="block__text oneImgBlock__text ">Model on the left has meshes grouped by element.</p>
-                <p class="block__text oneImgBlock__text">Model on the right has meshes grouped by materials.</p>
-              </div>
-            </div>
-            <div class="groupMeshes__twoImgBlock twoImgBlock">
-              <div class="twoImgBlock__item">
-                <img class="twoImgBlock__img" src="{% static 'mainsite/img/settings_img2.png' %}">
-                <p class="block__text twoImgBlock__text">
-                  Large projects exported by elements may have less FPS rate.
-                  Number of draw calls for this model is 6494.
-                </p>
-              </div>
-              <div class="twoImgBlock__item">
-                <img class="twoImgBlock__img" src="{% static 'mainsite/img/settings_img3.png' %}">
-                <p class="block__text">
-                  Gain more FPS exporting by materials — only 55 draw calls — the same as
-                  number of materials. Though file size for the model is increased from
-                  18MB to 29MB.
-                </p>
-              </div>
-            </div>
+        <div class="HowItWorks__content">
+          <!-- <h2 class="block__title HowItWorks__title">How it works?</h2> -->
+          <div class="HowItWorks__video">
+            <iframe poster="{% static 'mainsite/img/poster.png' %}" width="100%" height="100%" src="https://www.youtube.com/embed/t9ZyJI2tGqM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <img class="HowItWorks__play" src="{% static 'mainsite/img/play_button.png' %}"> -->
           </div>
-
-          <div class="settings__levelDetails levelDetails">
-            <h3 class="block block__subtitle levelDetails__title">Level of details</h3>
-            <div class="levelDetails__imgList">
-              <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img4.png' %}">
-              <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img5.png' %}">
-              <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img6.png' %}">
-            </div>
-            <div class="levelDetails__textBlock">
-              <p class="block__text">
-                Level of details determines how many polygons 3D model has. It relates mostly for rounded
-                objects and may dramatically impact the file size.
-              </p><br>
-              <p class="block__text">
-                The same model of torus exported with LOD 1, LOD 3 and LOD 15 (5KB, 15KB and
-                396KB corresponding). LOD values ​​from 5 to 7 are generally sufficient.
-              </p>
-            </div>
-          </div>
-
-          <div class="settings__ExportMat ExportMat">
-            <h3 class="block block__subtitle ExportMat__title">Export materials</h3>
-            <img class="ExportMat__img" src="{% static 'mainsite/img/settings_img7.png' %}">
-            <div class="ExportMat__textBlock">
-              <p class="block__text">
-                glTF Exporter maps Revit materials to PBR materials (and to KHR if you
-                choose export with merged LODs option) so you can get beautifully looking 3D model.
-              </p><br>
-              <p class="block__text">
-                But if you what to experiment or get some statistics you can skip materials and export
-                geometry only disabling Export materials checkbox. This might be useful for some geometry analysis.
-              </p>
-            </div>
-          </div>
-
-          <div class="settings__oututFormat oututFormat">
-            <h3 class="block block__subtitle oututFormat__title">Export materials</h3>
-            <img class="oututFormat__img" src="{% static 'mainsite/img/settings_img8.png' %}">
-            <div class="oututFormat__textWidthImg">
-              <div class="oututFormat__textBlock">
-                <p class="block__text .oututFormat__text">
-                  Output format option determines files you get. The best choice for
-                  projects which are going to be send by the Internet is glb format — there
-                  will be only single file you can immediately email to a client, for instance.
-                </p>
-                <p class="block__text .oututFormat__text">
-                  If you are planning to edit textures or want to see the file structure — choose gltf
-                  format. You can open gltf file with any text editor and edit materials from Textures
-                  folder.
-                </p>
-              </div>
-              <img class="oututFormat__img_mini" src="{% static 'mainsite/img/settings_img9.png' %}">
-            </div>
-          </div>
-
-          <div class="settings__dracoCompres dracoCompres">
-            <h3 class="block block__subtitle dracoCompres__title">Draco compression</h3>
-            <p class=" block__text dracoCompres__text">
-              Draco compression minimizes file size as much as possible. It’s extremely
-              useful for large projects, but remember that not all third party software
-              can handle compressed files. Exported projects with this option can be saved
-              only as glb files. Difference in file size can be seen from the following export
-              results:
-            </p>
-            <img class="dracoCompres__img" src="{% static 'mainsite/img/settings_img10.png' %}">
-          </div>
-
-          <div class="block settings__creating creating">
-            <h3 class="block block__subtitle creating__title">Creating merged LODs model </h3>
-             <p class=" block__text creating__text">
-              Create merged LODs model options improves the quality of detailed Revit
-              models handling. With this checkbox enabled glTF Exporter creates tree
-              files: one with specified LOD and two other with degrading LOD, and merges
-              them into single file. Thismight be specifically useful for Windows Mixed
-              Reality developers.
-            </p>
-          </div>
-
-
-
         </div>
       </div>
     </section>

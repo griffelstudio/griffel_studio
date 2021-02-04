@@ -839,6 +839,11 @@ main {
   display: flex;
   justify-content: space-between;
 }
+/* .products__list >  * + *{
+  margin:0 0 0 2.4rem;
+} */
+
+
 
 .products__item {
   position: relative;
@@ -1965,6 +1970,7 @@ main {
   font-weight: 600;
 }
 
+
 @media (max-width: 1610px) {
   .block {
     margin-top: 12rem;
@@ -2377,6 +2383,12 @@ main {
   .instruction__item {
     margin-top: 2.4rem;
   }
+  .howItWork__item_middle .howItWork_img{
+    order: 2;
+  }
+  .howItWork__item_middle .banner{
+    order: 1;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2446,10 +2458,10 @@ main {
     width: 100%;
   }
   .products__item {
-    height: 67.5rem;
+    height: 61rem;
     width: 100%;
     min-width: 28.8rem;
-    padding: 4rem 4.6rem;
+    padding: 4rem 2.6rem;
   }
   .banner__buttons {
     -ms-flex-wrap: wrap;
@@ -2557,5 +2569,8 @@ main {
   .news__text {
     margin-top: 1.6rem;
   }
+}
+.exporter__buttons{
+  margin-top: 5rem;
 }
 /*# sourceMappingURL=style.css.map */
