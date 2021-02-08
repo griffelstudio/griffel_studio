@@ -1659,15 +1659,26 @@
 				max-width: 100%;
 				margin-right: 0rem;
 			}
+			.news__items {
+		    -ms-grid-rows: 57rem 53.5rem 53.5rem;
+		    grid-template-rows: 60rem 60rem;
+			}
+			.products__list{
+				justify-content: center;
+			}
+			.products__item{
+				width:30% !important;
+				height: 72rem;
+			}
 		}
 	@media (max-width: 1500px){
 		.news__items {
 			grid-template-rows: 57rem 57rem 57rem;
 		}
-		.products__item{
+		/* .products__item{
 			width:40rem;
 			height: 70rem;
-		}
+		} */
 	}
 	@media (max-width: 1000px){
 
