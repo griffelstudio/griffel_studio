@@ -1709,7 +1709,7 @@
 			grid-template-rows: 57rem 57rem 57rem;
 		}
 		.products__item{
-			width:100%;
+			width:100% !important;
 			height: 61rem;
 		}
 		.banner__buttonAutodesk{
