@@ -157,7 +157,6 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1rem;
   width: 14.8rem;
   height: 5rem;
   cursor: pointer;
@@ -167,6 +166,7 @@ main {
 .logo__img {
   width: 5rem;
   height: 5rem;
+  margin-right: 1rem;
   background-image: url("img/logo.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -376,7 +376,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4rem;
+}
+.burger__social > * + *{
+  margin-left: 4rem;
 }
 
 .intro {
@@ -424,7 +426,9 @@ main {
 .solutions__content {
   width: 100%;
 }
-
+.solutions__content > * + *:not(.solutions__item:nth-of-type(1)){
+  margin-top: 4rem;
+}
 .solutions__title {
   -ms-flex-item-align: start;
   align-self: flex-start;
@@ -438,7 +442,10 @@ main {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  gap: 10rem;
+}
+
+.solutions__item > * + *{
+  margin-left: 10rem;
 }
 
 .banner {
@@ -498,8 +505,11 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2rem;
   margin-top: 8rem;
+}
+.whatWedo__list > * + *{
+  margin-left: 2rem;
+
 }
 
 .whatWeDo__item {
@@ -513,6 +523,7 @@ main {
 .whatWeDo__subtite {
   font-weight: 600;
   text-align: center;
+  margin-top: 4rem;
 }
 
 .button__regular {
@@ -751,7 +762,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 8rem;
 }
 
 .footer__block1 {
@@ -762,7 +772,6 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 2rem;
 }
 
 .footer__block2 {
@@ -773,7 +782,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 2rem;
+  margin-left: 8rem;
 }
 
 .footer__list {
@@ -832,16 +841,15 @@ main {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: center;
-  gap: 2.4rem;
   margin-top: 8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-/* .products__list >  * + *{
+.products__list >  * + *{
   margin:0 0 0 2.4rem;
-} */
+}
 
 
 
@@ -902,14 +910,19 @@ main {
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  gap: 2.4rem;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: center;
 }
+.products__item .buttonAutodesk{
+  margin-top: 2.4rem;
+}
 
 .banner__buttonAutodesk {
   width: 29.6rem;
+}
+.banner__buttonAutodesk .buttonAutodesk__note{
+  margin-top: 2.4rem;
 }
 
 .buttonAutodesk {
@@ -923,7 +936,6 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1.6rem;
   height: 6rem;
   background-color: #828282;
   -webkit-box-shadow: 2px 2px 11px rgba(47, 47, 47, 0.4);
@@ -948,6 +960,7 @@ main {
 }
 
 .buttonAutodesk__text {
+  margin-left: 1.6rem;
   font-size: 1.6rem;
   font-style: normal;
   text-decoration: none;
@@ -956,8 +969,7 @@ main {
 }
 
 .buttonAutodesk__note {
-  margin-top: 0.9rem;
-  width: 100%;
+  display: inline;
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
@@ -965,9 +977,6 @@ main {
   text-align: left;
 }
 
-.exporter .buttonAutodesk__note {
-  width: 50%;
-}
 
 .text__link {
   color: #12A276;
@@ -1043,11 +1052,16 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2rem;
   margin-top: 9rem;
   /* max-width: 64rem; */
   width: 100%;
   /* width: 43%; */
+}
+.exporter__buttons >  * + *{
+  margin:0 0 0 2.4rem;
+}
+.exporter .buttonAutodesk__note {
+    margin: auto 0 0 2.4rem;
 }
 
 .rayTraceView {
@@ -1109,10 +1123,12 @@ main {
   -ms-flex-pack: justify;
   justify-content: space-between;
   /* height: 56.3rem; */
-  gap: 2.4rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+.options__list >  * + * {
+  margin: 0 0 0 2.4rem;
 }
 
 .options__sublist {
@@ -1203,10 +1219,12 @@ main {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 12rem;
-  gap: 2rem;
   width: 100%;
   /* height: 56.6rem; */
   height: 29.4vw;
+}
+.howItWork__item > * + * {
+  margin: 0 0 0 2.4rem;
 }
 
 .howItWork__item_first {
@@ -1275,10 +1293,12 @@ main {
   display: -ms-flexbox;
   display: flex;
   /* justify-content: space-between; */
-  gap: 4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.linkBlock__copybutton{
+  margin-left: 4rem;
 }
 
 .settings__title .copybutton {
@@ -1301,8 +1321,10 @@ main {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
-  gap: 2.4rem;
   margin-top: 4rem;
+}
+.groupMeshes__list > * + * {
+  margin:0 0 0 2.4rem ;
 }
 
 .groupMeshes__item {
@@ -1456,7 +1478,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2.4rem;
 }
 
 .connectingProject {
@@ -1510,7 +1531,6 @@ main {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 0.8rem;
   top: 0.8rem;
   right: 0.8rem;
   width: 8.5rem;
@@ -1533,6 +1553,7 @@ main {
 }
 
 .copybutton__text {
+  margin-left: 0.8rem;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 200;
@@ -1742,7 +1763,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5rem;
   /* -ms-flex-wrap: wrap;
       flex-wrap: wrap; */
 }
@@ -1758,22 +1778,25 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5.5rem;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+.team__items > * + * {
+  margin: 0 0 0 5rem;
+}
+.team__column > * + * {
+  margin: 5.5rem 0 0 0 ;
 }
 
 .team__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 6rem;
   width: 100%;
   /* width:41.6%; */
   /* height: 15rem; */
 }
-
 .team__subtextBlock {
   -ms-flex-item-align: center;
   align-self: center;
@@ -1786,6 +1809,7 @@ main {
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-left: 4rem;
 }
 
 .team__subtitle {
@@ -1883,7 +1907,6 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.6rem;
 }
 
 .links__phone {
@@ -1894,6 +1917,7 @@ main {
 .links__email {
   width: 100%;
   line-height: 3.2rem;
+  margin-top: 1.6rem;
 }
 
 .secondBlock {
@@ -1909,7 +1933,6 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 1.6rem;
 }
 
 .secondBlock__text {
@@ -1920,9 +1943,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.6rem;
   text-decoration: none;
   color: #000000;
+}
+.secondBlock > * + * {
+  margin:1.6rem 0 0 0 ;
+}
+.secondBlock__text{
+  margin-left: 1.6rem;
 }
 
 .contacts__form {
@@ -2041,6 +2069,16 @@ main {
     column-gap: 2.4rem;
     justify-content: center;
   }
+  .products__list >  * {
+    margin:  2.4rem 0 0  2.4rem;;
+  }
+  .exporter .buttonAutodesk__note {
+      margin: 2.4rem 0 0 0 ;
+      width: 50%;
+  }
+  .exporter__buttons{
+    align-items: center;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -2067,14 +2105,17 @@ main {
   .header__content {
     margin-top: 0;
   }
-  .solutions__item {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 2.4rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .solutions__item{
+    flex-wrap: wrap;
   }
+  .solutions__item > * + *{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .solutions__content > * + *:not(.solutions__item:nth-of-type(1)){
+    margin-top: 2.4rem;
+  }
+
   .solutions_img {
     margin-top: 4rem;
     width: 100%;
@@ -2090,11 +2131,11 @@ main {
             order: 2;
   }
   .whatWedo__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+  .whatWedo__list > * + *{
+    margin-left: 0rem;
     margin-top: 4rem;
   }
   .whatWeDo__item {
@@ -2153,38 +2194,35 @@ main {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+            flex-direction: column;
+            align-items: center;
     /* width: 50%;
     margin-left: auto;
     margin-right: auto; */
   }
   .footer__block1 {
-    width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    gap: 2.4rem;
-    padding-left: 25%;
-    /* justify-content: center; */
+    width: 32rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
   .footer__block2 {
-    width: 100%;
-    gap: 2.4rem;
+    width: 32rem;
     -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-    padding-left: 25%;
+    -ms-flex-pack: left;
+    justify-content: left;
+    margin-left: 0rem;
+    margin-top: 2.4rem;
+  }
+  .footer__block2 > .footer__menu_min:last-child{
+    margin-left: 2.4rem;
+  }
+  .footer__block1 > .footer__menu:last-child{
+    margin-top: 2.4rem;
   }
   .team__item {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 0rem;
   }
   .team__column {
     width: 15rem;
@@ -2204,7 +2242,7 @@ main {
             justify-content: center;
   }
   .team__item_corect {
-    margin-top: 2.5rem;
+    margin-top: 8.5rem;
   }
   .contacts__text {
     width: 100%;
@@ -2249,7 +2287,7 @@ main {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin-top: 2.4rem;
+    margin-top: 2.4rem ;
   }
   .rayTraceView__text {
     width: 100%;
@@ -2333,6 +2371,10 @@ main {
     width: 100%;
   }
   .oututFormat__img_mini {
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.4rem;
     width: 100%;
   }
   .dracoCompres, .creating {
@@ -2371,7 +2413,6 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 0rem;
   }
   .rayTraceView__text {
     margin-top: 1.2rem;
@@ -2385,6 +2426,27 @@ main {
   .howItWork__item_middle .banner{
     order: 1;
   }
+  .whatWeDo__subtite {
+    margin-top: 2.4rem;
+  }
+  .options__list{
+    flex-wrap: wrap;
+  }
+  .options__list >  * + * {
+    /* margin: 2.4rem 0 0 0 ; */
+  }
+  .howItWork__item > * + * {
+    margin:2.4rem 0 0 0 ;
+  }
+  .groupMeshes__list > * + * {
+    margin:2.4rem 0 0 0 ;
+  }
+  .team__subtextBlock {
+    margin-left: 0rem;
+  }
+
+
+
 }
 
 @media (max-width: 768px) {
@@ -2394,6 +2456,13 @@ main {
     column-gap: 2.4rem;
     justify-content: center;
   }
+  .exporter__buttons >  * + *{
+    margin:2.4rem 0 0 0 ;
+  }
+  .exporter__buttons{
+    flex-direction: column;
+  }
+
 }
 
 @media (max-width: 550px) {
@@ -2439,12 +2508,12 @@ main {
     padding-top: 4rem;
     padding-bottom: 6rem;
   }
-  .footer__block1 {
+  /* .footer__block1 {
     padding-left: 20%;
   }
   .footer__block2 {
     padding-left: 20%;
-  }
+  } */
   .products__list {
     width: 100%;
   }
@@ -2495,7 +2564,6 @@ main {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
   }
-  @media (max-width: 550px){
   .news__items {
     -ms-grid-columns: 28.8rem;
     grid-template-columns: 100%;
@@ -2550,7 +2618,6 @@ main {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 5rem;
   }
   .levelDetails__imgItem {
     width: 100%;
@@ -2572,6 +2639,28 @@ main {
   .button__readmore{
     height: 6rem;
   }
-}
+  .products__list >  * {
+    margin:  2.4rem 0 0 0;
+  }
+  .options__list >  * + * {
+    margin:2.4rem 0 0 0 ;
+  }
+  /* .footer__block1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+            padding-left: 0rem;
+            width: 80%;
+  }
+  .footer__block2 {
+    width: 80%;
 
-/*# sourceMappingURL=style.css.map */
+  } */
+}
