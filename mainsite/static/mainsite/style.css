@@ -2012,8 +2012,8 @@ main {
     margin-top: 2.4rem;
   }
   .products__item {
-    width: 50.4rem;
-    height: 60rem;
+    /* width: 50.4rem; */
+    /* height: 60rem; */
     padding: 5rem 2rem 6rem 2rem;
   }
   .products__item {
@@ -2562,11 +2562,16 @@ main {
   .news__text {
     margin-top: 1.6rem;
   }
-}
-.exporter__buttons{
-  margin-top: 5rem;
-}
 
+  .exporter__buttons{
+    margin-top: 5rem;
   }
+  .buttonAutodesk{
+    max-width: 100%;
+  }
+  .button__readmore{
+    height: 6rem;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
