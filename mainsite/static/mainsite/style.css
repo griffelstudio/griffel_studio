@@ -916,6 +916,7 @@ main {
 }
 .products__item .buttonAutodesk{
   margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
 }
 
 .banner__buttonAutodesk {
@@ -1686,7 +1687,6 @@ main {
 
 .news_img {
   width: 100%;
-  height: 100%;
 }
 
 .news__textWrapper {
