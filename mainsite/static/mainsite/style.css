@@ -398,7 +398,7 @@ main {
 }
 
 .burger__menu {
-  height: 60vh;
+  height: 55vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -538,6 +538,7 @@ main {
 
 .solutions_img {
   max-width: 57.5%;
+  /* max-height: 58vw; */
 }
 
 .whatWeDo {
@@ -2729,7 +2730,9 @@ main {
     left: 0%;
     width:100vw;
     height: 80vh;
-
+  }
+  .footer__block1, .footer__block2 {
+    width: 28rem;
   }
 
 }
