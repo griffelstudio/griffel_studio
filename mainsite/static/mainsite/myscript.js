@@ -106,7 +106,6 @@ function copyText(copyText) {
 }
 
 function copyLink(link) {
-  console.log("copy");
   let area = document.createElement("textarea");
   area.value = link;
   document.body.appendChild(area).select();
@@ -133,8 +132,9 @@ function succesSend(){
   formContent.style.alignSelf = "flex-start";
   formContent.style.justifyContent = "center"
   formContent.innerHTML = `
-    <h2 class=" block__title" style="color:#12A276; margin-top:12rem;">Message sent successfully!</h2>
-    <p class="connect__subtitle">We will reply to you within one business day.</p>
+    <h2 class="block  block__title connect__title" style="color:#12A276;">Message sent successfully!</h2>
+    <p class="connect__subtitle block__text">We will reply to you within one business day.</p>
   `;
+
 
 }

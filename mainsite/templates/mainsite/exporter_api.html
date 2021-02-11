@@ -96,7 +96,7 @@
           <h2 class=" block__title howItWork__title">How does it work?</h2>
 
           <div class="connectingProject">
-            <h3 class="block__title connectingProject__title">Connect the project to the code</h3>
+            <h3 class="block__title48 connectingProject__title">Connect the project to the code</h3>
             <div class="connectingProject__getLink">
               <p class="block__text getLink__text">
                 To make use of glTF export functionality in your Revit add-in project
@@ -142,10 +142,10 @@
 
                   <code class="linkBlock__text">
                     <p id="copy-text2">
-                      var outputPath = <wbr>@"C:\ExportResult.glb";<br>
-                      var settings = <wbr>new GltfExportSettings(outputPath);<br>
-                      var exporter = <wbr>new GltfExportSettings(settings);<br>
-                      exporter.Export(document, view);
+                      <span class="yelow">var</span> <span class="blue">outputPath</span> = <wbr>@<span class="green">"C:\ExportResult.glb"</span>;<br>
+                      <span class="yelow">var</span> <span class="blue">settings</span> = <wbr><span class="yelow">new GltfExportSettings</span>(<span class="yelow">outputPath</span>);<br>
+                      <span class="yelow">var</span> <span class="blue">exporter</span> = <wbr><span class="yelow">new GltfExportSettings</span>(<span class="yelow">settings</span>);<br>
+                      <span class="yelow">exporter</span>.<span class="purple">Export</span>(<span class="yelow">document, view</span>);
                     </p>
                   </code>
                   <div onclick="copyText(copyText2)" class="linkBlock__copybutton copybutton">
@@ -165,7 +165,7 @@
             </div>
           </div>
 
-          <h3 class="block__title connectingProject__title connectingProject__title_end">Or export a file from Revit</h3>
+          <h3 class="block__title48 connectingProject__title connectingProject__title_end">Or export a file from Revit</h3>
 
 
           <div class="howItWork__item howItWork__item_first">
@@ -289,14 +289,14 @@
             </div>
             <div class="groupMeshes__twoImgBlock twoImgBlock">
               <div class="twoImgBlock__item">
-                <img class="twoImgBlock__img" src="{% static 'mainsite/img/settings_img2.png' %}">
+                <img class="twoImgBlock__img" src="{% static 'mainsite/img/byelement.gif' %}">
                 <p class="block__text twoImgBlock__text">
                   Large projects grouped by element may have less FPS rate.
                   Number of draw calls for this model is 6494.
                 </p>
               </div>
               <div class="twoImgBlock__item">
-                <img class="twoImgBlock__img" src="{% static 'mainsite/img/settings_img3.png' %}">
+                <img class="twoImgBlock__img" src="{% static 'mainsite/img/bymaterial.gif' %}">
                 <p class="block__text">
                   Gain more FPS grouping by material — only 55 draw calls — the same as
                   number of materials. Though file size for the model has been increased from
