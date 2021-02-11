@@ -251,21 +251,22 @@
           </ul>
         </div>
         <div id="settings"></div>
+        <div id="group_meshes"></div>
       </div>
     </section>
 
     <section class="block settings">
       <div class="wrapper">
         <div class="settings__content">
-          <h2 class=" block__title settings__title">
+          <h2 onclick="copyLink(this)" data-id="settings" class=" block__title settings__title">
             Settings Explained
-            <!-- <div onclick="copyLink('https://griffelstudio.com//products/exporter_api/#settings')" class="linkBlock__copybutton copybutton">
+            <!-- <div onclick="copyLink('https://griffelstudio.com//products/exporter/#settings')" class="linkBlock__copybutton copybutton">
               <img class="copybutton__img" src="{% static 'mainsite/img/copy.png' %}">
-              <div class="copybutton__text">Copy link</div>
+              <div class="copybutton__text">Copy</div>
             </div> -->
           </h2>
           <div class="settings__groupMeshes groupMeshes">
-            <h3 class="block__subtitle groupMeshes__title">Group meshes</h3>
+            <h3 onclick="copyLink(this)" data-id="group_meshes" class="block__subtitle groupMeshes__title">Group meshes</h3>
             <ul class="groupMeshes__list">
               <li class="block__text groupMeshes__item">
                 Group meshes by element or by material option influences output file size,
@@ -304,10 +305,11 @@
                 </p>
               </div>
             </div>
+            <div id="level_of_detail"></div>
           </div>
 
           <div class="settings__levelDetails levelDetails">
-            <h3 class="block block__subtitle levelDetails__title">Level of details</h3>
+            <h3 onclick="copyLink(this)" data-id="level_of_detail" class="block block__subtitle levelDetails__title">Level of detail</h3>
             <div class="levelDetails__imgList">
               <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img4.png' %}">
               <img class="levelDetails__imgItem" src="{% static 'mainsite/img/settings_img5.png' %}">
@@ -323,10 +325,11 @@
                 396KB corresponding). LOD values ​​from 5 to 7 are generally sufficient.
               </p>
             </div>
+            <div id="export_materials"></div>
           </div>
 
           <div class="settings__ExportMat ExportMat">
-            <h3 class="block block__subtitle ExportMat__title">Export materials</h3>
+            <h3 onclick="copyLink(this)" data-id="export_materials"  class="block block__subtitle ExportMat__title">Export materials</h3>
             <img class="ExportMat__img" src="{% static 'mainsite/img/settings_img7.png' %}">
             <div class="ExportMat__textBlock">
               <p class="block__text">
@@ -338,10 +341,11 @@
                 geometry just by disabling Export materials checkbox. This might be useful for some geometry analysis.
               </p>
             </div>
+            <div id="output_format"></div>
           </div>
 
-          <div class="settings__oututFormat oututFormat">
-            <h3 class="block block__subtitle oututFormat__title">Export materials</h3>
+          <div onclick="copyLink(this)" data-id="output_format" class="settings__oututFormat oututFormat">
+            <h3 class="block block__subtitle oututFormat__title">Output format</h3>
             <img class="oututFormat__img" src="{% static 'mainsite/img/settings_img8.png' %}">
             <div class="oututFormat__textWidthImg">
               <div class="oututFormat__textBlock">
@@ -358,10 +362,11 @@
               </div>
               <img class="oututFormat__img_mini" src="{% static 'mainsite/img/settings_img9.png' %}">
             </div>
+            <div id="draco_compression"></div>
           </div>
 
           <div class="settings__dracoCompres dracoCompres">
-            <h3 class="block block__subtitle dracoCompres__title">Draco compression</h3>
+            <h3 onclick="copyLink(this)" data-id="draco_compression" class="block block__subtitle dracoCompres__title">Draco compression</h3>
             <p class=" block__text dracoCompres__text">
               Draco compression minimizes file size as much as possible. It’s extremely
               useful for large projects, but remember that not every third party software
@@ -370,18 +375,20 @@
               results:
             </p>
             <img class="dracoCompres__img" src="{% static 'mainsite/img/settings_img10.png' %}">
+            <div id="create_merged_LODs_model"></div>
           </div>
 
-          <div class="settings__creating creating">
-            <h3 class="block block__subtitle creating__title">Create merged LODs model </h3>
+          <div class="block settings__creating creating ">
+            <h3 onclick="copyLink(this)" data-id="create_merged_LODs_model" class="block block__subtitle creating__title">Create merged LODs model</h3>
              <p class=" block__text creating__text">
-              Create merged LODs model options improves the quality of detailed Revit
+              Create merged LODs model option improves the quality of detailed Revit
               models handling. With this checkbox enabled glTF Exporter creates three
               files: one with specified LOD and two other with degrading LOD, and merges
               them into single file. This might be specifically useful for Windows Mixed
               Reality developers.
             </p>
           </div>
+
 
 
         </div>
