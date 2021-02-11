@@ -108,7 +108,7 @@ function copyText(copyText) {
 function copyLink(element) {
   let area = document.createElement("textarea");
   let path = window.location.href;
-  if(path.indexOf('#')){
+  if(path.indexOf('#') !== -1){
     path = path.substring(0, path.indexOf('#'))
   }
   area.value = `${path}#${element.getAttribute('data-id')}`;
