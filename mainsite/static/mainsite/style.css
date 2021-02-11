@@ -565,8 +565,9 @@ main {
 }
 
 .solutions_img {
-  max-width: 57.5%;
-  /* max-height: 58vw; */
+  width: 57.5%;
+  max-width: 81.6rem;
+  max-height: 58rem;
 }
 
 .whatWeDo {
@@ -679,7 +680,7 @@ main {
 }
 
 .connect__title {
-  margin-top: 8rem;
+  margin-top: 12rem;
 }
 
 .connect__subtitle {
@@ -692,7 +693,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   margin-top: 4rem;
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1499,6 +1500,10 @@ main {
 
 .levelDetails__imgItem {
   width: 32%;
+  max-width: 44rem;
+  max-height: 32.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .levelDetails__textBlock {
@@ -1965,7 +1970,7 @@ main {
 
 .worldWide__img {
   margin-top: 8rem;
-  width: 100%;
+  width: 50%;
 }
 
 .contacts {
@@ -2211,6 +2216,16 @@ main {
 }
 
 @media (max-width: 1500px) {
+  .levelDetails__imgItem {
+    max-width: 32rem;
+    max-height: 23.5rem
+  }
+  .form {
+    margin-bottom: 8rem;
+  }
+  .connect__title {
+    margin-top: 8rem;
+  }
   .products__list {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2233,6 +2248,12 @@ main {
   .exporter__buttons{
     align-items: center;
   }
+  .solutions_img {
+    max-width: 59.2rem;
+    max-height: 49rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 }
 
@@ -2243,7 +2264,7 @@ main {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1025px) {
   .block {
     margin-top: 8rem;
   }
@@ -2274,10 +2295,11 @@ main {
   .solutions_img {
     margin-top: 4rem;
     width: 100%;
-    max-width: 100%;
     -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    align-items: center;
+
   }
   .solutions .banner {
     margin-top: 2.4rem;
@@ -2602,6 +2624,9 @@ main {
   .team__items > * + * {
     margin: 0 0 0 2rem;
   }
+  .worldWide__img {
+    width: 100%;
+  }
 
 
 
@@ -2637,6 +2662,10 @@ main {
 }
 
 @media (max-width: 550px) {
+  .solutions_img {
+    max-width: 30.4rem;
+    max-height: 23.5rem;
+  }
   .burger__list {
     height: 21rem;
   }
@@ -2796,6 +2825,8 @@ main {
   }
   .levelDetails__imgItem {
     width: 100%;
+    max-width: 32rem;
+    max-height: 23.5rem
   }
   .news__title {
     font-weight: 600;
