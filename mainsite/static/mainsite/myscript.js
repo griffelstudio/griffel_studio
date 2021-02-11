@@ -84,9 +84,9 @@ function burger(x) {
 
 window.addEventListener("scroll", ()=>{
   if(window.pageYOffset > 150){
-    header.style.backgroundColor = "rgb(255,255,255,0.95)"
+    header.style.backgroundColor = "rgb(255,255,255)"
     header.opacity = "0.6"
-    header.style.boxShadow = "0px 4px 30px rgba(47, 47, 47, 0.2)";
+    header.style.boxShadow = "0px 4px 30px rgba(47, 47, 47, 0.1)";
   }
   else{
     header.style.backgroundColor = "transparent"

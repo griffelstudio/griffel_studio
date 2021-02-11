@@ -111,13 +111,14 @@
           <form onsubmit="succesSend()" class="form" action="{% url 'mainsite:form_url' %}" method="post">
             {% csrf_token %}
 
-            <input class="inputArea" placeholder="Name"  type="text" name="name" required>
+            <input class="inputArea" placeholder="Name"  type="text" name="name">
 
             <input class="inputArea" placeholder="E-mail" type="email" name="email" required>
 
-            <textarea class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80" required></textarea>
+            <textarea class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80"></textarea>
 
             <button  class="button button__form" type="submit">Send</button>
+            
           </form>
         </div>
       </div>
