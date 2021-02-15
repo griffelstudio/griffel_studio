@@ -652,7 +652,7 @@ main {
   display: flex;
   /* font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin); */
   /* height: calc( (100vw - 1000px)/(1920 - 320) * (64 - 32) + 32px); */
-  height: 89.6rem
+  height: 86.9rem
   /* margin-top: 20rem; */
 }
 

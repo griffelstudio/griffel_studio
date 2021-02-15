@@ -31,7 +31,9 @@ $(document).on('submit','#form',function(e) {
           <p class="connect__subtitle block__text">We will reply to you within one business day.</p>
           `)
       }else{
-        succesSend()
+        if(formContent){
+          succesSend()
+        }
       }
       if(document.getElementById("form")){
         document.getElementById("form").reset();

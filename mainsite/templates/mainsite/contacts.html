@@ -45,13 +45,13 @@
         </div>
 
         <div class="contacts__form">
-          <form onsubmit="alert('Your message has been sent.')"  action="{% url 'mainsite:form_url' %}" method="post" class="form">
+          <form id='form' onsubmit="alert('Your message has been sent.')"   class="form">
             {% csrf_token %}
-            <input class="inputArea" placeholder="Name"  type="text" name="name" required>
+            <input id="name" class="inputArea" placeholder="Name"  type="text" name="name" required>
 
-            <input class="inputArea" placeholder="E-mail" type="email" name="email" required>
+            <input id="email" class="inputArea" placeholder="E-mail" type="email" name="email" required>
 
-            <textarea class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80" required></textarea>
+            <textarea id="message" class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80" required></textarea>
 
             <button  class="button button__form" type="submit">Send</button>
           </form>
