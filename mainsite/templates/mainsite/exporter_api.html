@@ -69,9 +69,10 @@
     <section class="block options">
       <div class="wrapper">
         <div class="options__content">
-          <h3 class="block__title options__title">Options</h3>
+          <h3 class="block__title options__title options__title_mob">Options</h3>
           <div class="options__list">
             <div class="options__item">
+              <h3 class="block__title options__title options__title_pc">Options</h3>
               <ul class="block__text options__sublist">
                 <li class="options__subitem">Choose a file format between glTF and packed glb.</li>
                 <li class="options__subitem">Choose either to export materials or not.</li>
@@ -216,7 +217,7 @@
           <div class="howItWork__item howItWork__item_absoluteApi">
             <img src="{% static 'mainsite/img/exporterapi_img5.png' %}" class="howItWork_img">
             <div class="banner">
-              <p class="block__text banner__text">
+              <p class="block__text banner__text banner__text_correct">
                 Use it any way you like.
               </p>
             </div>
@@ -298,7 +299,7 @@
               </div>
               <div class="twoImgBlock__item">
                 <img class="twoImgBlock__img" src="{% static 'mainsite/img/bymaterial.gif' %}">
-                <p class="block__text">
+                <p class="block__text twoImgBlock__text">
                   Gain more FPS grouping by material — only 55 draw calls — the same as
                   number of materials. Though file size for the model has been increased from
                   18MB to 29MB.
@@ -348,18 +349,16 @@
             <h3 class="block block__subtitle oututFormat__title">Output format</h3>
             <img class="oututFormat__img" src="{% static 'mainsite/img/settings_img8.png' %}">
             <div class="oututFormat__textWidthImg">
-              <div class="oututFormat__textBlock">
-                <p class="block__text .oututFormat__text">
-                  Output format option determines files you get. The best choice for
-                  projects which are going to be send by the Internet is glb format — there
-                  will be a single file you can immediately email to a client, for instance.
-                </p>
-                <p class="block__text .oututFormat__text">
-                  If you are planning to edit textures or want to see the file structure — choose glTF
-                  format. You can open glTF file with any text editor and edit materials from Textures
-                  folder.
-                </p>
-              </div>
+              <p class="block__text .oututFormat__text">
+                Output format option determines files you get. The best choice for
+                projects which are going to be send by the Internet is glb format — there
+                will be a single file you can immediately email to a client, for instance.
+              </p>
+              <p class="block__text .oututFormat__text">
+                If you are planning to edit textures or want to see the file structure — choose glTF
+                format. You can open glTF file with any text editor and edit materials from Textures
+                folder.
+              </p>
               <img class="oututFormat__img_mini" src="{% static 'mainsite/img/settings_img9.png' %}">
             </div>
             <div id="draco_compression"></div>

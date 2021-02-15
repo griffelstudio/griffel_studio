@@ -26,11 +26,12 @@
               to make them faster and simpler while keeping them as deep
               and reliable as they have been for decades
           </p>
+          <a onclick="createFormPopup()" class="button button__header buttonOff">Get in touch</a>
         </div>
       </div>
     </section>
 
-    <section class="block solutions">
+    <section class="solutions">
       <div class="wrapper">
         <div class="solutions__content">
           <h2 class=" block__title solutions__title">What we are into</h2>
@@ -108,17 +109,15 @@
         <div class="connect__formBlockContent">
           <h2 class=" block__title connect__title">Let’s create together</h2>
           <p class="block__text connect__subtitle">Send us a message</p>
-          <form onsubmit="succesSend()" class="form" action="{% url 'mainsite:form_url' %}" method="post">
+          <!-- <form id = "form" class="form" action="{% url 'mainsite:form_url' %}" method="post"> -->
+            <form id = "form">
             {% csrf_token %}
+            <input id="name" class="inputArea" placeholder="Name"  type="text" name="name">
 
-            <input class="inputArea" placeholder="Name"  type="text" name="name">
+            <input id="email" class="inputArea" placeholder="E-mail" type="email" name="email" required>
 
-            <input class="inputArea" placeholder="E-mail" type="email" name="email" required>
-
-            <textarea class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80"></textarea>
-
+            <textarea id="message" class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80"></textarea>
             <button  class="button button__form" type="submit">Send</button>
-
           </form>
         </div>
       </div>

@@ -12,6 +12,7 @@
   <title> Griffel Studio</title>
   <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
   <meta name="google-site-verification" content="dnVPdGRVYN_fS693C4B1KIuRNamqRyevNIhSF1T8xN8" />
+  <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
 </head>
 <body>
 <div class="hover"></div>
@@ -38,7 +39,7 @@
           </ul>
         </nav>
         {% endblock %}
-        <a href="{% url 'mainsite:index_url' %}#get-connected" class="button button__header">Get in touch</a>
+        <a onclick="createFormPopup()"  class="button button__header">Get in touch</a>
 
       </div>
     </div>

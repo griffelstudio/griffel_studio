@@ -11,6 +11,34 @@ const link = document.createElement('div');
 const news = document.querySelectorAll(".news__item");
 const newsContainer = document.querySelector(".news__items");
 
+$(document).on('submit','#form',function(e) {
+  console.log('message start')
+  e.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: "/form",
+    data:{
+      name: $('#name').val(),
+      email: $('#email').val(),
+      message: $('#message').val(),
+      csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+    },
+    succes:  (function(){
+      if($('.formBlock').length === 1){
+        let formBlock = document.querySelector(".formBlock");
+        console.log(formBlock.childNodes[1].childNodes[3].childNodes[1].childNodes[1].innerHTML=`
+          <h2 class="block  block__title connect__title" style="color:#12A276;">Message sent successfully!</h2>
+          <p class="connect__subtitle block__text">We will reply to you within one business day.</p>
+          `)
+      }else{
+        succesSend()
+      }
+      if(document.getElementById("form")){
+        document.getElementById("form").reset();
+      }
+    })()
+  })
+})
 
 for(let i = 0; i < news.length; i++){
   news[i].addEventListener("click", (event)=>{
@@ -27,7 +55,6 @@ for(let i = 0; i < news.length; i++){
       }, 50)
 
       document.body.appendChild(popupBody);
-
 
       let popupClose = document.createElement("div");
       popupClose.classList.add("popupClose");
@@ -46,16 +73,11 @@ for(let i = 0; i < news.length; i++){
       popupBody.appendChild(popupContent);
       popupContent.style.overflowY = "scroll";
 
-
-
-
-
       let popupTitle = document.createElement("div");
       popupTitle.classList.add("block__title");
       popupTitle.classList.add("popupTitle");
       popupTitle.textContent = event.target.previousElementSibling.previousElementSibling.textContent;
       popupContent.appendChild(popupTitle);
-
 
       let popupText = document.createElement("div");
       popupText.classList.add("block__text32");
@@ -69,7 +91,6 @@ for(let i = 0; i < news.length; i++){
         document.body.style.overflowY = "scroll";
         popupBody.classList.remove("popupOpen");
       })
-
     }
   })
 }
@@ -140,6 +161,50 @@ function succesSend(){
     <h2 class="block  block__title connect__title" style="color:#12A276;">Message sent successfully!</h2>
     <p class="connect__subtitle block__text">We will reply to you within one business day.</p>
   `;
+}
 
+function createFormPopup(){
 
+  let formBlock = document.createElement("div");
+  formBlock.classList.add("formBlock");
+  formBlock.innerHTML = `
+    <section id="get-connected" class="connect">
+      <div class="popupClose" for="modal">&#10005;</div>
+      <div class="connect__bg">
+        <div class="connect__formBlock">
+          <div class="connect__formBlockContent">
+            <h2 class=" block__title connect__title">Let’s create together</h2>
+            <p class="block__text connect__subtitle">Send us a message</p>
+            <form id="form" class="form">
+              {% csrf_token %}
+              <input id="name" class="inputArea" placeholder="Name"  type="text" name="name">
+              <input id="email" class="inputArea" placeholder="E-mail" type="email" name="email" required>
+              <textarea id="message" class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80"></textarea>
+              <button  class="button button__form" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="connect__img">
+        </div>
+      </div>
+    </section>
+  `
+formBlock.style.color = "transparent";
+document.body.style.overflowY = "hidden";
+setTimeout(()=>{
+  let popupClose = document.querySelector('.popupClose');
+  popupClose.addEventListener("click",()=>{
+    document.body.removeChild(formBlock);
+    document.body.style.overflowY = "scroll";
+  })
+},200)
+
+document.body.prepend(formBlock );
+
+formBlock.addEventListener('click', (event)=>{
+  if(event.target === formBlock){
+    document.body.removeChild(formBlock);
+    document.body.style.overflowY = "scroll";
+  }
+})
 }

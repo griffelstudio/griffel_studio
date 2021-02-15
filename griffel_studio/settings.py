@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+     'jquery',
     'mainsite.apps.MainsiteConfig',
 ]
 
@@ -137,9 +138,9 @@ DATABASES['default'].update(db_from_env)
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
 # EMAIL_HOST_USER = 'nicolay.krischenovich@gmail.com'
-# EMAIL_HOST_PASSWORD =                       '
-# DEFAULT_FROM_EMAIL = 'nicolay_kr'
+# EMAIL_HOST_PASSWORD =''
 # DEFAULT_TO_EMAIL = 'nicolay.krischenovich@gmail.com'
+
 EMAIL_HOST_USER = 'contact@griffelstudio.com'
 EMAIL_HOST_PASSWORD = 'studiogriffel'
 EMAIL_USE_TLS = True
