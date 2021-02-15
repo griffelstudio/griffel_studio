@@ -2011,6 +2011,7 @@ main {
 
 .contacts {
   margin-top: 12rem;
+  margin-bottom: 8rem;
 }
 
 .contacts__content {
@@ -2660,7 +2661,7 @@ main {
   }
   .howItWork_img {
     width: 100%;
-    min-width: 28.8rem;
+    min-height: 48.4vw;
   }
   .howItWork .banner {
     width: 100%;
@@ -2845,6 +2846,9 @@ main {
   .exporter .buttonAutodesk__note {
     width: 50%;
   }
+  .HowItWorks__play{
+    visibility: hidden;
+  }
 
 }
 
@@ -2981,6 +2985,7 @@ main {
   }
   .exporter .buttonAutodesk__note {
     width: 100%;
+    order: 3;
   }
   .options__item {
     width: 100%;
@@ -2992,6 +2997,7 @@ main {
   .howItWork_img_absolute2 {
     width: 52.8rem;
     height: 24.6rem;
+    min-height: 48.4vw;
   }
   .connectingProject {
     overflow-x: hidden;
@@ -3161,6 +3167,12 @@ main {
     padding: 0;
   }
   .worldWide__text {
+    width: 100%;
+  }
+  .banner__text_correct{
+    margin-top: 0rem;
+  }
+  .options__button {
     width: 100%;
   }
 
