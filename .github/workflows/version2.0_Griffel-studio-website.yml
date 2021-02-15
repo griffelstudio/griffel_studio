@@ -32,4 +32,4 @@ jobs:
       with:
         app-name: 'Griffel-studio-website'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_71736eac8c864b61b41686af0c9eae8f }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_15c5f36fc8464a5eba8c84b1e6ec9ba0 }}
