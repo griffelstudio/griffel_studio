@@ -210,3 +210,16 @@ formBlock.addEventListener('click', (event)=>{
   }
 })
 }
+
+$('#email').on('input invalid', function() {
+    this.setCustomValidity('')
+    if (this.validity.valueMissing) {
+      this.setCustomValidity("Нет значения")
+    }
+    if (this.validity.typeMismatch) {
+      this.setCustomValidity("Не соответствует типу")
+    }
+    if (this.validity.patternMismatch) {
+      this.setCustomValidity("Не соответствует паттерну")
+    }
+})
