@@ -1712,7 +1712,7 @@ main{
   justify-content:space-between;
   margin-top:12rem;
   width:100%;
-  height:29.4vw;
+  /* height:29.4vw; */
 }
 .howItWork__item > * + *{
   margin:0 0 0 2.4rem;
@@ -3017,7 +3017,6 @@ main{
   .howItWork__item{
     -ms-flex-wrap:wrap;
         flex-wrap:wrap;
-    height:auto;
   }
   .howItWork_img_absolute1, .howItWork__item_absolute{
     position:static;
