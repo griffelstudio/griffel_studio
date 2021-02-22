@@ -3597,6 +3597,9 @@ main{
         -ms-flex-align:start;
             align-items:flex-start;
   }
+  .howItWork__item{
+    height: inherit;
+  }
 
 }
 
