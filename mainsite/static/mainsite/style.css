@@ -389,7 +389,7 @@ body{
   background-color:white;
   z-index:5;
   opacity:1;
-  padding:5rem;
+  padding:4rem 8rem;
   border-radius:1rem;
   -webkit-transform:scale(0);
       -ms-transform:scale(0);
@@ -425,10 +425,12 @@ body{
 
 }
 .popupContent::-webkit-scrollbar{
+  margin-left: 2rem;
   width:0.5rem;
   height:0.5rem;
 }
 .popupContent::-webkit-scrollbar-track{
+  margin-left: 2rem;
 }
 
 .popupContent::-webkit-scrollbar-thumb{
@@ -451,6 +453,9 @@ body{
 }
 .popupClose:hover{
   color:#12A276;
+}
+.popupTitle{
+  margin-top:4rem;
 }
 .popupText{
     margin-top:4rem;
@@ -2151,13 +2156,13 @@ main{
 .news__items{
   display:-ms-grid;
   display:grid;
-  -webkit-box-pack:center;
-  -ms-flex-pack:center;
-  justify-content:space-between;
-  -ms-grid-columns:31.6% 31.6% 31.6%;
-  grid-template-columns:31.6% 31.6% 31.6%;
-  -ms-grid-rows:70rem 70rem;
-  grid-template-rows:70rem 70rem;
+  -webkit-box-pack:start;
+  -ms-flex-pack:start;
+  justify-content:start;
+  -ms-grid-columns:31.6% 31.6%;
+  grid-template-columns:31.6% 31.6%;
+  -ms-grid-rows:70rem;
+  grid-template-rows:70rem;
   -webkit-column-gap:2.4rem;
   -moz-column-gap:2.4rem;
        column-gap:2.4rem;
@@ -2171,7 +2176,7 @@ main{
   -ms-grid-columns:100%;
       grid-template-columns:100%;
   -ms-grid-rows:1fr 1.4fr;
-      grid-template-rows:1fr 1.4fr;
+      grid-template-rows:0.7fr 1.4fr;
   width:100%;
   height:100%;
   -webkit-box-shadow:0px 4px 30px 0px #2F2F2F;
@@ -2194,7 +2199,7 @@ main{
   flex-direction:column;
   -webkit-box-pack:justify;
       -ms-flex-pack:justify;
-          justify-content:space-between;
+          /* justify-content:space-between; */
 }
 
 .news__data{
@@ -2206,15 +2211,18 @@ main{
 
 .news__title{
   font-weight:600;
-  margin-top:2.4rem;
+  margin-top:1rem;
 }
-
-.news__text{
+.news__text {
+	margin: 0 0 0 0;
+}
+.news__textBlock {
   margin-top:2.4rem;
-  -o-text-overflow:ellipsis;
-     text-overflow:ellipsis;
-  white-space:nowrap;
-  overflow:hidden;
+  overflow: hidden;
+	line-height: 20px;
+	display: -webkit-box;
+	-webkit-line-clamp: 6;
+	-webkit-box-orient: vertical;
 }
 
 .news_botton{
@@ -2632,11 +2640,8 @@ main{
     margin-left:0;
   }
   .news__items{
-    -ms-grid-rows:53.5rem 53.5rem 53.5rem;
-        grid-template-rows:61rem 61rem;
-  }
-  .news_botton{
-    margin-top:3.2rem;
+    -ms-grid-rows:53.5rem 53.5rem;
+        grid-template-rows:61rem;
   }
   .team__subtextBlock{
     margin-left:3.2rem;
@@ -2703,13 +2708,13 @@ main{
   .news__items{
 
     grid-template-columns:32.8rem 32.8rem;
-    grid-template-rows:58rem 58rem 58rem;
+    grid-template-rows:53rem ;
     -webkit-column-gap:2.4rem;
        -moz-column-gap:2.4rem;
             column-gap:2.4rem;
-    -webkit-box-pack:center;
-        -ms-flex-pack:center;
-            justify-content:center;
+    -webkit-box-pack:start;
+        -ms-flex-pack:start;
+            justify-content:start;
   }
   .products__list >  *{
     margin:2.4rem 0 0  2.4rem;;
@@ -3182,12 +3187,17 @@ main{
   .intro{
     height:93vh;
   }
+  .news__items{
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+  }
 
 }
 @media (max-width: 768px){
   .news__items{
     grid-template-columns:32.8rem;
-    grid-template-rows:repeat(6, 57rem);
+    grid-template-rows:repeat(2, 53rem);
     -webkit-column-gap:2.4rem;
        -moz-column-gap:2.4rem;
             column-gap:2.4rem;
@@ -3350,9 +3360,9 @@ main{
   }
   .news__items{
     -ms-grid-columns:28.8rem;
-    grid-template-columns:100%;
-    -ms-grid-rows:repeat(6, 46rem);
-    grid-template-rows:repeat(6, 60rem);
+    grid-template-columns:28.8rem;
+    -ms-grid-rows:repeat(2, 46rem);
+    grid-template-rows:repeat(2, 46rem);
     -webkit-column-gap:2.4rem;
     -moz-column-gap:2.4rem;
          column-gap:2.4rem;
@@ -3420,7 +3430,7 @@ main{
     margin-top:1.6rem;
   }
   .news__text{
-    margin-top:1.6rem;
+    margin-top:1rem;
   }
 
   .exporter__buttons{
@@ -3439,10 +3449,10 @@ main{
     margin:2.4rem 0 0 0;
   }
   .popup{
-    top:10%;
+    top:5%;
     left:0%;
     width:100vw;
-    height:80vh;
+    height:90vh;
   }
   .footer__block1, .footer__block2{
     width:100%;
@@ -3599,6 +3609,9 @@ main{
   }
   .howItWork__item{
     height: inherit;
+  }
+  .news__textBlock {
+  	-webkit-line-clamp: 4;
   }
 
 }

@@ -5,7 +5,7 @@
 <nav class="menu">
   <ul class="menu__list">
     <li class="menu__item"><a class="menu__link " href="{% url 'mainsite:products_url' %}" >Products</a></li>
-    <!-- <li class="menu__item"><a class="menu__link menu__link_active" href="{% url 'mainsite:news_url' %}" style="color: #12A276">News</a></li> -->
+    <li class="menu__item"><a class="menu__link menu__link_active" href="{% url 'mainsite:news_url' %}" style="color: #12A276">News</a></li>
     <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:team_url' %}">Our team</a></li>
     <li class="menu__item"><a class="menu__link" href="{% url 'mainsite:contacts_url' %}">Contacts</a></li>
   </ul>
@@ -22,95 +22,56 @@
           <div class="news__items">
 
             <div class="news__item">
-              <img class="news_img" src="{% static 'mainsite/img/news_img1.png' %}">
+              <img class="news_img" src="{% static 'mainsite/img/news_1.png' %}">
               <div class="news__textWrapper">
-                <div class="news__data">01.12.2021</div>
+                <div class="news__data">08.03.2021</div>
                 <h3 class="block__text32 news__title">
-                  Two factors for the effectiveness of the AR / VR implementation...
+                  Our goals
                 </h3>
-                <p class="block__text18 news__text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  2 factors for the effectiveness of the AR / VR
-                  implementation in the field...
-                </p>
-                <div class="news_botton">Read more</div>
+                <div class="news__textBlock">
+                  <p class="block__text18 news__text">
+                    Provide AEC businesses with modern software and custom solutions
+                    When we started the company it was clear that the entire AEC
+                    industry had started to move forward and to adopt new technologies
+                    at the pace never seen before.
+                    Our goal is to provide AEC companies with modern software and
+                    custom solutions. Looking further, we aim to make the industry
+                    not just adopt new technologies but use them inventively for
+                    benefits of both business and clients.
+                  </p>
+                </div>
+
+                <div id="news_1"  class="news_botton">Read more</div>
               </div>
             </div>
 
             <div class="news__item">
-              <img class="news_img" src="{% static 'mainsite/img/news_img2.png' %}">
+              <img class="news_img" src="{% static 'mainsite/img/news_2.png' %}">
               <div class="news__textWrapper">
-                <div class="news__data">01.12.2021</div>
+                <div class="news__data">08.03.2021</div>
                 <h3 class="block__text32 news__title">
-                  Who we are
+                  AR/VR in education
                 </h3>
-                <p class="block__text18 news__text">
-                  Griffel Studio develops automation solutions for the AEC industry.
-                  We create software which solves the industry questions on how to implement #BIM in a company...
-                </p>
-                <div class="news_botton">Read more</div>
-              </div>
-            </div>
-
-            <div class="news__item">
-              <img class="news_img" src="{% static 'mainsite/img/news_img3.png' %}">
-              <div class="news__textWrapper">
-                <div class="news__data">01.12.2021</div>
-                <h3 class="block__text32 news__title">
-                  Another area of ​​active application of AR/VR
-                </h3>
-                <p class="block__text18 news__text">
-                  Griffel Studio is no exception as we offer our solutions in
-                  the field of AR / VR for creating educational conte...
-                </p>
-                <div class="news_botton">Read more</div>
-              </div>
-            </div>
-
-            <div class="news__item">
-              <img class="news_img" src="{% static 'mainsite/img/news_img1.png' %}">
-              <div class="news__textWrapper">
-                <div class="news__data">01.12.2021</div>
-                <h3 class="block__text32 news__title">
-                  Two factors for the effectiveness of the AR / VR implementation...
-                </h3>
-                <p class="block__text18 news__text">
-                  2 factors for the effectiveness of the AR / VR
-                  implementation in the field...
-                </p>
-                <div class="news_botton">Read more</div>
-              </div>
-            </div>
-
-            <div class="news__item">
-              <img class="news_img" src="{% static 'mainsite/img/news_img2.png' %}">
-              <div class="news__textWrapper">
-                <div class="news__data">01.12.2021</div>
-                <h3 class="block__text32 news__title">
-                  Who we are
-                </h3>
-                <p class="block__text18 news__text">
-                  Griffel Studio develops automation solutions for the AEC industry.
-                  We create software which solves the industry questions on how to implement #BIM in a company...
-                </p>
-                <div class="news_botton">Read more</div>
-              </div>
-            </div>
-
-            <div class="news__item">
-              <img class="news_img" src="{% static 'mainsite/img/news_img3.png' %}">
-              <div class="news__textWrapper">
-                <div class="news__data">01.12.2021</div>
-                <h3 class="block__text32 news__title">
-                  Another area of ​​active application of AR/VR
-                </h3>
-                <p class="block__text18 news__text">
-                  Griffel Studio is no exception as we offer our solutions in
-                  the field of AR / VR for creating educational conte...
-                </p>
-                <div class="news_botton">Read more</div>
+                <div class="news__textBlock">
+                  <p class="block__text18 news__text">
+                    Visuals rule the world. It is true that vision is the main
+                    channel of getting information for most people. AR/VR tools
+                    allow you to transmit information in a highly illustrative manner.
+                    Architecture and engineering students are able to see structural
+                    elements in detail. It is not necessary (though still desirable)
+                    to visit a construction site in person to see how things are done.
+                    And obviously it is much safer to learn how to run the site or operate
+                    heavy machinery when you are in an auditorium with a headset on.
+  	                Emotions help to absorb information.Traditional education ignores
+                    emotions as an important aspect of the teaching process. It is
+                    believed that emotions interfere with the information perception
+                    rather than help. However, we are convinced that any at first
+                    glance boring material can be learned more effectively when the
+                    student is involved in the process emotionally. AR/VR technologies
+                    can increase student involvement significantly.
+                  </p>
+                </div>
+                <div id="news_2" class="news_botton">Read more</div>
               </div>
             </div>
           </div>

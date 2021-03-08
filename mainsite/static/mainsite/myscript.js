@@ -75,6 +75,13 @@ for(let i = 0; i < news.length; i++){
       popupBody.appendChild(popupContent);
       popupContent.style.overflowY = "scroll";
 
+      let popupImg = document.createElement("img");
+      popupImg.classList.add("news_img");
+      popupImg.src = `${window.location.origin}/static/mainsite/img/${event.target.id}.png`
+
+
+      popupContent.appendChild(popupImg);
+
       let popupTitle = document.createElement("div");
       popupTitle.classList.add("block__title");
       popupTitle.classList.add("popupTitle");
