@@ -3055,7 +3055,7 @@ main{
         align-self:center;
   }
   .howItWork_exporter{
-    height:auto;
+    height:inherit;
   }
   .howHelp__content{
     width:100%;
@@ -3197,6 +3197,15 @@ main{
         -ms-flex-pack:center;
             justify-content:center;
   }
+  .howItWork__item{
+    height:inherit;
+  }
+  .howItWork__item_absolute{
+    margin-top: 4rem;
+  }
+  .banner__text_correct {
+      margin-top: 4rem;
+  }
 
 }
 @media (max-width: 768px){
@@ -3267,6 +3276,9 @@ main{
   }
   .howItWork__item{
     margin-top:4rem;
+  }
+  .howItWork__item_absolute{
+    margin-top:1.6rem;
   }
   .exporter__title{
     font-size:4rem;
@@ -3621,8 +3633,13 @@ main{
   .popup{
     padding: 2rem 2rem 8rem 2rem;
   }
-
+  .howItWork__item_last, .howItWork__item_absoluteApi{
+    margin-top: 1.6rem;
+  }
+  .banner__text {
+    margin-top: 2.4rem;
+  }
+  .howItWork__item_absoluteApi .banner__text_correct{
+    margin-top: 0rem;
+  }
 }
-
-
-/*# sourceMappingURL=main.css.map*/
