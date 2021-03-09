@@ -10,36 +10,59 @@ const burgerMenu = document.querySelector(".burger");
 const link = document.createElement('div');
 const news = document.querySelectorAll(".news__item");
 const newsContainer = document.querySelector(".news__items");
+const form = document.querySelector("#form");
+
+let isValid = false;
+
+function emailValidate(form){
+  let email = document.querySelector(form);
+  let incorrectText = document.querySelector(".incorrectText");
+  email.addEventListener('change',(event)=>{
+    if(!email.validity.valid){
+      email.classList.add("incorrect")
+      incorrectText.style.display = "inline-block";
+      isValid = false;
+    }else{
+      if(email.classList.contains("incorrect")){
+        email.classList.remove("incorrect");
+        incorrectText.style.display = "none";
+      }
+      isValid = true;
+    }
+  })
+}
+if(form){
+  emailValidate('.mainForm');
+}
 
 $(document).on('submit','#form',function(e) {
-  console.log('message start')
   e.preventDefault();
-  $.ajax({
-    type: 'POST',
-    url: "/form",
-    data:{
-      name: $('#name').val(),
-      email: $('#email').val(),
-      message: $('#message').val(),
-      csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
-    },
-    succes:  (function(){
-      if($('.formBlock').length === 1){
-        let formBlock = document.querySelector(".formBlock");
-        console.log(formBlock.childNodes[1].childNodes[3].childNodes[1].childNodes[1].innerHTML=`
-          <h2 class="block  block__title connect__title" style="color:#12A276;">Message sent successfully!</h2>
-          <p class="connect__subtitle block__text">We will reply to you within one business day.</p>
-          `)
-      }else{
-        if(formContent){
-          succesSend()
+  if(isValid){
+    $.ajax({
+      type: 'POST',
+      url: "/form",
+      data:{
+        name: $('#name').val(),
+        email: $('#email').val(),
+        message: $('#message').val(),
+        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+      },
+      succes:  (function(){
+        if($('.formBlock').length === 1){
+          formContentPopup = document.querySelector(".connect__formBlockContent_popup");
+          succesSend(formContentPopup);
+        }else{
+          if(formContent){
+            succesSend(formContent)
+          }
         }
-      }
-      if(document.getElementById("form")){
-        document.getElementById("form").reset();
-      }
-    })()
-  })
+        if(document.getElementById("form")){
+          document.getElementById("form").reset();
+          isValid = false;
+        }
+      })()
+    })
+  }
 })
 
 for(let i = 0; i < news.length; i++){
@@ -163,7 +186,7 @@ window.addEventListener("load",()=>{
 
   }
 })
-function succesSend(){
+function succesSend(formContent){
   formContent.style.alignSelf = "flex-start";
   formContent.style.justifyContent = "center"
   formContent.innerHTML = `
@@ -181,13 +204,14 @@ function createFormPopup(){
       <div class="popupClose" for="modal">&#10005;</div>
       <div class="connect__bg">
         <div class="connect__formBlock">
-          <div class="connect__formBlockContent">
+          <div class="connect__formBlockContent_popup">
             <h2 class=" block__title connect__title">Let’s create together</h2>
             <p class="block__text connect__subtitle">Send us a message</p>
-            <form id="form" class="form">
+            <form id="form" class="form" novalidate>
               {% csrf_token %}
               <input id="name" class="inputArea" placeholder="Name"  type="text" name="name">
-              <input id="email" class="inputArea" placeholder="E-mail" type="email" name="email" required>
+              <input id="email" class="inputArea popupForm" placeholder="E-mail" type="email" name="email" required>
+              <span class="incorrectText">Enter a valid email address (example@mail.com)</span>
               <textarea id="message" class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80"></textarea>
               <button  class="button button__form" type="submit">Send</button>
             </form>
@@ -198,6 +222,7 @@ function createFormPopup(){
       </div>
     </section>
   `
+
 formBlock.style.color = "transparent";
 document.body.style.overflowY = "hidden";
 setTimeout(()=>{
@@ -209,6 +234,7 @@ setTimeout(()=>{
 },200)
 
 document.body.prepend(formBlock );
+emailValidate('.popupForm');
 
 formBlock.addEventListener('click', (event)=>{
   if(event.target === formBlock){

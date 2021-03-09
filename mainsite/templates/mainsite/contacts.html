@@ -49,7 +49,8 @@
             {% csrf_token %}
             <input id="name" class="inputArea" placeholder="Name"  type="text" name="name" required>
 
-            <input id="email" class="inputArea" placeholder="E-mail" type="email" name="email" required>
+            <input id="email" class="inputArea mainForm" placeholder="E-mail" type="email" name="email" required>
+            <span class="incorrectText">Enter a valid email address (example@mail.com)</span>
 
             <textarea id="message" class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80" required></textarea>
 

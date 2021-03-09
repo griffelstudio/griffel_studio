@@ -1135,6 +1135,19 @@ main{
   width:100%;
   height:5.2rem;
 }
+
+
+.incorrectText{
+  display: none;
+  margin-top: 0.8rem;
+  margin-left: 2rem;
+  font-size: 1.4rem;
+  line-height: 130%;
+  color: #FF002E;
+}
+ .incorrect{
+   border: 1px solid #FF002E;
+ }
 .inputBox{
   width:100%;
   height:40%;
