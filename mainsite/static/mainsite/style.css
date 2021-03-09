@@ -3294,6 +3294,7 @@ main{
     height:21rem;
   }
   .howItWork__item{
+    justify-content: start;
     margin-top:4rem;
   }
   .howItWork__item_absolute{
