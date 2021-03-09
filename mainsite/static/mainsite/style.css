@@ -991,7 +991,9 @@ main{
 }
 .whatWedo__list > * + *{
   margin-left:2rem;
-
+}
+.solutions .banner{
+  max-width: 57.6rem
 }
 
 .whatWeDo__item{
@@ -1729,7 +1731,6 @@ main{
 
 .howItWork .banner{
   width:21.7%;
-  max-width: 57.6rem
 }
 
 .banner_top{
@@ -2739,7 +2740,7 @@ main{
     line-height:3.9rem;
     font-size:1.7rem;
   }
-  .howItWork .banner{
+  .solutions .banner{
     max-width: 41.6rem
   }
 
