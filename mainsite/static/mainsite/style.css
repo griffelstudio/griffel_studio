@@ -3055,7 +3055,7 @@ main{
         align-self:center;
   }
   .howItWork_exporter{
-    height:inherit;
+    height:auto;
   }
   .howHelp__content{
     width:100%;
@@ -3198,7 +3198,7 @@ main{
             justify-content:center;
   }
   .howItWork__item{
-    height:inherit;
+    height:auto;
   }
   .howItWork__item_absolute{
     margin-top: 4rem;
@@ -3630,7 +3630,7 @@ main{
             align-items:flex-start;
   }
   .howItWork__item{
-    height: inherit;
+    height: auto;
   }
   .news__textBlock {
   	-webkit-line-clamp: 4;
