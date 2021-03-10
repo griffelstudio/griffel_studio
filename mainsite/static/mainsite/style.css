@@ -3057,7 +3057,7 @@ main{
   }
   .howItWork_img{
     width:100%;
-    /* min-height:48.4vw; */
+    height:48.4vw;
   }
   .howItWork .banner{
     width:100%;
@@ -3659,7 +3659,22 @@ main{
   .banner__text {
     margin-top: 2.4rem;
   }
-  .howItWork__item_absoluteApi .banner__text_correct{
+  .howItWork__item_absoluteApi .banner__text_correct, .howItWork__item_absolute .banner__text_correct{
     margin-top: 0rem;
+  }
+  .connectingProject__title_end {
+    margin-top: 4rem;
+  }
+  .team, .contacts{
+    margin-top: 3.2rem;
+  }
+  .team__text, .contacts__text {
+    margin-top: 2.4rem;
+  }
+  .team__items, .contacts__info{
+    margin-top: 4rem;
+  }
+  .contacts__title{
+    margin: 0;
   }
 }
