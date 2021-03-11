@@ -6,6 +6,10 @@ from django.core.mail import send_mail
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
 
+import urllib.request
+import json
+from django.conf import settings
+
 
 class Index(View):
     def get(self, request):
@@ -46,6 +50,21 @@ class Privacy_mobile(View):
 
 def formsend(request):
     if request.method == "POST":
-        send_mail('message from {} email: {}'.format(request.POST['name'],request.POST['email'] ),request.POST['message'],'contact@griffelstudio.com' ,
-        ['contact@griffelstudio.com'], fail_silently=False,)
-        return HttpResponse('succes')
+        recaptcha_response = request.POST['captcha']
+        url = 'https://www.google.com/recaptcha/api/siteverify'
+        values = {
+        'secret': '6LdWqXoaAAAAAELb5_lMpl3hUHFMdn_PFZn2XeE2',
+        'response': recaptcha_response
+        }
+        data = urllib.parse.urlencode(values).encode()
+        req =  urllib.request.Request(url, data=data)
+        response = urllib.request.urlopen(req)
+        result = json.loads(response.read().decode())
+
+        if result['success']:
+            send_mail('message from {} email: {}'.format(request.POST['name'],request.POST['email'] ),request.POST['message'],'contact@griffelstudio.com' ,
+            ['contact@griffelstudio.com'], fail_silently=False,)
+            # ['nicolay.krischenovich@gmail.com'], fail_silently=False,)
+            return HttpResponse('succes')
+        else:
+            return HttpResponse('unsucces')

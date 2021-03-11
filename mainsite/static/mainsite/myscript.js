@@ -11,8 +11,14 @@ const link = document.createElement('div');
 const news = document.querySelectorAll(".news__item");
 const newsContainer = document.querySelector(".news__items");
 const form = document.querySelector("#form");
+let captcha = document.getElementById('captcha')
 
 let isValid = false;
+
+function verifyCaptcha(){
+  let incorrectCaptcha = document.querySelector(".incorrectCaptcha");
+  incorrectCaptcha.style.display = "none";
+}
 
 function emailValidate(form){
   let email = document.querySelector(form);
@@ -37,32 +43,44 @@ if(form){
 
 $(document).on('submit','#form',function(e) {
   e.preventDefault();
-  if(isValid){
-    $.ajax({
-      type: 'POST',
-      url: "/form",
-      data:{
-        name: $('#name').val(),
-        email: $('#email').val(),
-        message: $('#message').val(),
-        csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
-      },
-      succes:  (function(){
-        if($('.formBlock').length === 1){
-          formContentPopup = document.querySelector(".connect__formBlockContent_popup");
-          succesSend(formContentPopup);
-        }else{
-          if(formContent){
-            succesSend(formContent)
-          }
-        }
-        if(document.getElementById("form")){
-          document.getElementById("form").reset();
-          isValid = false;
-        }
-      })()
-    })
+  let response = grecaptcha.getResponse();
+  let incorrectCaptcha = document.querySelector(".incorrectCaptcha");
+  if(!response){
+    incorrectCaptcha.style.display = "inline-block";
   }
+  else{
+    incorrectCaptcha.style.display = "none";
+    if(isValid && response){
+      $.ajax({
+        type: 'POST',
+        url: "/form",
+        data:{
+          name: $('#name').val(),
+          crossDomain: true,
+          email: $('#email').val(),
+          captcha: response,
+          message: $('#message').val(),
+          csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+        },
+        succes:  (function(){
+          if($('.formBlock').length === 1){
+            formContentPopup = document.querySelector(".connect__formBlockContent_popup");
+            succesSend(formContentPopup);
+          }else{
+            if(formContent){
+              succesSend(formContent)
+            }
+          }
+          if(document.getElementById("form")){
+            document.getElementById("form").reset();
+            isValid = false;
+          }
+        })()
+      })
+    }
+
+  }
+
 })
 
 for(let i = 0; i < news.length; i++){
@@ -213,6 +231,7 @@ function createFormPopup(){
               <input id="email" class="inputArea popupForm" placeholder="E-mail" type="email" name="email" required>
               <span class="incorrectText">Enter a valid email address (example@mail.com)</span>
               <textarea id="message" class="inputBox" placeholder="Describe your task" name="message"  rows="4" cols="80"></textarea>
+              ${captcha}
               <button  class="button button__form" type="submit">Send</button>
             </form>
           </div>
@@ -222,7 +241,6 @@ function createFormPopup(){
       </div>
     </section>
   `
-
 formBlock.style.color = "transparent";
 document.body.style.overflowY = "hidden";
 setTimeout(()=>{

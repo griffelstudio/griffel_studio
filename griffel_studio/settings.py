@@ -138,7 +138,7 @@ DATABASES['default'].update(db_from_env)
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
 # EMAIL_HOST_USER = 'nicolay.krischenovich@gmail.com'
-# EMAIL_HOST_PASSWORD =''
+# EMAIL_HOST_PASSWORD ='vakar021290'
 # DEFAULT_TO_EMAIL = 'nicolay.krischenovich@gmail.com'
 
 EMAIL_HOST_USER = 'contact@griffelstudio.com'

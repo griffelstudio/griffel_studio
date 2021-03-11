@@ -702,8 +702,10 @@ main{
   color:#ffffff;
   background-color:#12A276;
   border-radius:0.5rem;
-  -webkit-box-shadow:0rem 0.2rem 1.1rem 0rem #12A276;
-  box-shadow:0rem 0.2rem 1.1rem 0rem #12A276;
+  -webkit-box-shadow:0px 2px 11px 0px rgba(0, 139, 97, 0.4);
+  box-shadow: 0px 2px 11px 0px rgba(0, 139, 97, 0.4);
+
+
   cursor:pointer;
   -webkit-transition:0.1s;
   -o-transition:0.1s;
@@ -715,14 +717,14 @@ main{
   -o-transition:0.1s;
   transition:0.1s;
   background-color:#5133CB;
-  -webkit-box-shadow:0rem 0.2rem 1.1rem 0rem #5133CB;
-  box-shadow:0rem 0.2rem 1.1rem 0rem #5133CB;
+  -webkit-box-shadow:0px 2px 11px rgba(81, 51, 203, 0.4);
+  box-shadow: 0px 2px 11px rgba(81, 51, 203, 0.4);
 }
 
 
 .button__header{
-  height:4rem;
-  width:15.2rem;
+  height:3.8rem;
+  width:17.6rem;
 }
 .container{
   display:none;
@@ -1011,8 +1013,10 @@ main{
 }
 
 .button__regular{
-  height:6rem;
-  width:33.6rem;
+  height:6.1rem;
+  width:22.9rem;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
   -ms-flex-item-align:center;
   -ms-grid-row-align:center;
   align-self:center;
@@ -1069,7 +1073,7 @@ main{
 }
 
 .connect__title{
-  margin-top:12rem;
+  margin-top:4rem;
 }
 
 .connect__subtitle{
@@ -1137,7 +1141,7 @@ main{
 }
 
 
-.incorrectText{
+.incorrectText,.incorrectCaptcha {
   display: none;
   margin-top: 0.8rem;
   margin-left: 2rem;
@@ -1357,8 +1361,8 @@ main{
   width:31.3%;
   height:85.3rem;
   min-width:32.8rem;
-  -webkit-box-shadow:0px 9px 16px rgba(0, 0, 0, 0.25);
-  box-shadow:0px 9px 16px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow:0px 4px 20px 0px rgba(47,47,47, 0.11);
+  box-shadow:0px 4px 20px 0px rgba(47,47,47, 0.11);
   border-radius:0.5rem;
   background-color:white;
 }
@@ -2186,6 +2190,8 @@ main{
   margin-top:8rem;
 }
 
+
+
 .news__item{
   display:-ms-grid;
   display:grid;
@@ -2195,8 +2201,8 @@ main{
       grid-template-rows:0.7fr 1.4fr;
   width:100%;
   height:100%;
-  -webkit-box-shadow:0px 4px 30px 0px #2F2F2F;
-  box-shadow:0px 4px 30px 0px #2F2F2F;
+  -webkit-box-shadow:0px 4px 30px 0px rgba(47,47,47, 0.2);
+  box-shadow:0px 4px 30px 0px rgba(47,47,47, 0.2);
   background-color:white;
 }
 
@@ -2597,6 +2603,13 @@ main{
 .rayTraceView__img {
   background-image: url("img/raytrace.png");
 }
+.captcha{
+  margin-top: 4rem;
+}
+.contacts__title{
+  margin: 0;
+}
+
 
 @media (max-width: 1601px){
   .block{
@@ -2670,7 +2683,7 @@ main{
     margin-bottom:2rem;
   }
   .connect__title{
-    margin-top:8rem;
+    margin-top:4rem;
   }
   .inputArea[type="text"], .inputArea[type="email"]{
     height:3.2rem;
@@ -2686,7 +2699,10 @@ main{
     margin-top:1.6rem;
   }
   .button__form{
-    margin-top:4rem;
+    margin-top:2rem;
+  }
+  .captcha{
+    margin-top: 2rem;
   }
   .connect__formBlock{
     padding-left:8.3rem;
@@ -2709,12 +2725,18 @@ main{
 }
 }
 @media (max-width: 1500px){
+  .menu__link {
+    font-size: 1.8rem;
+  }
+  .button__header {
+    font-size: 1.8rem;
+  }
   .levelDetails__imgItem{
     max-width:32rem;
     max-height:23.5rem
   }
   .connect__title{
-    margin-top:8rem;
+    margin-top:4rem;
   }
   .products__list{
     -webkit-box-pack:center;
@@ -2745,6 +2767,12 @@ main{
     max-height:49rem;
     margin-left:auto;
     margin-right:auto;
+  }
+  .button__regular{
+    height:4.5rem;
+    width:17.6rem;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
   }
 
 
@@ -3674,13 +3702,16 @@ main{
   .team__items, .contacts__info{
     margin-top: 4rem;
   }
-  .contacts__title{
-    margin: 0;
-  }
+
   .howItWork__item_middle .banner{
     margin-top: 0;
   }
   .howItWork__item_middle .howItWork_img{
     margin-top: 2.4rem;
+  }
+  .button__regular{
+    height:3.4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 }
