@@ -441,15 +441,18 @@ body{
 
 
 
-.popupClose{
-  -ms-flex-item-align:end;
-      align-self:flex-end;
-  width:4rem;
-  height:5rem;
-  margin-left:auto;
-  font-size:5rem;
-  line-height:100%;
-  cursor:pointer;
+.popupClose {
+    -ms-flex-item-align: end;
+    position: relative;
+    left: 6.4rem;
+    top: 1rem;
+    align-self: flex-end;
+    width: 4rem;
+    height: 5rem;
+    margin-left: auto;
+    font-size: 3.5rem;
+    line-height: 100%;
+    cursor: pointer;
 }
 .popupClose:hover{
   color:#12A276;
@@ -3713,5 +3716,9 @@ main{
     height:3.4rem;
     font-size: 1.6rem;
     line-height: 2rem;
+  }
+  .popupClose {
+    left: 1rem;
+    top: 1rem;
   }
 }
